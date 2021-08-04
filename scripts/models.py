@@ -1,16 +1,17 @@
 from typing import List, Optional
 import pydantic
 import enum
+from utils import StrEnum
 
 
-class Domain(enum.StrEnum):
+class Domain(StrEnum):
     images = enum.auto()
     nlp = enum.auto()
     tabular = enum.auto()
     time_series = enum.auto()
 
 
-class Technique(enum.StrEnum):
+class Technique(StrEnum):
     linear_models = enum.auto()
     trees = enum.auto()
     bayesian = enum.auto()
@@ -24,12 +25,12 @@ class Technique(enum.StrEnum):
     ad_hoc = enum.auto()
 
 
-class MetaLearning(enum.StrEnum):
+class MetaLearning(StrEnum):
     portfolio = enum.auto()
     warm_start = enum.auto()
 
 
-class Task(enum.StrEnum):
+class Task(StrEnum):
     classification = enum.auto()
     structured_prediction = enum.auto()
     structured_generation = enum.auto()
@@ -46,7 +47,7 @@ class Task(enum.StrEnum):
     domain_preprocessing = enum.auto()
 
 
-class SearchStrategy(enum.StrEnum):
+class SearchStrategy(StrEnum):
     random = enum.auto()
     evolutionary = enum.auto()
     gradient_descent = enum.auto()
@@ -59,7 +60,7 @@ class SearchStrategy(enum.StrEnum):
     monte_carlo = enum.auto()
 
 
-class Hyperparameters(enum.StrEnum):
+class Hyperparameters(StrEnum):
     continuous = enum.auto()
     discrete = enum.auto()
     categorical = enum.auto()
