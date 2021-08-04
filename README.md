@@ -71,8 +71,7 @@ Characteristics describing the actual models and techniques used in the system, 
   - `rnn`
   - `pretrained`
   - `ensembles`
-  - `ad_hoc`
-    > 📝 indicates non-ML algorithms, e.g., tokenizers...
+  - `ad_hoc` (📝 indicates non-ML algorithms, e.g., tokenizers)
 - **`distillation`** (`bool`): Whether the system supports model distillation
 - **`ml_libraries`** (`list[str]`): List of ML libraries that support the system, i.e., where the techniques are actually implemented, if any. Valid values are lists of strings. Some examples are:
   - `scikit-learn`
@@ -99,10 +98,8 @@ Characteristics describing the types of tasks, or problems, in which the system 
   - `feature_selection`
   - `data_augmentation`
   - `dimensionality_reduction`
-  - `data_preprocessing`
-    > 📝 domain-agonostic data preprocessing such as normalization and scaling
-  - `domain_preprocessing`
-    > 📝 refers to domain-specific preprocessing, e.g., stemming, as opposed to
+  - `data_preprocessing` (📝 domain-agonostic data preprocessing such as normalization and scaling)
+  - `domain_preprocessing` (📝 refers to domain-specific preprocessing, e.g., stemming)
 - **`multi_task`**: Whether the system supports multiple tasks in a single workflow, e.g.,
     by allowing multiple output heads from the same neural network
 
