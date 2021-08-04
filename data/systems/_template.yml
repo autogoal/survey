@@ -47,10 +47,6 @@ domains:
 # by allowing multiple inputs of different types simultaneously
 multi_domain: yes
 
-# Whether the system supports multiple tasks in a single workflow, e.g.,
-# by allowing multiple output heads from the same neural network
-multi_task: no
-
 # List of high-level techniques that are available in the systems, broadly classified
 # according to model families
 techniques:
@@ -65,6 +61,9 @@ techniques:
   - pretrained
   - ensembles
   - ad_hoc # indicates non-ML algorithms, e.g., tokenizers...
+
+# Whether the system supports model distillation
+distillation: yes
 
 # List of ML libraries that support the system, i.e., where the techniques
 # are actually implemented, if any
@@ -95,12 +94,9 @@ tasks:
   # refers to domain-specific preprocessing, e.g., stemming, as opposed to
   - domain_preprocessing
 
-# Whether the system supports model distillation
-distillation: no
-# If the system includes meta-learning, list of broadly classified techniques used
-meta_learning:
-  - portfolio
-  - warm_start
+# Whether the system supports multiple tasks in a single workflow, e.g.,
+# by allowing multiple output heads from the same neural network
+multi_task: no
 
 # List of high-level search strategies that are available in the system
 search_strategies:
@@ -114,6 +110,11 @@ search_strategies:
   - reinforcement_learning
   - constructive
   - monte_carlo
+
+# If the system includes meta-learning, list of broadly classified techniques used
+meta_learning:
+  - portfolio
+  - warm_start
 
 # High-level characteristics of the hyperparameter search space
 search_space:
