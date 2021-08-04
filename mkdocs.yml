@@ -1,0 +1,22 @@
+site_name: AutoML Survey
+site_url: https://autogoal.github.io/survey
+repo_url: https://github.com/autogoal/survey
+edit_uri: edit/main/docs
+
+theme:
+    name: material
+    feature:
+        tabs: true
+    palette:
+        primary: black
+        accent: black
+
+markdown_extensions:
+    - codehilite
+    - toc:
+        permalink: true
+    - admonition
+    - markdown_include.include
+
+nav:
+    - Home: index.md
