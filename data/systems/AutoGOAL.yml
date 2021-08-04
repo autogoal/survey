@@ -5,7 +5,7 @@ institutions:
   - University of Havana
   - University of Alicante
 repository: https://github.com/autogoal/autogoal
-license: mit
+license: MIT
 
 references:
   - https://www.automl.org/wp-content/uploads/2020/07/AutoML_2020_paper_20.pdf

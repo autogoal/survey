@@ -1,20 +1,20 @@
 name: AutoPytorch
 website: null
-open_source: true
+open_source: yes
 institutions: []
 repository: null
 license: null
 references: []
-cli: true
-gui: false
-http: false
-library: true
+cli: yes
+gui: no
+http: no
+library: yes
 programming_languages: []
 domains:
   - images
   - tabular
-multi_domain: false
-multi_task: false
+multi_domain: no
+multi_task: no
 techniques:
   - mlp
   - ensembles
@@ -26,29 +26,29 @@ tasks:
   - domain_preprocessing
   - data_augmentation
   - dimensionality_reduction
-distillation: false
+distillation: no
 meta_learning:
   - portfolio
 search_strategies:
   - bayesian
 search_space:
-  hierarchical: true
-  probabilistic: true
-  differentiable: false
-  automatic_construction: false
+  hierarchical: yes
+  probabilistic: yes
+  differentiable: no
+  automatic_construction: no
   hyperparameters:
     - continuous
     - discrete
   pipelines:
-    single: false
-    fixed: false
-    linear: false
-    graph: false
-  invalid_pipelines: false
-extensible: false
-accessible_models: true
-portable_models: false
+    single: no
+    fixed: no
+    linear: no
+    graph: no
+  invalid_pipelines: no
+extensible: no
+accessible_models: yes
+portable_models: no
 computational_resources:
-  gpu: true
-  tpu: false
-  cluster: false
+  gpu: yes
+  tpu: no
+  cluster: no

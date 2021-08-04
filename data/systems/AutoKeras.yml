@@ -1,22 +1,22 @@
 name: Auto-Keras
 website: null
-open_source: true
+open_source: yes
 institutions: []
 repository: null
 license: null
 references: []
-cli: true
-gui: false
-http: false
-library: true
+cli: yes
+gui: no
+http: no
+library: yes
 programming_languages: []
 domains:
   - images
   - nlp
   - tabular
   - time_series
-multi_domain: true
-multi_task: true
+multi_domain: yes
+multi_task: yes
 techniques:
   - mlp
 ml_libraries: []
@@ -24,28 +24,28 @@ tasks:
   - classification
   - regression
   - data_augmentation
-distillation: false
+distillation: no
 meta_learning: []
 search_strategies:
   - bayesian
 search_space:
-  hierarchical: true
-  probabilistic: true
-  differentiable: false
-  automatic_construction: false
+  hierarchical: yes
+  probabilistic: yes
+  differentiable: no
+  automatic_construction: no
   hyperparameters:
     - continuous
     - discrete
   pipelines:
-    single: false
-    fixed: false
-    linear: false
-    graph: true
-  invalid_pipelines: false
-extensible: true
-accessible_models: true
-portable_models: false
+    single: no
+    fixed: no
+    linear: no
+    graph: yes
+  invalid_pipelines: no
+extensible: yes
+accessible_models: yes
+portable_models: no
 computational_resources:
-  gpu: true
-  tpu: false
-  cluster: false
+  gpu: yes
+  tpu: no
+  cluster: no

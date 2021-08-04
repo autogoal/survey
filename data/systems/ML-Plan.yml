@@ -1,19 +1,19 @@
 name: ML-Plan
 website: null
-open_source: true
+open_source: yes
 institutions: []
 repository: null
 license: null
 references: []
-cli: true
-gui: false
-http: false
-library: true
+cli: yes
+gui: no
+http: no
+library: yes
 programming_languages: []
 domains:
   - tabular
-multi_domain: false
-multi_task: false
+multi_domain: no
+multi_task: no
 techniques:
   - linear_models
   - trees
@@ -27,28 +27,28 @@ tasks:
   - feature_selection
   - feature_preprocessing
   - dimensionality_reduction
-distillation: false
+distillation: no
 meta_learning: []
 search_strategies:
   - monte_carlo
 search_space:
-  hierarchical: true
-  probabilistic: false
-  differentiable: false
-  automatic_construction: false
+  hierarchical: yes
+  probabilistic: no
+  differentiable: no
+  automatic_construction: no
   hyperparameters:
     - continuous
     - discrete
   pipelines:
-    single: false
-    fixed: true
-    linear: false
-    graph: false
-  invalid_pipelines: false
-extensible: false
-accessible_models: false
-portable_models: false
+    single: no
+    fixed: yes
+    linear: no
+    graph: no
+  invalid_pipelines: no
+extensible: no
+accessible_models: no
+portable_models: no
 computational_resources:
-  gpu: false
-  tpu: false
-  cluster: false
+  gpu: no
+  tpu: no
+  cluster: no

@@ -1,19 +1,19 @@
 name: AutoWeka
 website: null
-open_source: true
+open_source: yes
 institutions: []
 repository: null
 license: null
 references: []
-cli: true
-gui: false
-http: false
-library: true
+cli: yes
+gui: no
+http: no
+library: yes
 programming_languages: []
 domains:
   - tabular
-multi_domain: false
-multi_task: false
+multi_domain: no
+multi_task: no
 techniques:
   - linear_models
   - trees
@@ -25,28 +25,28 @@ tasks:
   - classification
   - regression
   - feature_selection
-distillation: false
+distillation: no
 meta_learning: []
 search_strategies:
   - bayesian
 search_space:
-  hierarchical: true
-  probabilistic: true
-  differentiable: false
-  automatic_construction: false
+  hierarchical: yes
+  probabilistic: yes
+  differentiable: no
+  automatic_construction: no
   hyperparameters:
     - continuous
     - discrete
   pipelines:
-    single: false
-    fixed: true
-    linear: false
-    graph: false
-  invalid_pipelines: false
-extensible: false
-accessible_models: true
-portable_models: false
+    single: no
+    fixed: yes
+    linear: no
+    graph: no
+  invalid_pipelines: no
+extensible: no
+accessible_models: yes
+portable_models: no
 computational_resources:
-  gpu: false
-  tpu: false
-  cluster: false
+  gpu: no
+  tpu: no
+  cluster: no

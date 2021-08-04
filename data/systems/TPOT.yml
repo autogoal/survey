@@ -1,19 +1,19 @@
 name: TPOT
 website: null
-open_source: true
+open_source: yes
 institutions: []
 repository: null
 license: null
 references: []
-cli: true
-gui: false
-http: false
-library: true
+cli: yes
+gui: no
+http: no
+library: yes
 programming_languages: []
 domains:
   - tabular
-multi_domain: false
-multi_task: false
+multi_domain: no
+multi_task: no
 techniques:
   - linear_models
   - trees
@@ -24,28 +24,28 @@ tasks:
   - feature_selection
   - feature_preprocessing
   - dimensionality_reduction
-distillation: false
+distillation: no
 meta_learning: []
 search_strategies:
   - evolutionary
 search_space:
-  hierarchical: false
-  probabilistic: false
-  differentiable: false
-  automatic_construction: false
+  hierarchical: no
+  probabilistic: no
+  differentiable: no
+  automatic_construction: no
   hyperparameters:
     - continuous
     - discrete
   pipelines:
-    single: false
-    fixed: false
-    linear: false
-    graph: true
-  invalid_pipelines: true
-extensible: true
-accessible_models: true
-portable_models: true
+    single: no
+    fixed: no
+    linear: no
+    graph: yes
+  invalid_pipelines: yes
+extensible: yes
+accessible_models: yes
+portable_models: yes
 computational_resources:
-  gpu: false
-  tpu: false
-  cluster: false
+  gpu: no
+  tpu: no
+  cluster: no

@@ -1,23 +1,23 @@
 name: Vertex AI
 website: null
-open_source: true
+open_source: yes
 institutions:
   - Google
 repository: null
 license: null
 references: []
-cli: true
-gui: true
-http: false
-library: true
+cli: yes
+gui: yes
+http: no
+library: yes
 programming_languages: []
 domains:
   - images
   - nlp
   - tabular
   - time_series
-multi_domain: false
-multi_task: false
+multi_domain: no
+multi_task: no
 techniques:
   - mlp
   - pretrained
@@ -30,29 +30,29 @@ tasks:
   - domain_preprocessing
   - structured_prediction
   - segmentation
-distillation: false
+distillation: no
 meta_learning: []
 search_strategies:
   - bayesian
   - random
 search_space:
-  hierarchical: true
-  probabilistic: true
-  differentiable: false
-  automatic_construction: false
+  hierarchical: yes
+  probabilistic: yes
+  differentiable: no
+  automatic_construction: no
   hyperparameters:
     - continuous
     - discrete
   pipelines:
-    single: false
-    fixed: false
-    linear: false
-    graph: false
-  invalid_pipelines: false
-extensible: false
-accessible_models: true
-portable_models: true
+    single: no
+    fixed: no
+    linear: no
+    graph: no
+  invalid_pipelines: no
+extensible: no
+accessible_models: yes
+portable_models: yes
 computational_resources:
-  gpu: true
-  tpu: false
-  cluster: false
+  gpu: yes
+  tpu: no
+  cluster: no

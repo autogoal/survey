@@ -1,22 +1,22 @@
 name: AI Builder
 website: null
-open_source: false
+open_source: no
 institutions:
   - Microsoft
 repository: null
 license: null
 references: []
-cli: true
-gui: true
-http: false
-library: true
+cli: yes
+gui: yes
+http: no
+library: yes
 programming_languages: []
 domains:
   - images
   - nlp
   - tabular
-multi_domain: false
-multi_task: false
+multi_domain: no
+multi_task: no
 techniques:
   - pretrained
 ml_libraries: []
@@ -27,25 +27,25 @@ tasks:
   - domain_preprocessing
   - structured_prediction
   - segmentation
-distillation: false
+distillation: no
 meta_learning: []
 search_strategies: []
 search_space:
-  hierarchical: false
-  probabilistic: false
-  differentiable: false
-  automatic_construction: false
+  hierarchical: no
+  probabilistic: no
+  differentiable: no
+  automatic_construction: no
   hyperparameters: []
   pipelines:
-    single: false
-    fixed: false
-    linear: false
-    graph: false
-  invalid_pipelines: false
-extensible: false
-accessible_models: false
-portable_models: false
+    single: no
+    fixed: no
+    linear: no
+    graph: no
+  invalid_pipelines: no
+extensible: no
+accessible_models: no
+portable_models: no
 computational_resources:
-  gpu: true
-  tpu: false
-  cluster: false
+  gpu: yes
+  tpu: no
+  cluster: no

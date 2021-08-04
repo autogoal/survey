@@ -1,22 +1,22 @@
 name: Azure ML
 website: null
-open_source: false
+open_source: no
 institutions:
   - Microsoft
 repository: null
 license: null
 references: []
-cli: true
-gui: true
-http: false
-library: true
+cli: yes
+gui: yes
+http: no
+library: yes
 programming_languages: []
 domains:
   - nlp
   - tabular
   - time_series
-multi_domain: false
-multi_task: false
+multi_domain: no
+multi_task: no
 techniques:
   - linear_models
   - trees
@@ -33,29 +33,29 @@ tasks:
   - feature_selection
   - feature_preprocessing
   - domain_preprocessing
-distillation: false
+distillation: no
 meta_learning: []
 search_strategies:
   - bayesian
   - random
 search_space:
-  hierarchical: false
-  probabilistic: true
-  differentiable: false
-  automatic_construction: false
+  hierarchical: no
+  probabilistic: yes
+  differentiable: no
+  automatic_construction: no
   hyperparameters:
     - continuous
     - discrete
   pipelines:
-    single: false
-    fixed: true
-    linear: false
-    graph: false
-  invalid_pipelines: false
-extensible: false
-accessible_models: true
-portable_models: true
+    single: no
+    fixed: yes
+    linear: no
+    graph: no
+  invalid_pipelines: no
+extensible: no
+accessible_models: yes
+portable_models: yes
 computational_resources:
-  gpu: true
-  tpu: false
-  cluster: false
+  gpu: yes
+  tpu: no
+  cluster: no
