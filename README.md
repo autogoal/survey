@@ -27,41 +27,40 @@ Most of the features are self-explanatory.
 
 Characteristics about the basic information of the system as a software product.
 
-- **`name`**: Name of the system.
-- **`website`**: The URL of the main website or documentation.
-- **`open_source`**: Whether the system is open-source.
-- **`institutions`**: List of businesses or academic institutions that directly support the development of the system, and/or hold intellectual property over it.
-- **`repository`**: If it's open-source, link of a public source code repository, otherwise `null`.
-- **`license`**: If it's open-source, a license key, otherwise `null`.
-- **`references`**: List of links to relevant papers, preferably DOIs or other universal handlers, but can also be links to arxiv.org or other repositories sorted by most relevant papers, not date.
+- **`name`** (`str`): Name of the system.
+- **`website`** (`str`): The URL of the main website or documentation.
+- **`open_source`** (`bool`): Whether the system is open-source.
+- **`institutions`** (`list[str]`): List of businesses or academic institutions that directly support the development of the system, and/or hold intellectual property over it.
+- **`repository`** (`str`): If it's open-source, link of a public source code repository, otherwise `null`.
+- **`license`** (`str`): If it's open-source, a license key, otherwise `null`.
+- **`references`** (`list[str]`): List of links to relevant papers, preferably DOIs or other universal handlers, but can also be links to arxiv.org or other repositories sorted by most relevant papers, not date.
 
 ### User interfaces
 
 Characteristics describing how the users interact with the system.
 
-- **`cli`**: Whether the system has a command line interface
-- **`gui`**: Whether the system has a graphic user interface
-- **`http`**: Whether the system can used from an HTTP RESTful API
-- **`library`**: Whether the system can be linked as a code library
-- **`programming_languages`**: List of programming languages in which the system can be used, i.e., it is either natively coded in that language or there are maintained bindings
-    (as opposed to using language X's standard way to call code from language Y).
+- **`cli`** (`bool`): Whether the system has a command line interface
+- **`gui`** (`bool`): Whether the system has a graphic user interface
+- **`http`** (`bool`): Whether the system can used from an HTTP RESTful API
+- **`library`** (`bool`): Whether the system can be linked as a code library
+- **`programming_languages`** (`list[str]`): List of programming languages in which the system can be used, i.e., it is either natively coded in that language or there are maintained bindings (as opposed to using language X's standard way to call code from language Y).
 
 ### Domains
 
 Characteristics describing the domains in which the system can be applied, which roughly correspond to the types of input data that the system can handle.
 
-- **`domains`**: Domains in which the system can be deployed. Valid values are:
+- **`domains`** (`list[str]`): Domains in which the system can be deployed. Valid values are:
   - `images`
   - `nlp`
   - `tabular`
   - `time_series`
-- **`multi_domain`**: Whether the system supports multiple domains for a single workflow, e.g., by allowing multiple inputs of different types simultaneously
+- **`multi_domain`** (`bool`): Whether the system supports multiple domains for a single workflow, e.g., by allowing multiple inputs of different types simultaneously
 
 ### Techniques
 
 Characteristics describing the actual models and techniques used in the system, and the underlying ML libraries where those techniques are implemented.
 
-- **`techniques`**: List of high-level techniques that are available in the systems, broadly classified according to model families. Valid values are:
+- **`techniques`** (`list[str]`): List of high-level techniques that are available in the systems, broadly classified according to model families. Valid values are:
   - `linear_models`
   - `trees`
   - `bayesian`
@@ -74,8 +73,8 @@ Characteristics describing the actual models and techniques used in the system, 
   - `ensembles`
   - `ad_hoc`
     > 📝 indicates non-ML algorithms, e.g., tokenizers...
-- **`distillation`**: Whether the system supports model distillation
-- **`ml_libraries`**: List of ML libraries that support the system, i.e., where the techniques are actually implemented, if any. Valid values are lists of strings. Some examples are:
+- **`distillation`** (`bool`): Whether the system supports model distillation
+- **`ml_libraries`** (`list[str]`): List of ML libraries that support the system, i.e., where the techniques are actually implemented, if any. Valid values are lists of strings. Some examples are:
   - `scikit-learn`
   - `keras`
   - `pytorch`
@@ -87,7 +86,7 @@ Characteristics describing the actual models and techniques used in the system, 
 
 Characteristics describing the types of tasks, or problems, in which the system can be applied, which roughly correspond to the types of outputs supported.
 
-- **`tasks`**: List of high-level tasks the system can perform automatically. Valid values are:
+- **`tasks`** (`list[str]`): List of high-level tasks the system can perform automatically. Valid values are:
   - `classification`
   - `structured_prediction`
   - `structured_generation`
@@ -111,7 +110,7 @@ Characteristics describing the types of tasks, or problems, in which the system 
 
 Characteristics describing the optimizaction/search strategies used for model search and/or hyperparameter tunning.
 
-- **`search_strategies`**: List of high-level search strategies that are available in the system. Valid values are:
+- **`search_strategies`** (`list[str]`): List of high-level search strategies that are available in the system. Valid values are:
   - `random`
   - `evolutionary`
   - `gradient_descent`
@@ -122,7 +121,7 @@ Characteristics describing the optimizaction/search strategies used for model se
   - `reinforcement_learning`
   - `constructive`
   - `monte_carlo`
-- **`meta_learning`**: If the system includes meta-learning, list of broadly classified techniques used. Valid values are:
+- **`meta_learning`** (`list[str]`): If the system includes meta-learning, list of broadly classified techniques used. Valid values are:
   - `portfolio`
   - `warm_start`
 
@@ -131,33 +130,33 @@ Characteristics describing the optimizaction/search strategies used for model se
 Characteristics describing the search space, the types of hyperparameters that can be optimized, and the types of ML pipelines that can be represented in this space.
 
 - **`search_space`**: High-level characteristics of the hyperparameter search space.
-  - **`hierarchical`**: If there are hyperparameters that only make sense conditioned to others.
-  - **`probabilistic`**: If the hyperparameter space has an associated probabilistic model.
-  - **`differentiable`**: If the hyperameter space can be used for gradient descent.
-  - **`automatic_construction`**: If the global structure of the hyperparameter space is inferred automatically from, e.g., type annotations or model's documentation, as opposed to explicitely defined by the developers or the user.
-  - **`hyperparameters`**: Types of hyperparameters that can be optimized. Valid values are:
+  - **`hierarchical`** (`bool`): If there are hyperparameters that only make sense conditioned to others.
+  - **`probabilistic`** (`bool`): If the hyperparameter space has an associated probabilistic model.
+  - **`differentiable`** (`bool`): If the hyperameter space can be used for gradient descent.
+  - **`automatic_construction`** (`bool`): If the global structure of the hyperparameter space is inferred automatically from, e.g., type annotations or model's documentation, as opposed to explicitely defined by the developers or the user.
+  - **`hyperparameters`** (`list[str]`): Types of hyperparameters that can be optimized. Valid values are:
     - `continuous`
     - `discrete`
     - `categorical`
     - `conditional`
   - **`pipelines`**: Types of pipelines that can be discovered by the AutoML process. Each of the following keys is boolean.
-    - **`single`**: A single estimator (or model in general)
-    - **`fixed`**: A fixed pipeline with several, but predefined, steps
-    - **`linear`**: A variable-length pipeline where each step feeds on the immediately previous' output
-    - **`graph`**: An arbitrarily graph-shaped pipeline where each step can feed on any of the previous'
-  - **`invalid_pipelines`**: Whether the seach space contains potentially invalid pipelines that are only discovered when evaluated, e.g., allowing a dense-only estimator to precede a sparse transformer.
+    - **`single`** (`bool`): A single estimator (or model in general)
+    - **`fixed`** (`bool`): A fixed pipeline with several, but predefined, steps
+    - **`linear`** (`bool`): A variable-length pipeline where each step feeds on the immediately previous output
+    - **`graph`** (`bool`): An arbitrarily graph-shaped pipeline where each step can feed on any of the previous outputs
+  - **`invalid_pipelines`** (`bool`): Whether the seach space contains potentially invalid pipelines that are only discovered when evaluated, e.g., allowing a dense-only estimator to precede a sparse transformer.
 
 ### Software architecture
 
 Other characteristics describing general features of the system as a software product.
 
-- **`extensible`**: Whether the system is designed to be extensible, in the sense that a user can add a single new type of model, or search algorithm, etc., in an easy manner, not needing to modify any part of the system/
-- **`accessible_models`**: Whether the models obtained from the AutoML process can be freely inspected by the user up to the level of individual parameters (e.g., neural network weights).
-- **`portable_models`**: Whether the models obtained can be exported out of the AutoML system, either on a standard format, or, at least, in a format native of the underlying ML library,such that they can be deployed on another platform without depending on the AutoML system itself.
+- **`extensible`** (`bool`): Whether the system is designed to be extensible, in the sense that a user can add a single new type of model, or search algorithm, etc., in an easy manner, not needing to modify any part of the system/
+- **`accessible_models`** (`bool`): Whether the models obtained from the AutoML process can be freely inspected by the user up to the level of individual parameters (e.g., neural network weights).
+- **`portable_models`** (`bool`): Whether the models obtained can be exported out of the AutoML system, either on a standard format, or, at least, in a format native of the underlying ML library,such that they can be deployed on another platform without depending on the AutoML system itself.
 - **`computational_resources`**: Computational resources that, if available, can be leveraged by the system.
-  - **`gpu`**: Whether the system supports GPUs.
-  - **`tpu`**: Whether the system supports TPUs.
-  - **`cluster`**: Whether the system supports cluster-based parallelism.
+  - **`gpu`** (`bool`): Whether the system supports GPUs.
+  - **`tpu`** (`bool`): Whether the system supports TPUs.
+  - **`cluster`** (`bool`): Whether the system supports cluster-based parallelism.
 
 ## How to contribute
 
