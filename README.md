@@ -155,8 +155,8 @@ Other characteristics describing general features of the system as a software pr
 - **`accessible_models`**: Whether the models obtained from the AutoML process can be freely inspected by the user up to the level of individual parameters (e.g., neural network weights).
 - **`portable_models`**: Whether the models obtained can be exported out of the AutoML system, either on a standard format, or, at least, in a format native of the underlying ML library,such that they can be deployed on another platform without depending on the AutoML system itself.
 - **`computational_resources`**: Computational resources that, if available, can be leveraged by the system.
-  - **`gpu`**: Whether the system supports GPUs
-  - **`tpu`**: Whether the system supports TPUs
+  - **`gpu`**: Whether the system supports GPUs.
+  - **`tpu`**: Whether the system supports TPUs.
   - **`cluster`**: Whether the system supports cluster-based parallelism.
 
 ## How to contribute
