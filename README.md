@@ -164,7 +164,8 @@ Other characteristics describing general features of the system as a software pr
 If you are an author or a user of any practical AutoML system that roughly fits the previous criteria, we would love to have your contributions.
 You can add new systems, add information for existing ones, or fix anything that is incorrect.
 
-To do this, either create a new file or modifying an existing file in [data/systems](data/systems).
+To do this, either create a new or modify an existing file in [data/systems](data/systems).
 Once done, you can run `make check` to ensure that the modifications are valid with respect to the schema defined in [scripts/models.py](scripts/models.py).
-If you need to add new fields, or new values to any of the enumerations defined, feel free to modify the corresponding schema as well (and modify both `_template.yml` and this README).
+If you need to add new fields, or new values to any of the enumerations defined, feel free to modify the corresponding schema as well (and modify both [data/systems/_template.yml](data/systems/_template.yml) and this README).
+
 Once validated, you can open a pull request.
