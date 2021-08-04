@@ -18,7 +18,7 @@ What matters is that it is intended to be used in practice, as opposed to, say, 
 For each of them we are creating a system card that describes, in our opinion, the most relevant features of the system, both from the scientific and the engineering points of view.
 To describe an AutoML system, we use a YAML-based definition.
 Most of the features are self-explanatory.
-Check [data/systems/template.yml](data/systems/template.yml) for an overview and starting template.
+Check [data/systems/_template.yml](data/systems/_template.yml) for an overview and starting template.
 
 ## How to contribute
 
