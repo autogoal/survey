@@ -1,0 +1,56 @@
+name: AutoSklearn
+website: null
+open_source: true
+institutions: []
+repository: null
+license: null
+references: []
+cli: true
+gui: false
+http: false
+library: true
+programming_languages: []
+domains:
+  - tabular
+multi_domain: false
+multi_task: false
+techniques:
+  - linear_models
+  - trees
+  - bayesian
+  - kernel_machines
+  - ensembles
+ml_libraries: []
+tasks:
+  - classification
+  - regression
+  - imputation
+  - feature_selection
+  - feature_preprocessing
+  - dimensionality_reduction
+distillation: false
+meta_learning:
+  - warm_start
+search_strategies:
+  - bayesian
+search_space:
+  hierarchical: true
+  probabilistic: true
+  differentiable: false
+  automatic_construction: false
+  hyperparameters:
+    - continuous
+    - discrete
+  pipelines:
+    single: false
+    fixed: true
+    linear: false
+    graph: false
+  invalid_pipelines: false
+extensible: true
+accessible_models: true
+portable_models: false
+computational_resources:
+  gpu: false
+  tpu: false
+  cluster: false

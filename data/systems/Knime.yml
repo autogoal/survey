@@ -1,0 +1,53 @@
+name: Knime
+website: null
+open_source: true
+institutions: []
+repository: null
+license: null
+references: []
+cli: true
+gui: true
+http: false
+library: true
+programming_languages: []
+domains:
+  - tabular
+multi_domain: false
+multi_task: false
+techniques:
+  - linear_models
+  - trees
+  - bayesian
+ml_libraries: []
+tasks:
+  - classification
+  - imputation
+  - feature_preprocessing
+  - dimensionality_reduction
+distillation: false
+meta_learning: []
+search_strategies:
+  - bayesian
+  - random
+  - gradient_descent
+search_space:
+  hierarchical: true
+  probabilistic: false
+  differentiable: false
+  automatic_construction: false
+  hyperparameters:
+    - continuous
+    - discrete
+  pipelines:
+    single: false
+    fixed: true
+    linear: false
+    graph: false
+  invalid_pipelines: false
+extensible: false
+accessible_models: true
+portable_models: true
+computational_resources:
+  gpu: true
+  tpu: false
+  cluster: false

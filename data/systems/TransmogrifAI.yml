@@ -1,0 +1,59 @@
+name: TransmogrifAI
+website: null
+open_source: true
+institutions:
+  - Salesforce
+repository: null
+license: null
+references: []
+cli: true
+gui: false
+http: false
+library: true
+programming_languages: []
+domains:
+  - nlp
+  - tabular
+  - time_series
+multi_domain: true
+multi_task: false
+techniques:
+  - linear_models
+  - trees
+  - bayesian
+  - kernel_machines
+  - ad_hoc
+ml_libraries: []
+tasks:
+  - classification
+  - regression
+  - imputation
+  - feature_selection
+  - feature_preprocessing
+  - domain_preprocessing
+  - structured_prediction
+distillation: false
+meta_learning: []
+search_strategies:
+  - random
+search_space:
+  hierarchical: true
+  probabilistic: false
+  differentiable: false
+  automatic_construction: true
+  hyperparameters:
+    - continuous
+    - discrete
+  pipelines:
+    single: false
+    fixed: false
+    linear: false
+    graph: true
+  invalid_pipelines: false
+extensible: true
+accessible_models: false
+portable_models: false
+computational_resources:
+  gpu: true
+  tpu: false
+  cluster: false

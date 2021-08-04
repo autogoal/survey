@@ -1,0 +1,56 @@
+name: AutoGluon
+website: null
+open_source: true
+institutions:
+  - Amazon
+repository: null
+license: null
+references: []
+cli: true
+gui: false
+http: false
+library: true
+programming_languages: []
+domains:
+  - images
+  - nlp
+  - tabular
+multi_domain: true
+multi_task: false
+techniques:
+  - linear_models
+  - trees
+  - mlp
+  - pretrained
+  - ensembles
+ml_libraries: []
+tasks:
+  - classification
+  - regression
+  - feature_selection
+  - feature_preprocessing
+  - domain_preprocessing
+  - segmentation
+distillation: true
+meta_learning: []
+search_strategies:
+  - constructive
+search_space:
+  hierarchical: true
+  probabilistic: false
+  differentiable: false
+  automatic_construction: false
+  hyperparameters: []
+  pipelines:
+    single: false
+    fixed: true
+    linear: false
+    graph: false
+  invalid_pipelines: false
+extensible: true
+accessible_models: true
+portable_models: false
+computational_resources:
+  gpu: true
+  tpu: false
+  cluster: false

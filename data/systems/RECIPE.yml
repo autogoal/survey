@@ -1,0 +1,53 @@
+name: RECIPE
+website: null
+open_source: true
+institutions: []
+repository: null
+license: null
+references: []
+cli: true
+gui: false
+http: false
+library: true
+programming_languages: []
+domains:
+  - tabular
+multi_domain: false
+multi_task: false
+techniques:
+  - linear_models
+  - trees
+  - bayesian
+  - kernel_machines
+ml_libraries: []
+tasks:
+  - classification
+  - imputation
+  - feature_selection
+  - feature_preprocessing
+  - dimensionality_reduction
+distillation: false
+meta_learning: []
+search_strategies:
+  - evolutionary
+search_space:
+  hierarchical: true
+  probabilistic: false
+  differentiable: false
+  automatic_construction: false
+  hyperparameters:
+    - continuous
+    - discrete
+  pipelines:
+    single: false
+    fixed: false
+    linear: true
+    graph: false
+  invalid_pipelines: false
+extensible: false
+accessible_models: true
+portable_models: false
+computational_resources:
+  gpu: false
+  tpu: false
+  cluster: false

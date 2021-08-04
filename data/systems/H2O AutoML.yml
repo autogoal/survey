@@ -1,0 +1,50 @@
+name: H2O AutoML
+website: null
+open_source: true
+institutions: []
+repository: null
+license: null
+references: []
+cli: true
+gui: true
+http: false
+library: true
+programming_languages: []
+domains:
+  - tabular
+multi_domain: false
+multi_task: false
+techniques:
+  - linear_models
+  - trees
+  - mlp
+  - ensembles
+ml_libraries: []
+tasks:
+  - classification
+  - regression
+  - imputation
+  - feature_preprocessing
+distillation: false
+meta_learning: []
+search_strategies:
+  - random
+search_space:
+  hierarchical: false
+  probabilistic: false
+  differentiable: false
+  automatic_construction: false
+  hyperparameters: []
+  pipelines:
+    single: false
+    fixed: false
+    linear: false
+    graph: false
+  invalid_pipelines: false
+extensible: false
+accessible_models: true
+portable_models: true
+computational_resources:
+  gpu: true
+  tpu: false
+  cluster: false

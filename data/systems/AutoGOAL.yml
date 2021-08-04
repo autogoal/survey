@@ -1,0 +1,98 @@
+name: AutoGOAL
+website: https://autogoal.github.io
+open_source: yes
+institutions:
+  - University of Havana
+  - University of Alicante
+repository: https://github.com/autogoal/autogoal
+license: mit
+
+references:
+  - https://www.automl.org/wp-content/uploads/2020/07/AutoML_2020_paper_20.pdf
+  - https://doi.org/10.1016/j.ins.2020.07.035
+  - https://www.aclweb.org/anthology/2020.coling-main.317/
+
+cli: yes
+gui: no
+http: no
+library: yes
+programming_languages:
+  - python
+
+domains:
+  - images
+  - nlp
+  - tabular
+
+multi_domain: yes
+multi_task: no
+
+techniques:
+  - linear_models
+  - trees
+  - bayesian
+  - kernel_machines
+  - graphical_models
+  - mlp
+  - cnn
+  - rnn
+  - pretrained
+  - ad_hoc
+
+ml_libraries:
+  - scikit-learn
+  - keras
+  - pytorch
+  - nltk
+  - spacy
+  - transformers
+
+tasks:
+  - classification
+  - structured_prediction
+  - regression
+  - clustering
+  - imputation
+  - segmentation
+  - feature_preprocessing
+  - feature_selection
+  - data_augmentation
+  - dimensionality_reduction
+  - data_preprocessing
+  - domain_preprocessing
+
+distillation: no
+meta_learning: []
+
+search_strategies:
+  - random
+  - evolutionary
+
+search_space:
+  hierarchical: yes
+  probabilistic: yes
+  differentiable: no
+  automatic_construction: yes
+
+  hyperparameters:
+    - continuous
+    - discrete
+    - categorical
+    - conditional
+
+  pipelines:
+    single: yes
+    fixed: yes
+    linear: yes
+    graph: yes
+
+  invalid_pipelines: yes
+
+extensible: yes
+accessible_models: yes
+portable_models: no
+
+computational_resources:
+  gpu: yes
+  tpu: no
+  cluster: no
