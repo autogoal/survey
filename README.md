@@ -165,3 +165,7 @@ Once done, you can run `make check` to ensure that the modifications are valid w
 If you need to add new fields, or new values to any of the enumerations defined, feel free to modify the corresponding schema as well (and modify both [data/systems/_template.yml](data/systems/_template.yml) and this README).
 
 Once validated, you can open a pull request.
+
+## License
+
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
