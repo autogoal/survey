@@ -1,4 +1,5 @@
 from enum import Enum
+import enum
 
 class StrEnum(str, Enum):
     """
@@ -32,3 +33,24 @@ class StrEnum(str, Enum):
         Return the lower-cased version of the member name.
         """
         return name.lower()
+
+
+
+def timer(timeout=24, step=0.5):
+    import itertools
+    import time
+
+    sequence = itertools.cycle("🕛🕧🕐🕜🕑🕝🕒🕞🕓🕟🕔🕠🕕🕡🕖🕢🕗🕣🕘🕤🕙🕥🕚🕦")
+
+    print(next(sequence), end="")
+    start = time.time()
+
+    while time.time() < start + timeout:
+        time.sleep(step)
+        print("\r" + next(sequence), end="")
+
+    print("\r⏰")
+
+
+if __name__ == "__main__":
+    timer()
