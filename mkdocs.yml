@@ -19,9 +19,9 @@ markdown_extensions:
     - markdown_include.include
 
 nav:
-    - Introduction: intro.md
+    - Introduction: index.md
     - Search Space: search-space.md
-    - Search Strategies: search-strategies.md
-    - Performance Estimation: performance.estimation.md
+    - Search Strategies: search-strategy.md
+    - Performance Estimation: performance-estimation.md
     - Comparison: comparison.md
     - Systems: systems.md
