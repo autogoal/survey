@@ -16,7 +16,7 @@ Based on the analized systems we defined a set of conceptual features that help 
 These features involve both internal and external characteristics of the systems.
 The internal characteristics refer to how the system works, e.g., the techniques it uses for optimizing and searching machine learning pipelines, and the types of hyperparameters it can represent.
 The external characteristics refer to the types of tasks that can be solved with the system and the way the user interacts with it.
-Based on these characteristics, we created a taxonomy of commonly used theoretical concepts in AutoML, which guide this survey.
+Based on these characteristics, we created a taxonomy of commonly used theoretical concepts, principle, and paradigims in the AutoML field, which guide this survey.
 We provide follow-up references on many of the topics we cover.
 
 ## AutoML in a nutshell
