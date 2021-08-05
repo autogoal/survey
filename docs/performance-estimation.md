@@ -1,1 +1,1 @@
-# Performance estimation strategies
+# Performance estimation functions

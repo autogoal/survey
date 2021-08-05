@@ -20,3 +20,23 @@ Based on these characteristics, we created a taxonomy of commonly used theoretic
 We provide follow-up references on many of the topics we cover.
 
 ## AutoML in a nutshell
+
+At its core, AutoML is about providing tools to automate the process of designing, training, validating, and deploying a machine learning pipeline for a given problem.
+ML pipelines come in varied flavour, but they are often composed of a set of atomic steps~(e.g., a feature selection algorithm, or a specific machine learning model), each of which can be configured by one or more *hyperparameters*~(e.g., the number and type of layers and neurons per layer in a neural network, or the regularization factor in logistic regression).
+Each step performs some task, often associated with an input data source, and producing an output that is fed to subsequent steps.
+The objective is to find a pipeline that is optimal, or close to optimal, in solving a given machine learning problem.
+
+Thus, we can see an AutoML system, on a broad perspective, as a computational solution that receives a machine learning problem definition of some kind~(e.g., classification, regression, clustering) and associated training data, and it outputs a suitable machine learning pipeline, composed of one or more atomic steps, that is close to optimal in solve that problem according to some predefined performance metric(s).
+
+According to how flexible these pipelines are, we can identify four basic types:
+
+- **Single model pipelines**: when a single model is trained end-to-end, which is often an estimator~(classifier or regressor). An example is training a neural network end-to-end for image classification, or a linear regression model for price estimation on tabular data.
+
+- **Fixed pipelines**: when a few fixed atomic steps are considered, e.g., data preprocessing, feature selection, and estimator. In each step, several different algorithms with they respective hyperparameters can be considered.
+
+- **Linear pipelines**:
+
+- **Graph-based pipelines**:
+
+The core of any AutoML system is a machine learning pipeline optimization engine.
+Three key components can be identified in any such engine: a search space, a search strategy, and a performance estimation function.
