@@ -47,6 +47,26 @@ Furthermore, we often want to optimize more than one performance indicator, whic
 These three components make up the core of what we call the "internal characteristics" of an AutoML system.
 In this survey, we are also interested in "external" characteristics, such as the types of machine learning tasks that can be solved, the interfaces by which users interact with the system, the steps of the machine learning workflow that are covered, and other software engineering concerns.
 
+## Flavours of AutoML
+
+Over the years several different conceptualizations of AutoML have been proposed, some more flexible than others.
+We'll review next some of the most common flavours of AutoML from a high-level point of view, without dwelving too deep into their specifities.
+Afterwards, when we have introduced all the building blocks of the AutoML process, we'll be able to look back at these definitions in more details.
+
+### Hyperparameter optimization
+
+Hyperparameter optimization is a huge field, with lots of internal research.
+
+### Full model selection
+
+### Combined selection and hyperparameter optimization
+
+### Neural architecture search
+
+### Heterogenous automated machine learning
+
+## What's next
+
 In the next few sections we'll review the basic theory behind the core AutoML process.
 We'll introduce the most common types of search spaces and strategies, and some interesting performance estimation functions.
 Finally, we'll present a comparison of many practical AutoML systems in terms of all of these characteristics, and provide some rules guidelines for choosing an appropiate tool for a given task.
