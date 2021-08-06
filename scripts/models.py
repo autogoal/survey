@@ -97,7 +97,10 @@ class ComputationalResources(pydantic.BaseModel):
 
 
 class AutoMLSystem(pydantic.BaseModel):
+    key: str # The filename stem from where the system was built
+
     name: str
+    description: Optional[str] = ""
     website: Optional[pydantic.HttpUrl]
     open_source: bool
     institutions: List[str]
@@ -136,7 +139,7 @@ class AutoMLSystem(pydantic.BaseModel):
     def from_yaml(cls, path: Path):
         with path.open() as fp:
             obj = yaml.safe_load(fp)
-            return AutoMLSystem(**obj)
+            return AutoMLSystem(**obj, key=path.stem)
 
 
 if __name__ == "__main__":

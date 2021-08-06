@@ -1,5 +1,7 @@
 # Name of the system
 name: My AutoML System
+# Short description
+description: An awesome AutoML system.
 # The URL of the main website or documentation
 website: https://example.com/...
 # Whether the system is open-source

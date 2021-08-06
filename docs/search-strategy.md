@@ -12,4 +12,6 @@
 
 ## Reinforced learning
 
+## Constructive methods
+
 ## Monte Carlo tree search
