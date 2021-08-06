@@ -42,7 +42,11 @@ Thus, an effective search strategy must be able to quickly find promising region
 Finally, the [performance estimation function](./performance-estimation) measures the expected performance of any given pipeline in the task at hand.
 The simplest performance estimation consists in evaluating the pipeline in a validation dataset, but evaluating machine learning algorithms is a costly task, especially when using models with millions or billions of parameters, like the largest neural networks.
 Thus, we often want to estimate this performance either by evaluating in smaller sets or by creating surrogate functions that approximate it.
-Furthermore, we often want to optimize more than one performance indicator, which may be in contradiction, such as accuracy versus model complexity~(to reduce inference time).
+Furthermore, we often want to optimize more than one performance indicator, which may be in contradiction, such as accuracy versus model complexity (to reduce inference time).
 
 These three components make up the core of what we call the "internal characteristics" of an AutoML system.
 In this survey, we are also interested in "external" characteristics, such as the types of machine learning tasks that can be solved, the interfaces by which users interact with the system, the steps of the machine learning workflow that are covered, and other software engineering concerns.
+
+In the next few sections we'll review the basic theory behind the core AutoML process.
+We'll introduce the most common types of search spaces and strategies, and some interesting performance estimation functions.
+Finally, we'll present a comparison of many practical AutoML systems in terms of all of these characteristics, and provide some rules guidelines for choosing an appropiate tool for a given task.

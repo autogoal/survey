@@ -4,24 +4,30 @@ repo_url: https://github.com/autogoal/survey
 edit_uri: edit/main/docs
 
 theme:
-    name: material
-    feature:
-        tabs: true
-    palette:
-        primary: black
-        accent: black
+  name: material
+  feature:
+    tabs: true
+  palette:
+    primary: black
+    accent: black
+
+extra_javascript:
+  - javascripts/config.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 markdown_extensions:
-    - codehilite
-    - toc:
-        permalink: true
-    - admonition
-    - markdown_include.include
-
+  - codehilite
+  - toc:
+      permalink: true
+  - admonition
+  - markdown_include.include
+  - pymdownx.arithmatex:
+      generic: true
 nav:
-    - Introduction: index.md
-    - Search Space: search-space.md
-    - Search Strategies: search-strategy.md
-    - Performance Estimation: performance-estimation.md
-    - Comparison: comparison.md
-    - Systems: systems.md
+  - Introduction: index.md
+  - Search Space: search-space.md
+  - Search Strategies: search-strategy.md
+  - Performance Estimation: performance-estimation.md
+  - Comparison: comparison.md
+  - Systems: systems.md
