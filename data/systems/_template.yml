@@ -129,7 +129,7 @@ search_space:
   # If the global structure of the hyperparameter space is inferred automatically from,
   # e.g., type annotations or model's documentation, as opposed to explicitely
   # defined by the developers or the user
-  automatic_construction: yes
+  automatic: yes
 
   # Types of hyperparameters that can be optimized
   hyperparameters:
@@ -151,7 +151,7 @@ search_space:
 
   # Whether the seach space contains potentially invalid pipelines that are only discovered
   # when evaluated, e.g., allowing a dense-only estimator to precede a sparse transformer
-  invalid_pipelines: yes
+  robust: no
 
 # Whether the system is designed to be extensible, in the sense that a user can add
 # a single new type of model, or search algorithm, etc., in an easy manner,
@@ -159,11 +159,11 @@ search_space:
 extensible: yes
 # Whether the models obtained from the AutoML process can be freely inspected by the user
 # up to the level of individual parameters (e.g., neural network weights)
-accessible_models: yes
+accessible: yes
 # Whether the models obtained can be exported out of the AutoML system, either on a
 # standard format, or, at least, in a format native of the underlying ML library,
 # such that they can be deployed on another platform without depending on the AutoML system itself.
-portable_models: no
+portable: no
 
 # Computational resources that, if available, can be leveraged by the system
 computational_resources:

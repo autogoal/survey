@@ -28,6 +28,7 @@ Most of the features are self-explanatory.
 Characteristics about the basic information of the system as a software product.
 
 - **`name`** (`str`): Name of the system.
+- **`description`** (`str`): A short (2-4 sentences) description of the sytem.
 - **`website`** (`str`): The URL of the main website or documentation.
 - **`open_source`** (`bool`): Whether the system is open-source.
 - **`institutions`** (`list[str]`): List of businesses or academic institutions that directly support the development of the system, and/or hold intellectual property over it.
@@ -130,7 +131,7 @@ Characteristics describing the search space, the types of hyperparameters that c
   - **`hierarchical`** (`bool`): If there are hyperparameters that only make sense conditioned to others.
   - **`probabilistic`** (`bool`): If the hyperparameter space has an associated probabilistic model.
   - **`differentiable`** (`bool`): If the hyperameter space can be used for gradient descent.
-  - **`automatic_construction`** (`bool`): If the global structure of the hyperparameter space is inferred automatically from, e.g., type annotations or model's documentation, as opposed to explicitely defined by the developers or the user.
+  - **`automatic`** (`bool`): If the global structure of the hyperparameter space is inferred automatically from, e.g., type annotations or model's documentation, as opposed to explicitely defined by the developers or the user.
   - **`hyperparameters`** (`list[str]`): Types of hyperparameters that can be optimized. Valid values are:
     - `continuous`
     - `discrete`
@@ -141,15 +142,15 @@ Characteristics describing the search space, the types of hyperparameters that c
     - **`fixed`** (`bool`): A fixed pipeline with several, but predefined, steps
     - **`linear`** (`bool`): A variable-length pipeline where each step feeds on the immediately previous output
     - **`graph`** (`bool`): An arbitrarily graph-shaped pipeline where each step can feed on any of the previous outputs
-  - **`invalid_pipelines`** (`bool`): Whether the seach space contains potentially invalid pipelines that are only discovered when evaluated, e.g., allowing a dense-only estimator to precede a sparse transformer.
+  - **`robust`** (`bool`): Whether the seach space contains potentially invalid pipelines that are only discovered when evaluated, e.g., allowing a dense-only estimator to precede a sparse transformer.
 
 ### Software architecture
 
 Other characteristics describing general features of the system as a software product.
 
 - **`extensible`** (`bool`): Whether the system is designed to be extensible, in the sense that a user can add a single new type of model, or search algorithm, etc., in an easy manner, not needing to modify any part of the system/
-- **`accessible_models`** (`bool`): Whether the models obtained from the AutoML process can be freely inspected by the user up to the level of individual parameters (e.g., neural network weights).
-- **`portable_models`** (`bool`): Whether the models obtained can be exported out of the AutoML system, either on a standard format, or, at least, in a format native of the underlying ML library,such that they can be deployed on another platform without depending on the AutoML system itself.
+- **`accessible`** (`bool`): Whether the models obtained from the AutoML process can be freely inspected by the user up to the level of individual parameters (e.g., neural network weights).
+- **`portable`** (`bool`): Whether the models obtained can be exported out of the AutoML system, either on a standard format, or, at least, in a format native of the underlying ML library,such that they can be deployed on another platform without depending on the AutoML system itself.
 - **`computational_resources`**: Computational resources that, if available, can be leveraged by the system.
   - **`gpu`** (`bool`): Whether the system supports GPUs.
   - **`tpu`** (`bool`): Whether the system supports TPUs.

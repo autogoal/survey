@@ -9,7 +9,8 @@ cli: yes
 gui: no
 http: no
 library: yes
-programming_languages: []
+programming_languages:
+  - Python
 domains:
   - tabular
 multi_domain: no
@@ -34,7 +35,7 @@ search_space:
   hierarchical: yes
   probabilistic: no
   differentiable: no
-  automatic_construction: no
+  automatic: no
   hyperparameters:
     - continuous
     - discrete
@@ -43,10 +44,10 @@ search_space:
     fixed: no
     linear: yes
     graph: no
-  invalid_pipelines: no
+  robust: yes
 extensible: no
-accessible_models: yes
-portable_models: no
+accessible: yes
+portable: no
 computational_resources:
   gpu: no
   tpu: no

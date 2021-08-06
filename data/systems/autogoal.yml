@@ -72,7 +72,7 @@ search_space:
   hierarchical: yes
   probabilistic: yes
   differentiable: no
-  automatic_construction: yes
+  automatic: yes
 
   hyperparameters:
     - continuous
@@ -86,11 +86,11 @@ search_space:
     linear: yes
     graph: yes
 
-  invalid_pipelines: yes
+  robust: no
 
 extensible: yes
-accessible_models: yes
-portable_models: no
+accessible: yes
+portable: no
 
 computational_resources:
   gpu: yes

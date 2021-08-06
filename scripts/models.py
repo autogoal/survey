@@ -81,13 +81,13 @@ class SearchSpace(pydantic.BaseModel):
     hierarchical: bool
     probabilistic: bool
     differentiable: bool
-    automatic_construction: bool
+    automatic: bool
+    robust: bool
 
     hyperparameters: List[Hyperparameters]
 
     pipelines: Pipeline
 
-    invalid_pipelines: bool
 
 
 class ComputationalResources(pydantic.BaseModel):
@@ -131,8 +131,8 @@ class AutoMLSystem(pydantic.BaseModel):
     meta_learning: List[MetaLearning]
 
     extensible: bool
-    accessible_models: bool
-    portable_models: bool
+    accessible: bool
+    portable: bool
     computational_resources: ComputationalResources
 
     @classmethod
