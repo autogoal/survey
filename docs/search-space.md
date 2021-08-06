@@ -16,12 +16,16 @@ For example, most algorithms in [scikit-learn]() work on matrices, but some can 
 Furthermore, in any AutoML system for neural networks, most operators will be neural layers, which all receive tensors as inputs.
 However, they work on specific tensor *shapes*, and we cannot connect a layer $L_1$ to another layer $L_2$ unless their output and input shapes match, respectively.
 
-In reality, most operators do have a rich internal structure, especially the models: those operators whose internal structure is adjusted from training data.
+### Models
+
+One special type of operators are models: operators that have internal parameters which are adjusted from training data.
 For example, in a decision tree classifier, the structure of the tree is adjusted such that it maximizes the probability of classifying correctly all the elements in the training set.
+The difference between models and the other operators is important because every machine learning pipeline ultimately fits one or more models.
+All the remaining operators are there for secundary, even if often crucial, tasks, such as feature preprocessing or dimensionality reduction.
 
 ## Hyperparameters
 
-
+Hyperparameters are the tunable values of any operator that cannot be adjusted from data, but must be decided with a data-independent strategy.
 
 ## Pipelines
 
