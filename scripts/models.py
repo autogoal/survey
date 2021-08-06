@@ -1,6 +1,9 @@
+from pathlib import Path
 from typing import List, Optional
 import pydantic
 import enum
+
+import yaml
 from utils import StrEnum
 
 
@@ -128,6 +131,12 @@ class AutoMLSystem(pydantic.BaseModel):
     accessible_models: bool
     portable_models: bool
     computational_resources: ComputationalResources
+
+    @classmethod
+    def from_yaml(cls, path: Path):
+        with path.open() as fp:
+            obj = yaml.safe_load(fp)
+            return AutoMLSystem(**obj)
 
 
 if __name__ == "__main__":

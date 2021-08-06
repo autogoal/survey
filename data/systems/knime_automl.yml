@@ -5,7 +5,7 @@ institutions: []
 repository: null
 license: null
 references: []
-cli: yes
+cli: no
 gui: yes
 http: no
 library: yes

@@ -8,8 +8,8 @@ license: null
 references: []
 cli: yes
 gui: no
-http: no
-library: yes
+http: yes
+library: no
 programming_languages: []
 domains:
   - nlp

@@ -34,6 +34,8 @@ class StrEnum(str, Enum):
         """
         return name.lower()
 
+    def __repr__(self) -> str:
+        return f"{self.__class__.__name__}.{self.value}"
 
 
 def timer(timeout=24, step=0.5):
