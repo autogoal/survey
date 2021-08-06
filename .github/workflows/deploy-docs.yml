@@ -27,7 +27,9 @@ jobs:
       run: make check
 
     - name: Build docs
-      run: mkdocs build
+      run: |
+        python scripts/models_to_markdown.py
+        mkdocs build
 
     - name: Deploy docs
       uses: peaceiris/actions-gh-pages@v3
