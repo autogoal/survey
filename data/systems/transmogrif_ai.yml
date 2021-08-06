@@ -10,7 +10,8 @@ cli: yes
 gui: no
 http: no
 library: yes
-programming_languages: []
+programming_languages:
+  - Scala
 domains:
   - nlp
   - tabular

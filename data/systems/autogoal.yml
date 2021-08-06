@@ -17,7 +17,7 @@ gui: no
 http: no
 library: yes
 programming_languages:
-  - python
+  - Python
 
 domains:
   - images
