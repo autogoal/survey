@@ -12,7 +12,7 @@ Operators are thus often characterized by input, output, and a set of hyperparam
 
 The input and output define how that operator interacts with other operators in any given pipeline.
 This is not as simple as defining an input and output *type*, since often types, at least in their conventional definition in programming languages (i.e., independent types), are insufficient to completely characterize whether an operator can act on a given input.
-For example, most algorithms in [scikit-learn]() work on matrices, but some can only act on *dense* matrices, while others work for dense and sparse matrices.
+For example, most algorithms in [`scikit-learn`](https://scikit-learn.org) take matrices as input, but some can only act on *dense* matrices, while others work for both dense and sparse matrices.
 Furthermore, in any AutoML system for neural networks, most operators will be neural layers, which all receive tensors as inputs.
 However, they work on specific tensor *shapes*, and we cannot connect a layer $L_1$ to another layer $L_2$ unless their output and input shapes match, respectively.
 

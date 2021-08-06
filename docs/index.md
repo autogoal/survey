@@ -31,21 +31,24 @@ Thus, we can see an AutoML system, on a broad perspective, as a computational so
 The core of any AutoML system is a *machine learning pipeline optimization engine*.
 Three key components can be identified in any such engine: a search space, a search strategy, and a performance estimation function.
 
+### Search space
+
 The [search space](./search-space) defines which types of pipelines are available. It is often restricted by an underlying machine learning library (or libraries) that support the actual implementation of said pipelines.
-For example, AutoML systems based on [scikit-learn](https://scikit-learn.org) can only output pipelines composed of scikit-learn estimators and transformers, while AutoML systems based on [keras]() or [pytorch] can output pipelines that correspond to neural network architectures.
+For example, AutoML systems based on [`scikit-learn`](https://scikit-learn.org) can only output pipelines composed of scikit-learn estimators and transformers, while AutoML systems based on [`keras`]() or [`pytorch`]() can output pipelines that correspond to neural network architectures.
 The search space also defines which hyperparameters are optimized, and to what extent.
+
+### Search strategy
 
 A [search strategy](./search-strategy) is an algorithm to efficiently explore a given search space and find the optimal pipelines.
 The search space can be arbitrarily big, exponential in size with respect to the number of available algorithms, and potentially unbounded in some hyperparameters~(e.g., you can add as many layers as you want to a neural network).
 Thus, an effective search strategy must be able to quickly find promising regions of the search space.
 
+### Performance estimation function
+
 Finally, the [performance estimation function](./performance-estimation) measures the expected performance of any given pipeline in the task at hand.
 The simplest performance estimation consists in evaluating the pipeline in a validation dataset, but evaluating machine learning algorithms is a costly task, especially when using models with millions or billions of parameters, like the largest neural networks.
 Thus, we often want to estimate this performance either by evaluating in smaller sets or by creating surrogate functions that approximate it.
 Furthermore, we often want to optimize more than one performance indicator, which may be in contradiction, such as accuracy versus model complexity (to reduce inference time).
-
-These three components make up the core of what we call the "internal characteristics" of an AutoML system.
-In this survey, we are also interested in "external" characteristics, such as the types of machine learning tasks that can be solved, the interfaces by which users interact with the system, the steps of the machine learning workflow that are covered, and other software engineering concerns.
 
 ## Flavours of AutoML
 
@@ -66,6 +69,9 @@ Hyperparameter optimization is a huge field, with lots of internal research.
 ### Heterogenous automated machine learning
 
 ## What's next
+
+The three components mentioned above (search space, search strategy, and performance estimation function) make up the core of the "internal characteristics" of an AutoML system.
+In this survey, we are also interested in "external" characteristics, such as the types of machine learning tasks that can be solved, the interfaces by which users interact with the system, the steps of the machine learning workflow that are covered, and other software engineering concerns.
 
 In the next few sections we'll review the basic theory behind the core AutoML process.
 We'll introduce the most common types of search spaces and strategies, and some interesting performance estimation functions.
