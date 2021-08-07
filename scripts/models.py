@@ -141,6 +141,9 @@ class AutoMLSystem(pydantic.BaseModel):
             obj = yaml.safe_load(fp)
             return AutoMLSystem(**obj, key=path.stem)
 
+    def slug(self):
+        return self.name.lower().replace(" ", "-")
+
 
 if __name__ == "__main__":
     print(AutoMLSystem.schema_json(indent=2))

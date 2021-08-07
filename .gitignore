@@ -147,3 +147,4 @@ cython_debug/
 
 # End of https://www.toptal.com/developers/gitignore/api/python
 docs/systems_list.md
+docs/*_examples.md

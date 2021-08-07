@@ -1,0 +1,4 @@
+{%- for system in systems -%}
+[`{{ system.name }}`](../systems/#{{ system.slug() }})
+{% if loop.last %}.{% else %}, {% endif %}
+{%- endfor -%}
