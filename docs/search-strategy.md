@@ -2,6 +2,8 @@
 
 ## Random search
 
+**Examples:** {!random_strategy !}
+
 ## Grid search
 
 ## Hill climbing
