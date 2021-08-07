@@ -34,5 +34,5 @@ for pipeline in ["single", "fixed", "linear", "graph"]:
         fp.write(template.render(systems=[s for s in systems if s.search_space.pipelines.dict()[pipeline] == True]))
 
 for strategy in SearchStrategy:
-    with (Path(__file__).parent.parent / "docs" / f"{strategy.name}_pipeline_examples.md").open("w") as fp:
+    with (Path(__file__).parent.parent / "docs" / f"{strategy.name}_strategy_examples.md").open("w") as fp:
         fp.write(template.render(systems=[s for s in systems if strategy in s.search_strategies]))

@@ -1,8 +1,9 @@
 # Search spaces
 
 In the context of AutoML, a search space is an implicitly- or explicitly-defined collection of machine learning pipelines, among which to search for a suitable solution to a given machine learning problem.
-The search space in any given AutoML system ultimately defines what is possible at all.
+The search space in any given AutoML system ultimately defines which solutions are possible at all.
 To characterize common search spaces, we'll focus first on the building blocks of any search space: [operators](#operators), [hyperparameters](#hyperparameters), and [pipelines](#pipelines).
+Then we'll look at [common characteristics](#other-features-of-search-spaces) that can help us analize and compare the search spaces in current AutoML systems.
 
 ## Operators
 
@@ -28,9 +29,19 @@ For example, in a decision tree classifier, the structure of the tree is adjuste
 The difference between models and the other operators is important because every machine learning pipeline ultimately fits one or more models.
 All the remaining operators are there for secundary, even if often crucial, tasks, such as feature preprocessing or dimensionality reduction.
 
+Models break the *operator as a black-box illusion* in one important sense: they have two modes of operation that must be dealt with explicitely in the AutoML engine, training, and prediction.
+Contrary to the other, model-free operators, classifiers and regressors must be run once on training data to adjust their parameters, and only then can they be actually used on new data.
+Thus, all AutoML systems must somehow deal with this two-mode operation issue.
+The most common strategy is to consider *all* operators to work in these two modes, with model-free operators just ignoring whatever mode they're in.
+
 ## Hyperparameters
 
-Hyperparameters are the tunable values of any operator that cannot be adjusted from data, but must be decided with a data-independent strategy.
+Hyperparameters are the tunable values of any operator that are not adjusted from data, but must be decided with a data-independent strategy.
+Examples include the number of layers or the activation functions in a neural network, the regularization strength in a linear classifier, or the maximum depth in a tree-based model.
+
+In a sense, the whole purpose of AutoML can be defined as finding the optimal configuration for all the hyperparameters involved in a set of selected operators.
+In fact, some AutoML paradigms are built entirely on top of the hyperparameter optimzation conceptualization.
+Paradigms like [CASH](../#combined-algorithm-selection-and-hyperparameter-optimization) consider the selection of operators as just another type of [categorical hyperparameter](#categorical-hyperparameters).
 
 ### Continuous and discrete hyperparameters
 

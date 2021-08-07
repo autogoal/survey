@@ -1,19 +1,43 @@
 # Search strategies
 
-## Random search
+## Basic search strategies
 
-**Examples:** {!random_strategy !}
+### Random search
 
-## Grid search
+**Examples:** {!docs/random_strategy_examples.md!}
 
-## Hill climbing
+### Grid search
 
-## Evolutionary search
+**Examples:** {!docs/grid_strategy_examples.md!}
 
-## Bayesian optimization
+### Hill climbing
 
-## Reinforced learning
+**Examples:** {!docs/hill_climbing_strategy_examples.md!}
 
-## Constructive methods
+### Evolutionary search
 
-## Monte Carlo tree search
+**Examples:** {!docs/evolutionary_strategy_examples.md!}
+
+### Bayesian optimization
+
+**Examples:** {!docs/bayesian_strategy_examples.md!}
+
+### Reinforced learning
+
+**Examples:** {!docs/reinforcement_learning_strategy_examples.md!}
+
+### Constructive methods
+
+**Examples:** {!docs/constructive_strategy_examples.md!}
+
+### Monte Carlo tree search
+
+**Examples:** {!docs/monte_carlo_strategy_examples.md!}
+
+## Meta-learning
+
+### Meta-features
+
+### Portfolios
+
+### Warm starting

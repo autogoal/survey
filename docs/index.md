@@ -22,11 +22,11 @@ We provide follow-up references on many of the topics we cover.
 ## AutoML in a nutshell
 
 At its core, AutoML is about providing tools to automate the process of designing, training, validating, and deploying a machine learning pipeline for a given problem.
-ML pipelines come in varied flavour, but they are often composed of a set of atomic steps~(e.g., a feature selection algorithm, or a specific machine learning model), each of which can be configured by one or more *hyperparameters*~(e.g., the number and type of layers and neurons per layer in a neural network, or the regularization factor in logistic regression).
-Each step performs some task, often associated with an input data source, and producing an output that is fed to subsequent steps.
+ML pipelines come in varied flavour, but they are often composed of a set of atomic *operators* (e.g., a feature selection algorithm, or a specific machine learning model), each of which can be configured by one or more *hyperparameters* (e.g., the number and type of layers and neurons per layer in a neural network, or the regularization factor in logistic regression).
+Each operator performs some task, often associated with an input data source, and producing an output that is fed to subsequent operators.
 The objective is to find a pipeline that is optimal, or close to optimal, in solving a given machine learning problem, among a set of posible pipelines.
 
-Thus, we can see an AutoML system, on a broad perspective, as a computational solution that receives a machine learning problem definition of some kind~(e.g., classification, regression, clustering) and associated training data, and it outputs a suitable machine learning pipeline, composed of one or more atomic steps, that is close to optimal in solve that problem according to some predefined performance metric(s).
+Thus, we can see an AutoML system, on a broad perspective, as a computational solution that receives a machine learning problem definition of some kind~(e.g., classification, regression, clustering) and associated training data, and it outputs a suitable machine learning pipeline, composed of one or more atomic operators, that is close to optimal in solve that problem according to some predefined performance metric(s).
 
 The core of any AutoML system is a *machine learning pipeline optimization engine*.
 Three key components can be identified in any such engine: a search space, a search strategy, and a performance estimation function.
@@ -35,13 +35,14 @@ Three key components can be identified in any such engine: a search space, a sea
 
 The [search space](./search-space) defines which types of pipelines are available. It is often restricted by an underlying machine learning library (or libraries) that support the actual implementation of said pipelines.
 For example, AutoML systems based on [`scikit-learn`](https://scikit-learn.org) can only output pipelines composed of scikit-learn estimators and transformers, while AutoML systems based on [`keras`]() or [`pytorch`]() can output pipelines that correspond to neural network architectures.
-The search space also defines which hyperparameters are optimized, and to what extent.
+The search space also defines which [hyperparameters](./search-space/#hyperparameters) are optimized, and to what extent.
 
 ### Search strategy
 
 A [search strategy](./search-strategy) is an algorithm to efficiently explore a given search space and find the optimal pipelines.
-The search space can be arbitrarily big, exponential in size with respect to the number of available algorithms, and potentially unbounded in some hyperparameters~(e.g., you can add as many layers as you want to a neural network).
-Thus, an effective search strategy must be able to quickly find promising regions of the search space.
+The search space can be arbitrarily big, exponential in size with respect to the number of available operators, and potentially unbounded in some of the hyperparameters (e.g., you can add as many layers as you want to a neural network).
+In machine learning, the difference between a useless solution and a highly effective one often boils down to the use of one type of algorithm over another, or even to their specific configurations.
+An effective search strategy must be able to quickly focus on promising regions of the search space, while still ensuring a thorough enough exploration to avoid missing potentially
 
 ### Performance estimation function
 
@@ -62,7 +63,7 @@ Hyperparameter optimization is a huge field, with lots of internal research.
 
 ### Full model selection
 
-### Combined selection and hyperparameter optimization
+### Combined algorithm selection and hyperparameter optimization
 
 ### Neural architecture search
 
