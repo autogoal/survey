@@ -15,7 +15,7 @@ The input and output define how that operator interacts with other operators in 
 This is not as simple as defining an input and output *type*, since often types, at least in their conventional definition in programming languages (i.e., independent types), are insufficient to completely characterize whether an operator can act on a given input.
 For example, most algorithms in [`scikit-learn`](https://scikit-learn.org) take matrices as input, but some can only act on *dense* matrices, while others work for both dense and sparse matrices.
 Similarly, in NAS, most operators are neural layers, which all receive tensors as inputs.
-However, they work on specific tensor *shapes*, and we cannot connect a layer $L_1$ to another layer $L_2$ unless their output and input shapes match, respectively.
+However, they work on specific tensor *shapes*, and we cannot connect a layer $l_1$ to another layer $l_2$ unless their output and input shapes match, respectively.
 
 Therefore, to completely characterize an operator, an AutoML systems needs and implict or explicit typing system that is able to capture these restrictions.
 The more flexible the pipeline representation and the more varied the types of operators involved, the more sophisticated the typing system should be.
@@ -29,8 +29,8 @@ For example, in a decision tree classifier, the structure of the tree is adjuste
 The difference between models and the other operators is important because every machine learning pipeline ultimately fits one or more models.
 All the remaining operators are there for secundary, even if often crucial, tasks, such as feature preprocessing or dimensionality reduction.
 
-Models break the *operator as a black-box illusion* in one important sense: they have two modes of operation that must be dealt with explicitely in the AutoML engine, training, and prediction.
-Contrary to the other, model-free operators, classifiers and regressors must be run once on training data to adjust their parameters, and only then can they be actually used on new data.
+Models break the *operator as a black-box illusion* in one important sense: they have two modes of operation that must be dealt with explicitely in the AutoML engine: training and prediction.
+Contrary to the other, model-free operators, models must be run once on training data to adjust their parameters, and only then can they be actually used on new data.
 Thus, all AutoML systems must somehow deal with this two-mode operation issue.
 The most common strategy is to consider *all* operators to work in these two modes, with model-free operators just ignoring whatever mode they're in.
 
@@ -41,11 +41,27 @@ Examples include the number of layers or the activation functions in a neural ne
 
 In a sense, the whole purpose of AutoML can be defined as finding the optimal configuration for all the hyperparameters involved in a set of selected operators.
 In fact, some AutoML paradigms are built entirely on top of the hyperparameter optimzation conceptualization.
-Paradigms like [CASH](../#combined-algorithm-selection-and-hyperparameter-optimization) consider the selection of operators as just another type of [categorical hyperparameter](#categorical-hyperparameters).
+Paradigms like [CASH](../#combined-algorithm-selection-and-hyperparameter-optimization) consider the selection of operators as [categorical hyperparameters](#categorical-hyperparameters), defining an implicit [two-level hierarchical space](#hierarchical-spaces).
 
 ### Continuous and discrete hyperparameters
 
+The simplest types of hyperparameters are numerical values, either continuous or discrete.
+Examples include the regularization strength in logistic regression, or the maximum depth in a decision tree.
+In the simplest case, a numerical hyperparameter has a defined range of valid values for the optimizer can choose from.
+From a probabilistic point of view, this represents an implicit uniform distribution on the hyperparameter domain.
+
+However, in some cases it makes more sense to explore the domain a specific hyperparameter with a different distribution.
+As an example, take the regularization strength $R$ of a simple logistic regression model.
+The sensible values for $R$ may lie anywhere between $10^{-6}$ to $1$.
+Asuming a uniform distribution in this case means that values between $0.1$ and $1$ will have roughly 90% of the attention of the optimizer, and values between $10^{-6}$ and $10^{-5}$ will be selected one in a million times.
+That's probably not what we want, but, on the contrary, we expect values between, say $10^{-3}$ and $10^{-2}$ to be as likely as those between $10{^-2}$ and $10^{-1}$.
+In this case, we can define a logarithmic distribution instead of a uniform distribution, effectively stretching out the smallest scales of the hyperparameter range.
+
 ### Categorical hyperparameters
+
+Categorical hyperparameters are used to model qualitatively different choices, such as the kernel function in a support vector machine, the activation function in a neural network's layer, or the regularization penalty function in a logistic regression.
+Since categorical values have no inherent order, they *should not* be treated as discrete values.
+The most common strategy is to define a categorical distribution, which assigns a probability $p_i$ to every value $i$ of a given hyperparameter, such that $\sum p_i = 1$.
 
 ### Conditional hyperparameters
 
@@ -55,7 +71,7 @@ According to how flexible these pipelines are, we can identify four basic types:
 
 ### Single model pipelines
 
-When a single model is trained end-to-end, which is often an estimator (e.g., a classifier or regressor). An example is training a neural network end-to-end for image classification, or a linear regression model for price estimation on tabular data.
+When a single model is trained end-to-end, which is often an estimator (e.g., a classifier or regressor). An example is training a linear regression model for price estimation on tabular data, or fine-tunning a fixed-architecture neural network end-to-end for image classification.
 
 **Examples:** {!docs/single_pipeline_examples.md!}
 
