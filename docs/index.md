@@ -1,7 +1,7 @@
 # Introduction to AutoML
 
 *Automated Machine Learning*, or AutoML for short, is a novel and expanding field in the intersection of machine learning, optimization, and software engineering.
-It's purpose is to progresively automate the most common (and often boring) tasks of conventional ML workflows.
+It's purpose is to progresively automate the most common (and often boring) tasks of conventional machine learning workflows.
 Tasks such as data preprocessing, feature extraction and selection, model selection, hyperparameter tunning, model validation, deployment, and monitoring.
 Despite its novelty, AutoML has become prominent in the last few years, as more profesionals from every field get into machine learning, often without a solid background in machine learning and no time to learn all the necessary theory.
 
@@ -22,19 +22,19 @@ We provide follow-up references on many of the topics we cover.
 ## AutoML in a nutshell
 
 At its core, AutoML is about providing tools to automate the process of designing, training, validating, and deploying a machine learning pipeline for a given problem.
-ML pipelines come in varied flavour, but they are often composed of a set of atomic *operators* (e.g., a feature selection algorithm, or a specific machine learning model), each of which can be configured by one or more *hyperparameters* (e.g., the number and type of layers and neurons per layer in a neural network, or the regularization factor in logistic regression).
+Machine learning pipelines come in a variety of flavours, but they are often composed of a set of atomic *operators* (e.g., a feature selection algorithm, or a specific machine learning model), each of which can be configured by one or more *hyperparameters* (e.g., the number and type of layers and neurons per layer in a neural network, or the regularization factor in logistic regression).
 Each operator performs some task, often associated with an input data source, and producing an output that is fed to subsequent operators.
 The objective is to find a pipeline that is optimal, or close to optimal, in solving a given machine learning problem, among a set of posible pipelines.
 
-Thus, we can see an AutoML system, on a broad perspective, as a computational solution that receives a machine learning problem definition of some kind~(e.g., classification, regression, clustering) and associated training data, and it outputs a suitable machine learning pipeline, composed of one or more atomic operators, that is close to optimal in solve that problem according to some predefined performance metric(s).
+Thus, we can see an AutoML system, on a broad perspective, as a computational solution that receives a machine learning problem definition of some kind~(e.g., classification, regression, clustering) and associated training data, and it outputs a suitable machine learning pipeline, composed of one or more atomic operators, that is close to optimal in solving that problem according to some predefined performance metric(s).
 
 The core of any AutoML system is a *machine learning pipeline optimization engine*.
 Three key components can be identified in any such engine: a search space, a search strategy, and a performance estimation function.
 
 ### Search space
 
-The [search space](./search-space) defines which types of pipelines are available. It is often restricted by an underlying machine learning library (or libraries) that support the actual implementation of said pipelines.
-For example, AutoML systems based on [`scikit-learn`](https://scikit-learn.org) can only output pipelines composed of scikit-learn estimators and transformers, while AutoML systems based on [`keras`]() or [`pytorch`]() can output pipelines that correspond to neural network architectures.
+The [search space](./search-space) defines which types of pipelines and operators are available. It is often restricted by an underlying machine learning library (or libraries) that support the actual implementation of said operators.
+For example, AutoML systems based on [`scikit-learn`](https://scikit-learn.org) can only output pipelines composed of `scikit-learn` estimators and transformers, while AutoML systems based on [`keras`]() or [`pytorch`]() can output pipelines that correspond to neural network architectures implemented in terms of these frameworks' APIs.
 The search space also defines which [hyperparameters](./search-space/#hyperparameters) are optimized, and to what extent.
 
 ### Search strategy
@@ -42,7 +42,8 @@ The search space also defines which [hyperparameters](./search-space/#hyperparam
 A [search strategy](./search-strategy) is an algorithm to efficiently explore a given search space and find the optimal pipelines.
 The search space can be arbitrarily big, exponential in size with respect to the number of available operators, and potentially unbounded in some of the hyperparameters (e.g., you can add as many layers as you want to a neural network).
 In machine learning, the difference between a useless solution and a highly effective one often boils down to the use of one type of algorithm over another, or even to their specific configurations.
-An effective search strategy must be able to quickly focus on promising regions of the search space, while still ensuring a thorough enough exploration to avoid missing potentially
+An effective search strategy must be able to quickly focus on promising regions of the search space, while still ensuring a thorough enough exploration to avoid missing potentially good solutions.
+This balance between exploration and exploitation is the crux of the problem that all search strategies are designed to deal with.
 
 ### Performance estimation function
 
