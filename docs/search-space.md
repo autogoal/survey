@@ -64,7 +64,7 @@ In this case, we can define a logarithmic distribution instead of a uniform dist
 
 Categorical hyperparameters are used to model qualitatively different choices, such as the kernel function in a support vector machine, the activation function in a neural network's layer, or the regularization penalty function in a logistic regression.
 Since categorical values have no inherent order, they *should not* be treated as discrete values.
-The most common strategy is to define a categorical distribution, which assigns a probability $p_i$ to every value $i$ of a given hyperparameter, such that $\sum p_i = 1$.
+The most common strategy is to define a categorical distribution, which assigns a probability $p_i$ to every value $h_i$ of a given hyperparameter $h$, such that $\sum  p_i = 1$.
 
 ### Conditional hyperparameters
 
@@ -74,13 +74,15 @@ According to how flexible these pipelines are, we can identify four basic types:
 
 ### Single model pipelines
 
-When a single model is trained end-to-end, which is often an estimator (e.g., a classifier or regressor). An example is training a linear regression model for price estimation on tabular data, or fine-tunning a fixed-architecture neural network end-to-end for image classification.
+When a single model is trained end-to-end, which is often an estimator (e.g., a classifier or regressor).
+An example is training a linear regression model for price estimation on tabular data, or fine-tunning a concrete neural network architecture end-to-end for image classification.
 
 **Examples:** {!docs/single_pipeline_examples.md!}
 
 ### Fixed-size pipelines
 
-When a few fixed atomic steps are considered, e.g., data preprocessing, feature selection, dimensionality reduction, and classification. In each step, several different algorithms with they respective hyperparameters can be considered.
+When a few fixed atomic steps are considered, e.g., data preprocessing, feature selection, dimensionality reduction, and classification.
+In each step, several different algorithms with they respective hyperparameters can be considered.
 
 **Examples:** {!docs/fixed_pipeline_examples.md!}
 
