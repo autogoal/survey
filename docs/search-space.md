@@ -1,5 +1,8 @@
 # Search spaces
 
+!!! warning
+    *This section is under construction*
+
 In the context of AutoML, a search space is an implicitly- or explicitly-defined collection of machine learning pipelines, among which to search for a suitable solution to a given machine learning problem.
 The search space in any given AutoML system ultimately defines which solutions are possible at all.
 To characterize common search spaces, we'll focus first on the building blocks of any search space: [operators](#operators), [hyperparameters](#hyperparameters), and [pipelines](#pipelines).

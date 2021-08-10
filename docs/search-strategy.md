@@ -1,5 +1,8 @@
 # Search strategies
 
+!!! warning
+    *This section is under construction*
+
 A search strategy is an algorithm that finds well-performing pipelines in a given [search space](../search-space).
 Most search strategies are applicable to a variety of search spaces, but often require some specific characteristics.
 For example, [bayesian optimization](#bayesian-optimization) requires probabilistic spaces, because it uses the probabilistic distribution as the means to explore the space.
@@ -45,9 +48,6 @@ For example, [gradient descent methods](#gradient-descent) requires the performa
 **Examples:** {!docs/reinforcement_learning_strategy_examples.md!}
 
 ## Meta-learning
-
-!!! warning
-    *This section is under construction*
 
 ### Portfolio-based methods
 

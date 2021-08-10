@@ -54,34 +54,22 @@ Furthermore, we often want to optimize more than one performance indicator, whic
 
 ## Flavours of AutoML
 
+!!! warning
+    *This section is under construction*
+
 Over the years several different conceptualizations of AutoML have been proposed, some more flexible than others.
 We'll review next some of the most common flavours of AutoML from a high-level point of view, without dwelving too deep into their specifities.
 Afterwards, when we have introduced all the building blocks of the AutoML process, we'll be able to look back at these definitions in more details.
 
 ### Hyperparameter optimization
 
-!!! warning
-    *This section is under construction*
-
 ### Full model selection
-
-!!! warning
-    *This section is under construction*
 
 ### Combined algorithm selection and hyperparameter optimization
 
-!!! warning
-    *This section is under construction*
-
 ### Neural architecture search
 
-!!! warning
-    *This section is under construction*
-
 ### Heterogenous automated machine learning
-
-!!! warning
-    *This section is under construction*
 
 ## What's next
 
