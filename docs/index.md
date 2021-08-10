@@ -60,13 +60,28 @@ Afterwards, when we have introduced all the building blocks of the AutoML proces
 
 ### Hyperparameter optimization
 
+!!! warning
+    *This section is under construction*
+
 ### Full model selection
+
+!!! warning
+    *This section is under construction*
 
 ### Combined algorithm selection and hyperparameter optimization
 
+!!! warning
+    *This section is under construction*
+
 ### Neural architecture search
 
+!!! warning
+    *This section is under construction*
+
 ### Heterogenous automated machine learning
+
+!!! warning
+    *This section is under construction*
 
 ## What's next
 

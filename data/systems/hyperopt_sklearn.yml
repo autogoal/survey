@@ -33,7 +33,7 @@ meta_learning: []
 search_strategies:
   - bayesian
   - random
-  - gradient_descent
+  - hill_climbing
 search_space:
   hierarchical: yes
   probabilistic: yes

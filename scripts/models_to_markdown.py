@@ -4,7 +4,7 @@ from pathlib import Path
 from typing import List
 
 from yaml.events import StreamEndEvent
-from models import AutoMLSystem, SearchStrategy
+from models import AutoMLSystem, MetaLearning, SearchStrategy
 
 # %%
 systems: List[AutoMLSystem] = []
@@ -36,3 +36,7 @@ for pipeline in ["single", "fixed", "linear", "graph"]:
 for strategy in SearchStrategy:
     with (Path(__file__).parent.parent / "docs" / f"{strategy.name}_strategy_examples.md").open("w") as fp:
         fp.write(template.render(systems=[s for s in systems if strategy in s.search_strategies]))
+
+for strategy in MetaLearning:
+    with (Path(__file__).parent.parent / "docs" / f"{strategy.name}_meta_examples.md").open("w") as fp:
+        fp.write(template.render(systems=[s for s in systems if strategy in s.meta_learning]))
