@@ -68,6 +68,22 @@ The most common strategy is to define a categorical distribution, which assigns 
 
 ### Conditional hyperparameters
 
+Conditional hyperparameters appear when one or more hyperparameters only make sense sometimes, that is, *conditioned* to some other.
+The simplest case is in a [two-level hierarchical space](#hierarchical-spaces), where the first level defines the type of model, and the second level defines the hyperparameters of each model.
+For example, suppose we have three different operators to choose from: SVM, logistic regression, and decision trees, each with their own hyperparameters.
+Lets assume the selection of which operator to use is indicated by a categorical hyperparameter called `model`.
+The value of the hyperparameter `kernel_function` is only relevant when `model=svm`.
+The hyperparameter `kernel_function` is thus said to be conditioned to the value of the hyperparameter `model`.
+
+Conditional hyperparameters can also appear in non-hierarchical spaces.
+For example, suppose we have again an SVM operator with different kernel functions available: `linear`, `rbf` and `poly`.
+When `kernel_function=poly`, a new hyperparameter `degree` becomes relevant, which is not used in the other kernel functions.
+
+As long as dependencies among hyperparameters are acyclical, we can transform the search space into a hierarchical one, such that conditional hyperparameters are selected in a level below the hyperparameters they depend on.
+In some cases we have constraints that restrict two hyperparameters from simultaneously taking some pairs of values.
+These cases cannot be easily transformed into hierarchical spaces without introducing an arbitrary order between the hyperparameters.
+The most flexible AutoML systems have mostly conditioned hyperparameters, which in turn result in highly hierarchical search spaces.
+
 ## Pipelines
 
 According to how flexible these pipelines are, we can identify four basic types:

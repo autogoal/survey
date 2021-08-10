@@ -137,11 +137,11 @@ Characteristics describing the search space, the types of hyperparameters that c
     - `discrete`
     - `categorical`
     - `conditional`
-  - **`pipelines`**: Types of pipelines that can be discovered by the AutoML process. Each of the following keys is boolean.
-    - **`single`** (`bool`): A single estimator (or model in general)
-    - **`fixed`** (`bool`): A fixed pipeline with several, but predefined, steps
-    - **`linear`** (`bool`): A variable-length pipeline where each step feeds on the immediately previous output
-    - **`graph`** (`bool`): An arbitrarily graph-shaped pipeline where each step can feed on any of the previous outputs
+  - **`pipelines`**: Types of pipelines that can be discovered by the AutoML process. Valid values are:
+    - `single`: A single estimator (or model in general)
+    - `fixed`: A fixed pipeline with several, but predefined, steps
+    - `linear`: A variable-length pipeline where each step feeds on the immediately previous output
+    - `graph`: An arbitrarily graph-shaped pipeline where each step can feed on any of the previous outputs
   - **`robust`** (`bool`): Whether the seach space contains potentially invalid pipelines that are only discovered when evaluated, e.g., allowing a dense-only estimator to precede a sparse transformer.
 
 ### Software architecture

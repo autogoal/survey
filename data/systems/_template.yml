@@ -141,13 +141,13 @@ search_space:
   # Types of pipelines that can be discovered by the AutoML process
   pipelines:
     # A single estimator (or model in general)
-    single: yes
+    - single
     # A fixed pipeline with several, but predefined, steps
-    fixed: yes
+    - fixed
     # A variable-length pipeline where each step feeds on the immediately previous' output
-    linear: yes
+    - linear
     # An arbitrarily graph-shaped pipeline where each step can feed on any of the previous'
-    graph: yes
+    - graph
 
   # Whether the seach space contains potentially invalid pipelines that are only discovered
   # when evaluated, e.g., allowing a dense-only estimator to precede a sparse transformer

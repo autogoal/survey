@@ -3,8 +3,7 @@ import jinja2
 from pathlib import Path
 from typing import List
 
-from yaml.events import StreamEndEvent
-from models import AutoMLSystem, MetaLearning, SearchStrategy
+from models import AutoMLSystem, MetaLearning, Pipeline, SearchSpace, SearchStrategy
 
 # %%
 systems: List[AutoMLSystem] = []
@@ -29,9 +28,9 @@ with (Path(__file__).parent.parent / "docs" / "systems_list.md").open("w") as fp
 with (Path(__file__).parent.parent / "data" / "templates" / "examples.jinja").open() as fp:
     template = jinja2.Template(fp.read())
 
-for pipeline in ["single", "fixed", "linear", "graph"]:
+for pipeline in Pipeline:
     with (Path(__file__).parent.parent / "docs" / f"{pipeline}_pipeline_examples.md").open("w") as fp:
-        fp.write(template.render(systems=[s for s in systems if s.search_space.pipelines.dict()[pipeline] == True]))
+        fp.write(template.render(systems=[s for s in systems if pipeline in s.search_space.pipelines]))
 
 for strategy in SearchStrategy:
     with (Path(__file__).parent.parent / "docs" / f"{strategy.name}_strategy_examples.md").open("w") as fp:

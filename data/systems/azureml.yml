@@ -47,10 +47,7 @@ search_space:
     - continuous
     - discrete
   pipelines:
-    single: no
-    fixed: yes
-    linear: no
-    graph: no
+    - fixed
   robust: yes
 extensible: no
 accessible: yes

@@ -36,11 +36,7 @@ search_space:
   differentiable: no
   automatic: no
   hyperparameters: []
-  pipelines:
-    single: no
-    fixed: no
-    linear: no
-    graph: no
+  pipelines: []
   robust: yes
 extensible: no
 accessible: no

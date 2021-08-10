@@ -63,18 +63,18 @@ class SearchStrategy(StrEnum):
     monte_carlo = enum.auto()
 
 
-class Hyperparameters(StrEnum):
+class Hyperparameter(StrEnum):
     continuous = enum.auto()
     discrete = enum.auto()
     categorical = enum.auto()
     conditional = enum.auto()
 
 
-class Pipeline(pydantic.BaseModel):
-    single: bool
-    fixed: bool
-    linear: bool
-    graph: bool
+class Pipeline(StrEnum):
+    single = enum.auto()
+    fixed = enum.auto()
+    linear = enum.auto()
+    graph = enum.auto()
 
 
 class SearchSpace(pydantic.BaseModel):
@@ -83,12 +83,8 @@ class SearchSpace(pydantic.BaseModel):
     differentiable: bool
     automatic: bool
     robust: bool
-
-    hyperparameters: List[Hyperparameters]
-
-    pipelines: Pipeline
-
-
+    hyperparameters: List[Hyperparameter]
+    pipelines: List[Pipeline]
 
 class ComputationalResources(pydantic.BaseModel):
     gpu: bool

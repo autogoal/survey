@@ -81,10 +81,10 @@ search_space:
     - conditional
 
   pipelines:
-    single: yes
-    fixed: yes
-    linear: yes
-    graph: yes
+    - single
+    - fixed
+    - linear
+    - graph
 
   robust: no
 
