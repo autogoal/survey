@@ -49,7 +49,7 @@ An effective search strategy must be able to quickly focus on promising regions 
 Finally, the [performance estimation function](./performance-estimation) measures the expected performance of any given pipeline in the task at hand.
 The simplest performance estimation consists in evaluating the pipeline in a validation dataset, but evaluating machine learning algorithms is a costly task, especially when using models with millions or billions of parameters, like the largest neural networks.
 Thus, we often want to estimate this performance either by evaluating in smaller sets or by creating surrogate functions that approximate it.
-Furthermore, we often want to optimize more than one performance indicator, which may be in contradiction, such as accuracy versus model complexity (to reduce inference time).
+Furthermore, we often want to optimize more than one performance indicator, which may be in contradiction, such as accuracy versus model complexity (e.g., to reduce inference time in a production scenario).
 
 ## Flavours of AutoML
 
@@ -58,8 +58,6 @@ We'll review next some of the most common flavours of AutoML from a high-level p
 Afterwards, when we have introduced all the building blocks of the AutoML process, we'll be able to look back at these definitions in more details.
 
 ### Hyperparameter optimization
-
-Hyperparameter optimization is a huge field, with lots of internal research.
 
 ### Full model selection
 
