@@ -104,7 +104,7 @@ Characteristics describing the types of tasks, or problems, in which the system 
 - **`multi_task`**: Whether the system supports multiple tasks in a single workflow, e.g.,
     by allowing multiple output heads from the same neural network
 
-## Search strategies
+### Search strategies
 
 Characteristics describing the optimizaction/search strategies used for model search and/or hyperparameter tunning.
 
