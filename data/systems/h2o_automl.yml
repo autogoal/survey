@@ -1,15 +1,21 @@
 name: H2O AutoML
-website: null
+website: https://docs.h2o.ai/h2o/latest-stable/h2o-docs/automl.html
 open_source: yes
-institutions: []
-repository: null
-license: null
-references: []
+institutions:
+ - H2O.ai
+repository: https://github.com/h2oai/h2o-3
+license: Apache 2.0
+references:
+  - https://www.automl.org/wp-content/uploads/2020/07/AutoML_2020_paper_61.pdf
 cli: yes
 gui: yes
-http: no
+http: yes
 library: yes
-programming_languages: []
+programming_languages:
+  - Python
+  - R
+  - Java
+  - Scala
 domains:
   - tabular
 multi_domain: no
@@ -19,16 +25,20 @@ techniques:
   - trees
   - mlp
   - ensembles
+  - ad_hoc
 ml_libraries: []
 tasks:
   - classification
   - regression
   - imputation
   - feature_preprocessing
+  - data_preprocessing
 distillation: no
 meta_learning: []
 search_strategies:
   - random
+  - grid
+  - constructive
 search_space:
   hierarchical: no
   probabilistic: no
@@ -37,6 +47,7 @@ search_space:
   hyperparameters: []
   pipelines:
     - single
+    - fixed
   robust: yes
 extensible: no
 accessible: yes
@@ -44,4 +55,4 @@ portable: yes
 computational_resources:
   gpu: yes
   tpu: no
-  cluster: no
+  cluster: yes
