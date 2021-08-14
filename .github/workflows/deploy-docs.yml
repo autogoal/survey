@@ -28,7 +28,7 @@ jobs:
 
     - name: Build docs
       run: |
-        python scripts/models_to_markdown.py
+        python scripts/generate.py
         mkdocs build
 
     - name: Deploy docs

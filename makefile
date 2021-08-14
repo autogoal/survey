@@ -1,8 +1,8 @@
 .PHONY: check
 check:
-	python scripts/validate_systems.py
+	python scripts/validate.py
 
 .PHONY: dev
 dev:
 	mkdocs serve &
-	find data/* scripts/* | entr python scripts/models_to_markdown.py
+	find data/* scripts/* | entr python scripts/generate.py
