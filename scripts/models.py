@@ -2,6 +2,7 @@ from pathlib import Path
 from typing import List, Optional
 import pydantic
 import enum
+import re
 
 import yaml
 from utils import StrEnum
@@ -139,6 +140,23 @@ class AutoMLSystem(pydantic.BaseModel):
 
     def slug(self):
         return self.name.lower().replace(" ", "-")
+
+    def format_website(self):
+        if not self.website:
+            return None
+
+        return self.website.split("/")[2]
+
+    def github_info(self):
+        if not self.repository:
+            return None
+
+        match: re.Match = re.fullmatch(r"https://github.com/(?P<user>[\w_-]+)/(?P<repo>[\w_-]+)", self.repository)
+
+        if not match:
+            return None
+
+        return match.groupdict()
 
 
 if __name__ == "__main__":
