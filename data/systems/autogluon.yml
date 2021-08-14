@@ -1,10 +1,10 @@
 name: AutoGluon
-website: null
+website: https://auto.gluon.ai/stable/index.html
 open_source: yes
 institutions:
   - Amazon
-repository: null
-license: null
+repository: https://github.com/awslabs/autogluon
+license: Apache 2.0
 references: []
 cli: yes
 gui: no

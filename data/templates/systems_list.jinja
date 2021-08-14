@@ -4,7 +4,7 @@
 
 [![Edit YAML definition](https://img.shields.io/badge/Edit-Info-orange?logo=github)](https://github.com/autogoal/survey/edit/main/data/systems/{{ system.key }}.yml)
 {% if system.github_info() -%}
-{% if system.repository -%} [![Repository](https://img.shields.io/badge/-{{ system.github_info()['user'] }}/{{ system.github_info()['repo'] }}-gray?logo=github)]({{ system.repository }}) {%- endif %}
+{% if system.repository -%} [![Repository](https://img.shields.io/badge/{{ system.github_info()['user'].replace("-", "--") }}-{{ system.github_info()['repo'].replace("-", "--") }}-blue?logo=github)]({{ system.repository }}) {%- endif %}
 ![GitHub Repo stars](https://img.shields.io/github/stars/{{ system.github_info()['user'] }}/{{ system.github_info()['repo'] }}?label=Github%20Stars&logo=github&style=social)
 {%- endif %}
 

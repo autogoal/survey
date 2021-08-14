@@ -1,9 +1,9 @@
-name: AutoPytorch
-website: null
+name: Auto-Pytorch
+website: https://automl.github.io/Auto-PyTorch/
 open_source: yes
 institutions: []
-repository: null
-license: null
+repository: https://github.com/automl/Auto-PyTorch
+license: Apache 2.0
 references: []
 cli: yes
 gui: no

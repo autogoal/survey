@@ -1,10 +1,10 @@
-name: Auto-Keras
-description: Auto-Keras focuses on neural architecture search, using bayesian optimization with a custom acquistion function based on network morphism. Presents a high-level API inspired by `scikit-learn`, where users only need to select a task-specific model; and a low-level API where users can completely customize a neural search space.
+name: AutoKeras
+description: AutoKeras focuses on neural architecture search, using bayesian optimization with a custom acquistion function based on network morphism. Presents a high-level API inspired by `scikit-learn`, where users only need to select a task-specific model; and a low-level API where users can completely customize a neural search space.
 website: https://autokeras.com
 open_source: yes
 institutions: []
-repository: null
-license: null
+repository: https://github.com/keras-team/autokeras
+license: Apache 2.0
 references: []
 cli: yes
 gui: no
