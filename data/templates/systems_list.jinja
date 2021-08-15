@@ -10,7 +10,6 @@
 
 {{ system.description }}
 
-
 | | |
 |-|-|
 | **Basic&nbsp;info** | {% if system.website -%} [![System website](https://img.shields.io/badge/website-{{ system.format_website() }}-informational)]({{ system.website }}) <br> {%- endif -%} ![Open source](https://img.shields.io/badge/open--source-{{ "yes" if system.open_source else "no" }}-{{ "success" if system.open_source else "critical" }})  {% if system.license -%} ![License](https://img.shields.io/badge/License-{{ system.license }}-informational) {%- endif %} |
