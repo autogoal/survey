@@ -1,6 +1,6 @@
 name: Vertex AI
-website: null
-open_source: yes
+website: https://cloud.google.com/vertex-ai
+open_source: no
 institutions:
   - Google
 repository: null
