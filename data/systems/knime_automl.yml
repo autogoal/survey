@@ -8,7 +8,7 @@ references: []
 cli: no
 gui: yes
 http: no
-library: yes
+library: no
 programming_languages: []
 domains:
   - tabular
