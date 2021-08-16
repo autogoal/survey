@@ -26,8 +26,8 @@ markdown_extensions:
       generic: true
 nav:
   - Introduction: index.md
-  - Search Space: search-space.md
-  - Search Strategies: search-strategy.md
-  - Performance Estimation: performance-estimation.md
+  - Search Space: search-spaces.md
+  - Search Strategies: search-strategies.md
+  - Evaluation Methods: evaluation-methods.md
   - Comparison: comparison.md
   - Systems: systems.md

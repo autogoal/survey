@@ -33,22 +33,22 @@ Three key components can be identified in any such engine: a search space, a sea
 
 ### Search space
 
-The [search space](./search-space) defines which types of pipelines and operators are available. It is often restricted by an underlying machine learning library (or libraries) that support the actual implementation of said operators.
+The [search space](./search-spaces) defines which types of pipelines and operators are available. It is often restricted by an underlying machine learning library (or libraries) that support the actual implementation of said operators.
 For example, AutoML systems based on [`scikit-learn`](https://scikit-learn.org) can only output pipelines composed of `scikit-learn` estimators and transformers, while AutoML systems based on [`keras`]() or [`pytorch`]() can output pipelines that correspond to neural network architectures implemented in terms of these frameworks' APIs.
 The search space also defines which [hyperparameters](./search-space/#hyperparameters) are optimized, and to what extent.
 
 ### Search strategy
 
-A [search strategy](./search-strategy) is an algorithm to efficiently explore a given search space and find the optimal pipelines.
+A [search strategy](./search-strategies) is an algorithm to efficiently explore a given search space and find the optimal pipelines.
 The search space can be arbitrarily big, exponential in size with respect to the number of available operators, and potentially unbounded in some of the hyperparameters (e.g., you can add as many layers as you want to a neural network).
 In machine learning, the difference between a useless solution and a highly effective one often boils down to the use of one type of algorithm over another, or even to their specific configurations.
 An effective search strategy must be able to quickly focus on promising regions of the search space, while still ensuring a thorough enough exploration to avoid missing potentially good solutions.
 This balance between exploration and exploitation is the crux of the problem that all search strategies are designed to deal with.
 
-### Performance estimation function
+### Evaluation method
 
-Finally, the [performance estimation function](./performance-estimation) measures the expected performance of any given pipeline in the task at hand.
-The simplest performance estimation consists in evaluating the pipeline in a validation dataset, but evaluating machine learning algorithms is a costly task, especially when using models with millions or billions of parameters, like the largest neural networks.
+Finally, the [evaluation method](./evaluation-methods) measures the expected performance of any given pipeline in the task at hand.
+The simplest evaluation method consists in evaluating the pipeline in a validation dataset, but evaluating machine learning algorithms is a costly task, especially when using models with millions or billions of parameters, like the largest neural networks.
 Thus, we often want to estimate this performance either by evaluating in smaller sets or by creating surrogate functions that approximate it.
 Furthermore, we often want to optimize more than one performance indicator, which may be in contradiction, such as accuracy versus model complexity (e.g., to reduce inference time in a production scenario).
 

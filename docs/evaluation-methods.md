@@ -1,4 +1,4 @@
-# Performance estimation functions
+# Evaluation methods
 
 !!! warning
     *This section is under construction*
