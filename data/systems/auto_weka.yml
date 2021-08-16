@@ -3,7 +3,7 @@ website: https://www.cs.ubc.ca/labs/beta/Projects/autoweka/
 open_source: yes
 institutions: []
 repository: https://github.com/automl/autoweka
-license: GPL
+license: GPLv3
 references: []
 cli: no
 gui: no

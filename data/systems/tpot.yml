@@ -1,9 +1,9 @@
 name: TPOT
-website: null
+website: https://epistasislab.github.io/tpot/
 open_source: yes
 institutions: []
-repository: null
-license: null
+repository: https://github.com/epistasislab/tpot
+license: LGPLv3
 references: []
 cli: yes
 gui: no

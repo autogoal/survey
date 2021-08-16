@@ -1,15 +1,16 @@
 name: ML-Plan
-website: null
+website: https://starlibs.github.io/AILibs/projects/mlplan/
 open_source: yes
 institutions: []
-repository: null
-license: null
+repository: https://github.com/starlibs/AILibs
+license: AGPLv3
 references: []
-cli: yes
+cli: no
 gui: no
 http: no
 library: yes
-programming_languages: []
+programming_languages:
+  - Java
 domains:
   - tabular
 multi_domain: no

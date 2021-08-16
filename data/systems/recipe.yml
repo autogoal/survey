@@ -1,11 +1,11 @@
 name: RECIPE
-website: null
+website: https://laic-ufmg.github.io/Recipe/docs/
 open_source: yes
 institutions: []
-repository: null
-license: null
+repository: https://github.com/laic-ufmg/Recipe
+license: GPLv3
 references: []
-cli: yes
+cli: no
 gui: no
 http: no
 library: yes

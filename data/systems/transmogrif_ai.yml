@@ -1,12 +1,12 @@
 name: TransmogrifAI
-website: null
+website: https://transmogrif.ai/
 open_source: yes
 institutions:
   - Salesforce
-repository: null
-license: null
+repository: https://github.com/salesforce/TransmogrifAI
+license: BSD
 references: []
-cli: yes
+cli: no
 gui: no
 http: no
 library: yes
