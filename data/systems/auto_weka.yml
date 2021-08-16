@@ -1,16 +1,17 @@
-name: AutoWeka
-website: null
+name: Auto-WEKA
+website: https://www.cs.ubc.ca/labs/beta/Projects/autoweka/
 open_source: yes
 institutions: []
-repository: null
-license: null
+repository: https://github.com/automl/autoweka
+license: GPL
 references: []
-cli: yes
+cli: no
 gui: no
 http: no
 library: yes
 programming_languages:
   - Java
+  - Python
 domains:
   - tabular
 multi_domain: no

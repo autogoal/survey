@@ -1,15 +1,17 @@
-name: AutoSklearn
-website: null
+name: Auto-Sklearn
+website: https://automl.github.io/auto-sklearn/master/
 open_source: yes
 institutions: []
-repository: null
-license: null
-references: []
-cli: yes
+repository: https://github.com/automl/auto-sklearn
+license: BSD
+references:
+  - https://papers.nips.cc/paper/5872-efficient-and-robust-automated-machine-learning.pdf
+cli: no
 gui: no
 http: no
 library: yes
-programming_languages: []
+programming_languages:
+  - Python
 domains:
   - tabular
 multi_domain: no

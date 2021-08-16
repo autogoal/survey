@@ -1,11 +1,12 @@
-name: Hyperopt-Sklearn
-website: null
+name: Hyperopt-sklearn
+website: https://hyperopt.github.io/hyperopt-sklearn/
 open_source: yes
 institutions: []
-repository: null
-license: null
-references: []
-cli: yes
+repository: https://github.com/hyperopt/hyperopt-sklearn
+license: MIT
+references:
+  - http://conference.scipy.org/proceedings/scipy2014/pdfs/komer.pdf
+cli: no
 gui: no
 http: no
 library: yes

@@ -6,7 +6,7 @@ institutions:
 repository: https://github.com/awslabs/autogluon
 license: Apache 2.0
 references: []
-cli: yes
+cli: no
 gui: no
 http: no
 library: yes
