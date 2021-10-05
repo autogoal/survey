@@ -4,6 +4,12 @@
 
 ---
 
+> ### 🎃 Hacktoberfest 2021 is here! 
+> 
+> We're open to your contributions. Drop by the issue section and help us with adding new system descriptions!
+
+---
+
 This project is a community effort in constructing and maintaining an up-to-date beginner-friendly introduction to AutoML, focusing on practical systems.
 AutoML is a big field, and continues to grow daily.
 Hence, we cannot hope to provide a comprehensive description of every interesting idea or approach available.
