@@ -1,0 +1,1454 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="canonical" href="https://autogoal.github.io/survey/systems/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.2">
+    
+    
+      
+        <title>Systems - AutoML Survey</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.1118c9be.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ba0d045b.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#000000">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="black" data-md-color-accent="black">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#a-list-of-popular-automl-systems" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="AutoML Survey" class="md-header__button md-logo" aria-label="AutoML Survey" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AutoML Survey
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Systems
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/autogoal/survey/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="AutoML Survey" class="md-nav__button md-logo" aria-label="AutoML Survey" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    AutoML Survey
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/autogoal/survey/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../search-spaces/" class="md-nav__link">
+        Search Space
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../search-strategies/" class="md-nav__link">
+        Search Strategies
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../evaluation-methods/" class="md-nav__link">
+        Evaluation Methods
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../comparison/" class="md-nav__link">
+        Comparison
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Systems
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Systems
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ai-builder" class="md-nav__link">
+    AI Builder
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auto-pytorch" class="md-nav__link">
+    Auto-Pytorch
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auto-sklearn" class="md-nav__link">
+    Auto-Sklearn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auto-weka" class="md-nav__link">
+    Auto-WEKA
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autogoal" class="md-nav__link">
+    AutoGOAL
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autogluon" class="md-nav__link">
+    AutoGluon
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autokeras" class="md-nav__link">
+    AutoKeras
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autonlp" class="md-nav__link">
+    AutoNLP
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#azure-ml" class="md-nav__link">
+    Azure ML
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#h2o-automl" class="md-nav__link">
+    H2O AutoML
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hyperopt-sklearn" class="md-nav__link">
+    Hyperopt-sklearn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#knime-automl" class="md-nav__link">
+    KNIME AutoML
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ml-plan" class="md-nav__link">
+    ML-Plan
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recipe" class="md-nav__link">
+    RECIPE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tpot" class="md-nav__link">
+    TPOT
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transmogrifai" class="md-nav__link">
+    TransmogrifAI
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vertex-ai" class="md-nav__link">
+    Vertex AI
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ai-builder" class="md-nav__link">
+    AI Builder
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auto-pytorch" class="md-nav__link">
+    Auto-Pytorch
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auto-sklearn" class="md-nav__link">
+    Auto-Sklearn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auto-weka" class="md-nav__link">
+    Auto-WEKA
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autogoal" class="md-nav__link">
+    AutoGOAL
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autogluon" class="md-nav__link">
+    AutoGluon
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autokeras" class="md-nav__link">
+    AutoKeras
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autonlp" class="md-nav__link">
+    AutoNLP
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#azure-ml" class="md-nav__link">
+    Azure ML
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#h2o-automl" class="md-nav__link">
+    H2O AutoML
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hyperopt-sklearn" class="md-nav__link">
+    Hyperopt-sklearn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#knime-automl" class="md-nav__link">
+    KNIME AutoML
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ml-plan" class="md-nav__link">
+    ML-Plan
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recipe" class="md-nav__link">
+    RECIPE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tpot" class="md-nav__link">
+    TPOT
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transmogrifai" class="md-nav__link">
+    TransmogrifAI
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vertex-ai" class="md-nav__link">
+    Vertex AI
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/autogoal/survey/edit/main/docs/systems.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="a-list-of-popular-automl-systems">A list of popular AutoML systems<a class="headerlink" href="#a-list-of-popular-automl-systems" title="Permanent link">&para;</a></h1>
+<p>This section lists all the AutoML systems considered for the present survey and the associated metadata.
+A description of the characteristics considered for each system can be found in the <a href="./comparison">Comparison section</a>.</p>
+<div class="admonition help">
+<p class="admonition-title">Help</p>
+<p>We need your help!
+If you want to contribute to this section, you can either <strong>edit</strong> any of the systems' characteristics by clicking on each section's <img alt="" src="https://img.shields.io/badge/Edit-Info-orange?logo=github" /> badge, or <a href="https://github.com/autogoal/survey">add new systems</a> in our repository.</p>
+</div>
+<h2 id="ai-builder">AI Builder<a class="headerlink" href="#ai-builder" title="Permanent link">&para;</a></h2>
+<p><a href="https://github.com/autogoal/survey/edit/main/data/systems/ai_builder.yml"><img alt="Edit YAML definition" src="https://img.shields.io/badge/Edit-Info-orange?logo=github" /></a></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Basic&nbsp;info</strong></td>
+<td><a href="https://docs.microsoft.com/en-us/ai-builder/overview"><img alt="System website" src="https://img.shields.io/badge/website-docs.microsoft.com-informational" /></a> <br><img alt="Open source" src="https://img.shields.io/badge/open--source-no-critical" /></td>
+</tr>
+<tr>
+<td><strong>Interfaces</strong></td>
+<td><img alt="CLI" src="https://img.shields.io/badge/CLI-yes-success" /> <img alt="GUI" src="https://img.shields.io/badge/GUI-yes-success" /> <img alt="HTTP" src="https://img.shields.io/badge/HTTP-no-critical" /> <img alt="Library" src="https://img.shields.io/badge/Library-yes-success" /> <br></td>
+</tr>
+<tr>
+<td><strong> Domains</strong></td>
+<td><img alt="Multi-domain" src="https://img.shields.io/badge/multi--domain-no-critical" /> <br><img alt="images" src="https://img.shields.io/badge/domain-images-white" /> &nbsp;<img alt="nlp" src="https://img.shields.io/badge/domain-nlp-white" /> &nbsp;<img alt="tabular" src="https://img.shields.io/badge/domain-tabular-white" /> &nbsp;</td>
+</tr>
+<tr>
+<td><strong>Techniques</strong></td>
+<td><img alt="Distillation" src="https://img.shields.io/badge/distillation-no-critical" /> <br> <img alt="pretrained" src="https://img.shields.io/badge/technique-pretrained-white" /> &nbsp;</td>
+</tr>
+<tr>
+<td><strong>Tasks</strong></td>
+<td><img alt="Multi-task" src="https://img.shields.io/badge/multi--task-no-critical" /> <br> <img alt="classification" src="https://img.shields.io/badge/task-classification-white" />  <img alt="regression" src="https://img.shields.io/badge/task-regression-white" />  <img alt="feature_preprocessing" src="https://img.shields.io/badge/task-feature_preprocessing-white" />  <img alt="domain_preprocessing" src="https://img.shields.io/badge/task-domain_preprocessing-white" />  <img alt="structured_prediction" src="https://img.shields.io/badge/task-structured_prediction-white" />  <img alt="segmentation" src="https://img.shields.io/badge/task-segmentation-white" /></td>
+</tr>
+<tr>
+<td><strong>Search&nbsp;strategies</strong></td>
+<td><img alt="Meta-learning" src="https://img.shields.io/badge/meta--learning-no-critical" /> <br></td>
+</tr>
+<tr>
+<td><strong>Search&nbsp;space</strong></td>
+<td><img alt="Hierarchical" src="https://img.shields.io/badge/hierarchical-no-critical" /> <img alt="Probabilistic" src="https://img.shields.io/badge/probabilistic-no-critical" /> <img alt="Differentiable" src="https://img.shields.io/badge/differentiable-no-critical" /> <img alt="Automatic" src="https://img.shields.io/badge/automatic-no-critical" /> <img alt="Robust" src="https://img.shields.io/badge/robust-yes-success" /> <br>  <br></td>
+</tr>
+<tr>
+<td><strong>Architecture</strong></td>
+<td><img alt="extensible" src="https://img.shields.io/badge/extensible-no-red" />  <img alt="accesible" src="https://img.shields.io/badge/accesible-no-red" />  <img alt="portable" src="https://img.shields.io/badge/portable-no-red" />  <br>  <img alt="gpu" src="https://img.shields.io/badge/gpu-yes-success" />  <img alt="tpu" src="https://img.shields.io/badge/tpu-no-red" />  <img alt="cluster" src="https://img.shields.io/badge/cluster-no-red" /></td>
+</tr>
+</tbody>
+</table>
+<h2 id="auto-pytorch">Auto-Pytorch<a class="headerlink" href="#auto-pytorch" title="Permanent link">&para;</a></h2>
+<p><a href="https://github.com/autogoal/survey/edit/main/data/systems/auto_pytorch.yml"><img alt="Edit YAML definition" src="https://img.shields.io/badge/Edit-Info-orange?logo=github" /></a>
+<a href="https://github.com/automl/Auto-PyTorch"><img alt="Repository" src="https://img.shields.io/badge/automl-Auto--PyTorch-blue?logo=github" /></a>
+<img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/automl/Auto-PyTorch?label=Github%20Stars&amp;logo=github&amp;style=social" /></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Basic&nbsp;info</strong></td>
+<td><a href="https://automl.github.io/Auto-PyTorch/"><img alt="System website" src="https://img.shields.io/badge/website-automl.github.io-informational" /></a> <br><img alt="Open source" src="https://img.shields.io/badge/open--source-yes-success" />  <img alt="License" src="https://img.shields.io/badge/License-Apache 2.0-informational" /></td>
+</tr>
+<tr>
+<td><strong>Interfaces</strong></td>
+<td><img alt="CLI" src="https://img.shields.io/badge/CLI-yes-success" /> <img alt="GUI" src="https://img.shields.io/badge/GUI-no-critical" /> <img alt="HTTP" src="https://img.shields.io/badge/HTTP-no-critical" /> <img alt="Library" src="https://img.shields.io/badge/Library-yes-success" /> <br>  <img alt="Python" src="https://img.shields.io/badge/language-Python-blueviolet" /></td>
+</tr>
+<tr>
+<td><strong> Domains</strong></td>
+<td><img alt="Multi-domain" src="https://img.shields.io/badge/multi--domain-no-critical" /> <br><img alt="images" src="https://img.shields.io/badge/domain-images-white" /> &nbsp;<img alt="tabular" src="https://img.shields.io/badge/domain-tabular-white" /> &nbsp;</td>
+</tr>
+<tr>
+<td><strong>Techniques</strong></td>
+<td><img alt="Distillation" src="https://img.shields.io/badge/distillation-no-critical" /> <br> <img alt="mlp" src="https://img.shields.io/badge/technique-mlp-white" /> &nbsp;  <img alt="ensembles" src="https://img.shields.io/badge/technique-ensembles-white" /> &nbsp;</td>
+</tr>
+<tr>
+<td><strong>Tasks</strong></td>
+<td><img alt="Multi-task" src="https://img.shields.io/badge/multi--task-no-critical" /> <br> <img alt="classification" src="https://img.shields.io/badge/task-classification-white" />  <img alt="regression" src="https://img.shields.io/badge/task-regression-white" />  <img alt="feature_preprocessing" src="https://img.shields.io/badge/task-feature_preprocessing-white" />  <img alt="domain_preprocessing" src="https://img.shields.io/badge/task-domain_preprocessing-white" />  <img alt="data_augmentation" src="https://img.shields.io/badge/task-data_augmentation-white" />  <img alt="dimensionality_reduction" src="https://img.shields.io/badge/task-dimensionality_reduction-white" /></td>
+</tr>
+<tr>
+<td><strong>Search&nbsp;strategies</strong></td>
+<td><img alt="Meta-learning" src="https://img.shields.io/badge/meta--learning-yes-success" />  <img alt="portfolio" src="https://img.shields.io/badge/meta-portfolio-white" /> &nbsp; <br> <img alt="bayesian" src="https://img.shields.io/badge/strategy-bayesian-white" /> &nbsp;</td>
+</tr>
+<tr>
+<td><strong>Search&nbsp;space</strong></td>
+<td><img alt="Hierarchical" src="https://img.shields.io/badge/hierarchical-yes-success" /> <img alt="Probabilistic" src="https://img.shields.io/badge/probabilistic-yes-success" /> <img alt="Differentiable" src="https://img.shields.io/badge/differentiable-no-critical" /> <img alt="Automatic" src="https://img.shields.io/badge/automatic-no-critical" /> <img alt="Robust" src="https://img.shields.io/badge/robust-yes-success" /> <br>  <img alt="continuous" src="https://img.shields.io/badge/params-continuous-white" />  <img alt="discrete" src="https://img.shields.io/badge/params-discrete-white" />  <br>  <img alt="fixed" src="https://img.shields.io/badge/pipeline-fixed-white" />  <img alt="graph" src="https://img.shields.io/badge/pipeline-graph-white" /></td>
+</tr>
+<tr>
+<td><strong>Architecture</strong></td>
+<td><img alt="extensible" src="https://img.shields.io/badge/extensible-no-red" />  <img alt="accesible" src="https://img.shields.io/badge/accesible-no-red" />  <img alt="portable" src="https://img.shields.io/badge/portable-no-red" />  <br>  <img alt="gpu" src="https://img.shields.io/badge/gpu-yes-success" />  <img alt="tpu" src="https://img.shields.io/badge/tpu-no-red" />  <img alt="cluster" src="https://img.shields.io/badge/cluster-no-red" /></td>
+</tr>
+</tbody>
+</table>
+<h2 id="auto-sklearn">Auto-Sklearn<a class="headerlink" href="#auto-sklearn" title="Permanent link">&para;</a></h2>
+<p><a href="https://github.com/autogoal/survey/edit/main/data/systems/auto_sklearn.yml"><img alt="Edit YAML definition" src="https://img.shields.io/badge/Edit-Info-orange?logo=github" /></a>
+<a href="https://github.com/automl/auto-sklearn"><img alt="Repository" src="https://img.shields.io/badge/automl-auto--sklearn-blue?logo=github" /></a>
+<img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/automl/auto-sklearn?label=Github%20Stars&amp;logo=github&amp;style=social" /></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Basic&nbsp;info</strong></td>
+<td><a href="https://automl.github.io/auto-sklearn/master/"><img alt="System website" src="https://img.shields.io/badge/website-automl.github.io-informational" /></a> <br><img alt="Open source" src="https://img.shields.io/badge/open--source-yes-success" />  <img alt="License" src="https://img.shields.io/badge/License-BSD-informational" /></td>
+</tr>
+<tr>
+<td><strong>Interfaces</strong></td>
+<td><img alt="CLI" src="https://img.shields.io/badge/CLI-no-critical" /> <img alt="GUI" src="https://img.shields.io/badge/GUI-no-critical" /> <img alt="HTTP" src="https://img.shields.io/badge/HTTP-no-critical" /> <img alt="Library" src="https://img.shields.io/badge/Library-yes-success" /> <br>  <img alt="Python" src="https://img.shields.io/badge/language-Python-blueviolet" /></td>
+</tr>
+<tr>
+<td><strong> Domains</strong></td>
+<td><img alt="Multi-domain" src="https://img.shields.io/badge/multi--domain-no-critical" /> <br><img alt="tabular" src="https://img.shields.io/badge/domain-tabular-white" /> &nbsp;</td>
+</tr>
+<tr>
+<td><strong>Techniques</strong></td>
+<td><img alt="Distillation" src="https://img.shields.io/badge/distillation-no-critical" /> <br> <img alt="linear_models" src="https://img.shields.io/badge/technique-linear_models-white" /> &nbsp;  <img alt="trees" src="https://img.shields.io/badge/technique-trees-white" /> &nbsp;  <img alt="bayesian" src="https://img.shields.io/badge/technique-bayesian-white" /> &nbsp;  <img alt="kernel_machines" src="https://img.shields.io/badge/technique-kernel_machines-white" /> &nbsp;  <img alt="ensembles" src="https://img.shields.io/badge/technique-ensembles-white" /> &nbsp;</td>
+</tr>
+<tr>
+<td><strong>Tasks</strong></td>
+<td><img alt="Multi-task" src="https://img.shields.io/badge/multi--task-no-critical" /> <br> <img alt="classification" src="https://img.shields.io/badge/task-classification-white" />  <img alt="regression" src="https://img.shields.io/badge/task-regression-white" />  <img alt="imputation" src="https://img.shields.io/badge/task-imputation-white" />  <img alt="feature_selection" src="https://img.shields.io/badge/task-feature_selection-white" />  <img alt="feature_preprocessing" src="https://img.shields.io/badge/task-feature_preprocessing-white" />  <img alt="dimensionality_reduction" src="https://img.shields.io/badge/task-dimensionality_reduction-white" /></td>
+</tr>
+<tr>
+<td><strong>Search&nbsp;strategies</strong></td>
+<td><img alt="Meta-learning" src="https://img.shields.io/badge/meta--learning-yes-success" />  <img alt="warm_start" src="https://img.shields.io/badge/meta-warm_start-white" /> &nbsp; <br> <img alt="bayesian" src="https://img.shields.io/badge/strategy-bayesian-white" /> &nbsp;</td>
+</tr>
+<tr>
+<td><strong>Search&nbsp;space</strong></td>
+<td><img alt="Hierarchical" src="https://img.shields.io/badge/hierarchical-yes-success" /> <img alt="Probabilistic" src="https://img.shields.io/badge/probabilistic-yes-success" /> <img alt="Differentiable" src="https://img.shields.io/badge/differentiable-no-critical" /> <img alt="Automatic" src="https://img.shields.io/badge/automatic-no-critical" /> <img alt="Robust" src="https://img.shields.io/badge/robust-yes-success" /> <br>  <img alt="continuous" src="https://img.shields.io/badge/params-continuous-white" />  <img alt="discrete" src="https://img.shields.io/badge/params-discrete-white" />  <br>  <img alt="fixed" src="https://img.shields.io/badge/pipeline-fixed-white" /></td>
+</tr>
+<tr>
+<td><strong>Architecture</strong></td>
+<td><img alt="extensible" src="https://img.shields.io/badge/extensible-yes-success" />  <img alt="accesible" src="https://img.shields.io/badge/accesible-no-red" />  <img alt="portable" src="https://img.shields.io/badge/portable-no-red" />  <br>  <img alt="gpu" src="https://img.shields.io/badge/gpu-no-red" />  <img alt="tpu" src="https://img.shields.io/badge/tpu-no-red" />  <img alt="cluster" src="https://img.shields.io/badge/cluster-no-red" /></td>
+</tr>
+</tbody>
+</table>
+<h2 id="auto-weka">Auto-WEKA<a class="headerlink" href="#auto-weka" title="Permanent link">&para;</a></h2>
+<p><a href="https://github.com/autogoal/survey/edit/main/data/systems/auto_weka.yml"><img alt="Edit YAML definition" src="https://img.shields.io/badge/Edit-Info-orange?logo=github" /></a>
+<a href="https://github.com/automl/autoweka"><img alt="Repository" src="https://img.shields.io/badge/automl-autoweka-blue?logo=github" /></a>
+<img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/automl/autoweka?label=Github%20Stars&amp;logo=github&amp;style=social" /></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Basic&nbsp;info</strong></td>
+<td><a href="https://www.cs.ubc.ca/labs/beta/Projects/autoweka/"><img alt="System website" src="https://img.shields.io/badge/website-www.cs.ubc.ca-informational" /></a> <br><img alt="Open source" src="https://img.shields.io/badge/open--source-yes-success" />  <img alt="License" src="https://img.shields.io/badge/License-GPLv3-informational" /></td>
+</tr>
+<tr>
+<td><strong>Interfaces</strong></td>
+<td><img alt="CLI" src="https://img.shields.io/badge/CLI-no-critical" /> <img alt="GUI" src="https://img.shields.io/badge/GUI-no-critical" /> <img alt="HTTP" src="https://img.shields.io/badge/HTTP-no-critical" /> <img alt="Library" src="https://img.shields.io/badge/Library-yes-success" /> <br>  <img alt="Java" src="https://img.shields.io/badge/language-Java-blueviolet" /> <img alt="Python" src="https://img.shields.io/badge/language-Python-blueviolet" /></td>
+</tr>
+<tr>
+<td><strong> Domains</strong></td>
+<td><img alt="Multi-domain" src="https://img.shields.io/badge/multi--domain-no-critical" /> <br><img alt="tabular" src="https://img.shields.io/badge/domain-tabular-white" /> &nbsp;</td>
+</tr>
+<tr>
+<td><strong>Techniques</strong></td>
+<td><img alt="Distillation" src="https://img.shields.io/badge/distillation-no-critical" /> <br> <img alt="linear_models" src="https://img.shields.io/badge/technique-linear_models-white" /> &nbsp;  <img alt="trees" src="https://img.shields.io/badge/technique-trees-white" /> &nbsp;  <img alt="bayesian" src="https://img.shields.io/badge/technique-bayesian-white" /> &nbsp;  <img alt="kernel_machines" src="https://img.shields.io/badge/technique-kernel_machines-white" /> &nbsp;  <img alt="ensembles" src="https://img.shields.io/badge/technique-ensembles-white" /> &nbsp;</td>
+</tr>
+<tr>
+<td><strong>Tasks</strong></td>
+<td><img alt="Multi-task" src="https://img.shields.io/badge/multi--task-no-critical" /> <br> <img alt="classification" src="https://img.shields.io/badge/task-classification-white" />  <img alt="regression" src="https://img.shields.io/badge/task-regression-white" />  <img alt="feature_selection" src="https://img.shields.io/badge/task-feature_selection-white" /></td>
+</tr>
+<tr>
+<td><strong>Search&nbsp;strategies</strong></td>
+<td><img alt="Meta-learning" src="https://img.shields.io/badge/meta--learning-no-critical" /> <br> <img alt="bayesian" src="https://img.shields.io/badge/strategy-bayesian-white" /> &nbsp;</td>
+</tr>
+<tr>
+<td><strong>Search&nbsp;space</strong></td>
+<td><img alt="Hierarchical" src="https://img.shields.io/badge/hierarchical-yes-success" /> <img alt="Probabilistic" src="https://img.shields.io/badge/probabilistic-yes-success" /> <img alt="Differentiable" src="https://img.shields.io/badge/differentiable-no-critical" /> <img alt="Automatic" src="https://img.shields.io/badge/automatic-no-critical" /> <img alt="Robust" src="https://img.shields.io/badge/robust-yes-success" /> <br>  <img alt="continuous" src="https://img.shields.io/badge/params-continuous-white" />  <img alt="discrete" src="https://img.shields.io/badge/params-discrete-white" />  <br>  <img alt="fixed" src="https://img.shields.io/badge/pipeline-fixed-white" /></td>
+</tr>
+<tr>
+<td><strong>Architecture</strong></td>
+<td><img alt="extensible" src="https://img.shields.io/badge/extensible-no-red" />  <img alt="accesible" src="https://img.shields.io/badge/accesible-no-red" />  <img alt="portable" src="https://img.shields.io/badge/portable-no-red" />  <br>  <img alt="gpu" src="https://img.shields.io/badge/gpu-no-red" />  <img alt="tpu" src="https://img.shields.io/badge/tpu-no-red" />  <img alt="cluster" src="https://img.shields.io/badge/cluster-no-red" /></td>
+</tr>
+</tbody>
+</table>
+<h2 id="autogoal">AutoGOAL<a class="headerlink" href="#autogoal" title="Permanent link">&para;</a></h2>
+<p><a href="https://github.com/autogoal/survey/edit/main/data/systems/autogoal.yml"><img alt="Edit YAML definition" src="https://img.shields.io/badge/Edit-Info-orange?logo=github" /></a>
+<a href="https://github.com/autogoal/autogoal"><img alt="Repository" src="https://img.shields.io/badge/autogoal-autogoal-blue?logo=github" /></a>
+<img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/autogoal/autogoal?label=Github%20Stars&amp;logo=github&amp;style=social" /></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Basic&nbsp;info</strong></td>
+<td><a href="https://autogoal.github.io"><img alt="System website" src="https://img.shields.io/badge/website-autogoal.github.io-informational" /></a> <br><img alt="Open source" src="https://img.shields.io/badge/open--source-yes-success" />  <img alt="License" src="https://img.shields.io/badge/License-MIT-informational" /></td>
+</tr>
+<tr>
+<td><strong>Interfaces</strong></td>
+<td><img alt="CLI" src="https://img.shields.io/badge/CLI-yes-success" /> <img alt="GUI" src="https://img.shields.io/badge/GUI-no-critical" /> <img alt="HTTP" src="https://img.shields.io/badge/HTTP-no-critical" /> <img alt="Library" src="https://img.shields.io/badge/Library-yes-success" /> <br>  <img alt="Python" src="https://img.shields.io/badge/language-Python-blueviolet" /></td>
+</tr>
+<tr>
+<td><strong> Domains</strong></td>
+<td><img alt="Multi-domain" src="https://img.shields.io/badge/multi--domain-yes-success" /> <br><img alt="images" src="https://img.shields.io/badge/domain-images-white" /> &nbsp;<img alt="nlp" src="https://img.shields.io/badge/domain-nlp-white" /> &nbsp;<img alt="tabular" src="https://img.shields.io/badge/domain-tabular-white" /> &nbsp;</td>
+</tr>
+<tr>
+<td><strong>Techniques</strong></td>
+<td><img alt="Distillation" src="https://img.shields.io/badge/distillation-no-critical" /> <br> <img alt="linear_models" src="https://img.shields.io/badge/technique-linear_models-white" /> &nbsp;  <img alt="trees" src="https://img.shields.io/badge/technique-trees-white" /> &nbsp;  <img alt="bayesian" src="https://img.shields.io/badge/technique-bayesian-white" /> &nbsp;  <img alt="kernel_machines" src="https://img.shields.io/badge/technique-kernel_machines-white" /> &nbsp;  <img alt="graphical_models" src="https://img.shields.io/badge/technique-graphical_models-white" /> &nbsp;  <img alt="mlp" src="https://img.shields.io/badge/technique-mlp-white" /> &nbsp;  <img alt="cnn" src="https://img.shields.io/badge/technique-cnn-white" /> &nbsp;  <img alt="rnn" src="https://img.shields.io/badge/technique-rnn-white" /> &nbsp;  <img alt="pretrained" src="https://img.shields.io/badge/technique-pretrained-white" /> &nbsp;  <img alt="ad_hoc" src="https://img.shields.io/badge/technique-ad_hoc-white" /> &nbsp;</td>
+</tr>
+<tr>
+<td><strong>Tasks</strong></td>
+<td><img alt="Multi-task" src="https://img.shields.io/badge/multi--task-no-critical" /> <br> <img alt="classification" src="https://img.shields.io/badge/task-classification-white" />  <img alt="structured_prediction" src="https://img.shields.io/badge/task-structured_prediction-white" />  <img alt="regression" src="https://img.shields.io/badge/task-regression-white" />  <img alt="clustering" src="https://img.shields.io/badge/task-clustering-white" />  <img alt="imputation" src="https://img.shields.io/badge/task-imputation-white" />  <img alt="segmentation" src="https://img.shields.io/badge/task-segmentation-white" />  <img alt="feature_preprocessing" src="https://img.shields.io/badge/task-feature_preprocessing-white" />  <img alt="feature_selection" src="https://img.shields.io/badge/task-feature_selection-white" />  <img alt="data_augmentation" src="https://img.shields.io/badge/task-data_augmentation-white" />  <img alt="dimensionality_reduction" src="https://img.shields.io/badge/task-dimensionality_reduction-white" />  <img alt="data_preprocessing" src="https://img.shields.io/badge/task-data_preprocessing-white" />  <img alt="domain_preprocessing" src="https://img.shields.io/badge/task-domain_preprocessing-white" /></td>
+</tr>
+<tr>
+<td><strong>Search&nbsp;strategies</strong></td>
+<td><img alt="Meta-learning" src="https://img.shields.io/badge/meta--learning-no-critical" /> <br> <img alt="random" src="https://img.shields.io/badge/strategy-random-white" /> &nbsp;  <img alt="evolutionary" src="https://img.shields.io/badge/strategy-evolutionary-white" /> &nbsp;</td>
+</tr>
+<tr>
+<td><strong>Search&nbsp;space</strong></td>
+<td><img alt="Hierarchical" src="https://img.shields.io/badge/hierarchical-yes-success" /> <img alt="Probabilistic" src="https://img.shields.io/badge/probabilistic-yes-success" /> <img alt="Differentiable" src="https://img.shields.io/badge/differentiable-no-critical" /> <img alt="Automatic" src="https://img.shields.io/badge/automatic-yes-success" /> <img alt="Robust" src="https://img.shields.io/badge/robust-no-critical" /> <br>  <img alt="continuous" src="https://img.shields.io/badge/params-continuous-white" />  <img alt="discrete" src="https://img.shields.io/badge/params-discrete-white" />  <img alt="categorical" src="https://img.shields.io/badge/params-categorical-white" />  <img alt="conditional" src="https://img.shields.io/badge/params-conditional-white" />  <br>  <img alt="single" src="https://img.shields.io/badge/pipeline-single-white" />  <img alt="fixed" src="https://img.shields.io/badge/pipeline-fixed-white" />  <img alt="linear" src="https://img.shields.io/badge/pipeline-linear-white" />  <img alt="graph" src="https://img.shields.io/badge/pipeline-graph-white" /></td>
+</tr>
+<tr>
+<td><strong>Architecture</strong></td>
+<td><img alt="extensible" src="https://img.shields.io/badge/extensible-yes-success" />  <img alt="accesible" src="https://img.shields.io/badge/accesible-no-red" />  <img alt="portable" src="https://img.shields.io/badge/portable-no-red" />  <br>  <img alt="gpu" src="https://img.shields.io/badge/gpu-yes-success" />  <img alt="tpu" src="https://img.shields.io/badge/tpu-no-red" />  <img alt="cluster" src="https://img.shields.io/badge/cluster-no-red" /></td>
+</tr>
+</tbody>
+</table>
+<h2 id="autogluon">AutoGluon<a class="headerlink" href="#autogluon" title="Permanent link">&para;</a></h2>
+<p><a href="https://github.com/autogoal/survey/edit/main/data/systems/autogluon.yml"><img alt="Edit YAML definition" src="https://img.shields.io/badge/Edit-Info-orange?logo=github" /></a>
+<a href="https://github.com/awslabs/autogluon"><img alt="Repository" src="https://img.shields.io/badge/awslabs-autogluon-blue?logo=github" /></a>
+<img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/awslabs/autogluon?label=Github%20Stars&amp;logo=github&amp;style=social" /></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Basic&nbsp;info</strong></td>
+<td><a href="https://auto.gluon.ai/stable/index.html"><img alt="System website" src="https://img.shields.io/badge/website-auto.gluon.ai-informational" /></a> <br><img alt="Open source" src="https://img.shields.io/badge/open--source-yes-success" />  <img alt="License" src="https://img.shields.io/badge/License-Apache 2.0-informational" /></td>
+</tr>
+<tr>
+<td><strong>Interfaces</strong></td>
+<td><img alt="CLI" src="https://img.shields.io/badge/CLI-no-critical" /> <img alt="GUI" src="https://img.shields.io/badge/GUI-no-critical" /> <img alt="HTTP" src="https://img.shields.io/badge/HTTP-no-critical" /> <img alt="Library" src="https://img.shields.io/badge/Library-yes-success" /> <br>  <img alt="Python" src="https://img.shields.io/badge/language-Python-blueviolet" /></td>
+</tr>
+<tr>
+<td><strong> Domains</strong></td>
+<td><img alt="Multi-domain" src="https://img.shields.io/badge/multi--domain-yes-success" /> <br><img alt="images" src="https://img.shields.io/badge/domain-images-white" /> &nbsp;<img alt="nlp" src="https://img.shields.io/badge/domain-nlp-white" /> &nbsp;<img alt="tabular" src="https://img.shields.io/badge/domain-tabular-white" /> &nbsp;</td>
+</tr>
+<tr>
+<td><strong>Techniques</strong></td>
+<td><img alt="Distillation" src="https://img.shields.io/badge/distillation-yes-success" /> <br> <img alt="linear_models" src="https://img.shields.io/badge/technique-linear_models-white" /> &nbsp;  <img alt="trees" src="https://img.shields.io/badge/technique-trees-white" /> &nbsp;  <img alt="mlp" src="https://img.shields.io/badge/technique-mlp-white" /> &nbsp;  <img alt="pretrained" src="https://img.shields.io/badge/technique-pretrained-white" /> &nbsp;  <img alt="ensembles" src="https://img.shields.io/badge/technique-ensembles-white" /> &nbsp;</td>
+</tr>
+<tr>
+<td><strong>Tasks</strong></td>
+<td><img alt="Multi-task" src="https://img.shields.io/badge/multi--task-no-critical" /> <br> <img alt="classification" src="https://img.shields.io/badge/task-classification-white" />  <img alt="regression" src="https://img.shields.io/badge/task-regression-white" />  <img alt="feature_selection" src="https://img.shields.io/badge/task-feature_selection-white" />  <img alt="feature_preprocessing" src="https://img.shields.io/badge/task-feature_preprocessing-white" />  <img alt="domain_preprocessing" src="https://img.shields.io/badge/task-domain_preprocessing-white" />  <img alt="segmentation" src="https://img.shields.io/badge/task-segmentation-white" /></td>
+</tr>
+<tr>
+<td><strong>Search&nbsp;strategies</strong></td>
+<td><img alt="Meta-learning" src="https://img.shields.io/badge/meta--learning-no-critical" /> <br> <img alt="constructive" src="https://img.shields.io/badge/strategy-constructive-white" /> &nbsp;</td>
+</tr>
+<tr>
+<td><strong>Search&nbsp;space</strong></td>
+<td><img alt="Hierarchical" src="https://img.shields.io/badge/hierarchical-yes-success" /> <img alt="Probabilistic" src="https://img.shields.io/badge/probabilistic-no-critical" /> <img alt="Differentiable" src="https://img.shields.io/badge/differentiable-no-critical" /> <img alt="Automatic" src="https://img.shields.io/badge/automatic-no-critical" /> <img alt="Robust" src="https://img.shields.io/badge/robust-yes-success" /> <br>  <br>  <img alt="fixed" src="https://img.shields.io/badge/pipeline-fixed-white" /></td>
+</tr>
+<tr>
+<td><strong>Architecture</strong></td>
+<td><img alt="extensible" src="https://img.shields.io/badge/extensible-yes-success" />  <img alt="accesible" src="https://img.shields.io/badge/accesible-no-red" />  <img alt="portable" src="https://img.shields.io/badge/portable-no-red" />  <br>  <img alt="gpu" src="https://img.shields.io/badge/gpu-yes-success" />  <img alt="tpu" src="https://img.shields.io/badge/tpu-no-red" />  <img alt="cluster" src="https://img.shields.io/badge/cluster-no-red" /></td>
+</tr>
+</tbody>
+</table>
+<h2 id="autokeras">AutoKeras<a class="headerlink" href="#autokeras" title="Permanent link">&para;</a></h2>
+<p><a href="https://github.com/autogoal/survey/edit/main/data/systems/autokeras.yml"><img alt="Edit YAML definition" src="https://img.shields.io/badge/Edit-Info-orange?logo=github" /></a>
+<a href="https://github.com/keras-team/autokeras"><img alt="Repository" src="https://img.shields.io/badge/keras--team-autokeras-blue?logo=github" /></a>
+<img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/keras-team/autokeras?label=Github%20Stars&amp;logo=github&amp;style=social" /></p>
+<p>AutoKeras focuses on neural architecture search, using bayesian optimization with a custom acquistion function based on network morphism. Presents a high-level API inspired by <code>scikit-learn</code>, where users only need to select a task-specific model; and a low-level API where users can completely customize a neural search space.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Basic&nbsp;info</strong></td>
+<td><a href="https://autokeras.com"><img alt="System website" src="https://img.shields.io/badge/website-autokeras.com-informational" /></a> <br><img alt="Open source" src="https://img.shields.io/badge/open--source-yes-success" />  <img alt="License" src="https://img.shields.io/badge/License-Apache 2.0-informational" /></td>
+</tr>
+<tr>
+<td><strong>Interfaces</strong></td>
+<td><img alt="CLI" src="https://img.shields.io/badge/CLI-yes-success" /> <img alt="GUI" src="https://img.shields.io/badge/GUI-no-critical" /> <img alt="HTTP" src="https://img.shields.io/badge/HTTP-no-critical" /> <img alt="Library" src="https://img.shields.io/badge/Library-yes-success" /> <br>  <img alt="Python" src="https://img.shields.io/badge/language-Python-blueviolet" /></td>
+</tr>
+<tr>
+<td><strong> Domains</strong></td>
+<td><img alt="Multi-domain" src="https://img.shields.io/badge/multi--domain-yes-success" /> <br><img alt="images" src="https://img.shields.io/badge/domain-images-white" /> &nbsp;<img alt="nlp" src="https://img.shields.io/badge/domain-nlp-white" /> &nbsp;<img alt="tabular" src="https://img.shields.io/badge/domain-tabular-white" /> &nbsp;<img alt="time_series" src="https://img.shields.io/badge/domain-time_series-white" /> &nbsp;</td>
+</tr>
+<tr>
+<td><strong>Techniques</strong></td>
+<td><img alt="Distillation" src="https://img.shields.io/badge/distillation-no-critical" /> <br> <img alt="mlp" src="https://img.shields.io/badge/technique-mlp-white" /> &nbsp;  <img alt="rnn" src="https://img.shields.io/badge/technique-rnn-white" /> &nbsp;  <img alt="cnn" src="https://img.shields.io/badge/technique-cnn-white" /> &nbsp;</td>
+</tr>
+<tr>
+<td><strong>Tasks</strong></td>
+<td><img alt="Multi-task" src="https://img.shields.io/badge/multi--task-yes-success" /> <br> <img alt="classification" src="https://img.shields.io/badge/task-classification-white" />  <img alt="regression" src="https://img.shields.io/badge/task-regression-white" />  <img alt="data_augmentation" src="https://img.shields.io/badge/task-data_augmentation-white" /></td>
+</tr>
+<tr>
+<td><strong>Search&nbsp;strategies</strong></td>
+<td><img alt="Meta-learning" src="https://img.shields.io/badge/meta--learning-no-critical" /> <br> <img alt="bayesian" src="https://img.shields.io/badge/strategy-bayesian-white" /> &nbsp;</td>
+</tr>
+<tr>
+<td><strong>Search&nbsp;space</strong></td>
+<td><img alt="Hierarchical" src="https://img.shields.io/badge/hierarchical-yes-success" /> <img alt="Probabilistic" src="https://img.shields.io/badge/probabilistic-yes-success" /> <img alt="Differentiable" src="https://img.shields.io/badge/differentiable-no-critical" /> <img alt="Automatic" src="https://img.shields.io/badge/automatic-no-critical" /> <img alt="Robust" src="https://img.shields.io/badge/robust-yes-success" /> <br>  <img alt="continuous" src="https://img.shields.io/badge/params-continuous-white" />  <img alt="discrete" src="https://img.shields.io/badge/params-discrete-white" />  <br>  <img alt="graph" src="https://img.shields.io/badge/pipeline-graph-white" /></td>
+</tr>
+<tr>
+<td><strong>Architecture</strong></td>
+<td><img alt="extensible" src="https://img.shields.io/badge/extensible-yes-success" />  <img alt="accesible" src="https://img.shields.io/badge/accesible-no-red" />  <img alt="portable" src="https://img.shields.io/badge/portable-no-red" />  <br>  <img alt="gpu" src="https://img.shields.io/badge/gpu-yes-success" />  <img alt="tpu" src="https://img.shields.io/badge/tpu-no-red" />  <img alt="cluster" src="https://img.shields.io/badge/cluster-no-red" /></td>
+</tr>
+</tbody>
+</table>
+<h2 id="autonlp">AutoNLP<a class="headerlink" href="#autonlp" title="Permanent link">&para;</a></h2>
+<p><a href="https://github.com/autogoal/survey/edit/main/data/systems/autonlp.yml"><img alt="Edit YAML definition" src="https://img.shields.io/badge/Edit-Info-orange?logo=github" /></a></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Basic&nbsp;info</strong></td>
+<td><a href="https://huggingface.co/autonlp"><img alt="System website" src="https://img.shields.io/badge/website-huggingface.co-informational" /></a> <br><img alt="Open source" src="https://img.shields.io/badge/open--source-no-critical" /></td>
+</tr>
+<tr>
+<td><strong>Interfaces</strong></td>
+<td><img alt="CLI" src="https://img.shields.io/badge/CLI-yes-success" /> <img alt="GUI" src="https://img.shields.io/badge/GUI-no-critical" /> <img alt="HTTP" src="https://img.shields.io/badge/HTTP-yes-success" /> <img alt="Library" src="https://img.shields.io/badge/Library-no-critical" /> <br></td>
+</tr>
+<tr>
+<td><strong> Domains</strong></td>
+<td><img alt="Multi-domain" src="https://img.shields.io/badge/multi--domain-no-critical" /> <br><img alt="nlp" src="https://img.shields.io/badge/domain-nlp-white" /> &nbsp;</td>
+</tr>
+<tr>
+<td><strong>Techniques</strong></td>
+<td><img alt="Distillation" src="https://img.shields.io/badge/distillation-no-critical" /> <br> <img alt="pretrained" src="https://img.shields.io/badge/technique-pretrained-white" /> &nbsp;</td>
+</tr>
+<tr>
+<td><strong>Tasks</strong></td>
+<td><img alt="Multi-task" src="https://img.shields.io/badge/multi--task-no-critical" /> <br> <img alt="classification" src="https://img.shields.io/badge/task-classification-white" />  <img alt="regression" src="https://img.shields.io/badge/task-regression-white" />  <img alt="domain_preprocessing" src="https://img.shields.io/badge/task-domain_preprocessing-white" />  <img alt="structured_prediction" src="https://img.shields.io/badge/task-structured_prediction-white" />  <img alt="segmentation" src="https://img.shields.io/badge/task-segmentation-white" /></td>
+</tr>
+<tr>
+<td><strong>Search&nbsp;strategies</strong></td>
+<td><img alt="Meta-learning" src="https://img.shields.io/badge/meta--learning-no-critical" /> <br></td>
+</tr>
+<tr>
+<td><strong>Search&nbsp;space</strong></td>
+<td><img alt="Hierarchical" src="https://img.shields.io/badge/hierarchical-no-critical" /> <img alt="Probabilistic" src="https://img.shields.io/badge/probabilistic-no-critical" /> <img alt="Differentiable" src="https://img.shields.io/badge/differentiable-no-critical" /> <img alt="Automatic" src="https://img.shields.io/badge/automatic-no-critical" /> <img alt="Robust" src="https://img.shields.io/badge/robust-yes-success" /> <br>  <br>  <img alt="fixed" src="https://img.shields.io/badge/pipeline-fixed-white" /></td>
+</tr>
+<tr>
+<td><strong>Architecture</strong></td>
+<td><img alt="extensible" src="https://img.shields.io/badge/extensible-no-red" />  <img alt="accesible" src="https://img.shields.io/badge/accesible-no-red" />  <img alt="portable" src="https://img.shields.io/badge/portable-no-red" />  <br>  <img alt="gpu" src="https://img.shields.io/badge/gpu-yes-success" />  <img alt="tpu" src="https://img.shields.io/badge/tpu-no-red" />  <img alt="cluster" src="https://img.shields.io/badge/cluster-no-red" /></td>
+</tr>
+</tbody>
+</table>
+<h2 id="azure-ml">Azure ML<a class="headerlink" href="#azure-ml" title="Permanent link">&para;</a></h2>
+<p><a href="https://github.com/autogoal/survey/edit/main/data/systems/azure_ml.yml"><img alt="Edit YAML definition" src="https://img.shields.io/badge/Edit-Info-orange?logo=github" /></a></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Basic&nbsp;info</strong></td>
+<td><a href="https://azure.microsoft.com/en-us/services/machine-learning/"><img alt="System website" src="https://img.shields.io/badge/website-azure.microsoft.com-informational" /></a> <br><img alt="Open source" src="https://img.shields.io/badge/open--source-no-critical" /></td>
+</tr>
+<tr>
+<td><strong>Interfaces</strong></td>
+<td><img alt="CLI" src="https://img.shields.io/badge/CLI-yes-success" /> <img alt="GUI" src="https://img.shields.io/badge/GUI-yes-success" /> <img alt="HTTP" src="https://img.shields.io/badge/HTTP-no-critical" /> <img alt="Library" src="https://img.shields.io/badge/Library-yes-success" /> <br></td>
+</tr>
+<tr>
+<td><strong> Domains</strong></td>
+<td><img alt="Multi-domain" src="https://img.shields.io/badge/multi--domain-no-critical" /> <br><img alt="nlp" src="https://img.shields.io/badge/domain-nlp-white" /> &nbsp;<img alt="tabular" src="https://img.shields.io/badge/domain-tabular-white" /> &nbsp;<img alt="time_series" src="https://img.shields.io/badge/domain-time_series-white" /> &nbsp;</td>
+</tr>
+<tr>
+<td><strong>Techniques</strong></td>
+<td><img alt="Distillation" src="https://img.shields.io/badge/distillation-no-critical" /> <br> <img alt="linear_models" src="https://img.shields.io/badge/technique-linear_models-white" /> &nbsp;  <img alt="trees" src="https://img.shields.io/badge/technique-trees-white" /> &nbsp;  <img alt="bayesian" src="https://img.shields.io/badge/technique-bayesian-white" /> &nbsp;  <img alt="kernel_machines" src="https://img.shields.io/badge/technique-kernel_machines-white" /> &nbsp;  <img alt="pretrained" src="https://img.shields.io/badge/technique-pretrained-white" /> &nbsp;  <img alt="ensembles" src="https://img.shields.io/badge/technique-ensembles-white" /> &nbsp;</td>
+</tr>
+<tr>
+<td><strong>Tasks</strong></td>
+<td><img alt="Multi-task" src="https://img.shields.io/badge/multi--task-no-critical" /> <br> <img alt="classification" src="https://img.shields.io/badge/task-classification-white" />  <img alt="regression" src="https://img.shields.io/badge/task-regression-white" />  <img alt="clustering" src="https://img.shields.io/badge/task-clustering-white" />  <img alt="imputation" src="https://img.shields.io/badge/task-imputation-white" />  <img alt="feature_selection" src="https://img.shields.io/badge/task-feature_selection-white" />  <img alt="feature_preprocessing" src="https://img.shields.io/badge/task-feature_preprocessing-white" />  <img alt="domain_preprocessing" src="https://img.shields.io/badge/task-domain_preprocessing-white" /></td>
+</tr>
+<tr>
+<td><strong>Search&nbsp;strategies</strong></td>
+<td><img alt="Meta-learning" src="https://img.shields.io/badge/meta--learning-no-critical" /> <br> <img alt="bayesian" src="https://img.shields.io/badge/strategy-bayesian-white" /> &nbsp;  <img alt="random" src="https://img.shields.io/badge/strategy-random-white" /> &nbsp;</td>
+</tr>
+<tr>
+<td><strong>Search&nbsp;space</strong></td>
+<td><img alt="Hierarchical" src="https://img.shields.io/badge/hierarchical-no-critical" /> <img alt="Probabilistic" src="https://img.shields.io/badge/probabilistic-yes-success" /> <img alt="Differentiable" src="https://img.shields.io/badge/differentiable-no-critical" /> <img alt="Automatic" src="https://img.shields.io/badge/automatic-no-critical" /> <img alt="Robust" src="https://img.shields.io/badge/robust-yes-success" /> <br>  <img alt="continuous" src="https://img.shields.io/badge/params-continuous-white" />  <img alt="discrete" src="https://img.shields.io/badge/params-discrete-white" />  <br>  <img alt="fixed" src="https://img.shields.io/badge/pipeline-fixed-white" /></td>
+</tr>
+<tr>
+<td><strong>Architecture</strong></td>
+<td><img alt="extensible" src="https://img.shields.io/badge/extensible-no-red" />  <img alt="accesible" src="https://img.shields.io/badge/accesible-no-red" />  <img alt="portable" src="https://img.shields.io/badge/portable-yes-success" />  <br>  <img alt="gpu" src="https://img.shields.io/badge/gpu-yes-success" />  <img alt="tpu" src="https://img.shields.io/badge/tpu-no-red" />  <img alt="cluster" src="https://img.shields.io/badge/cluster-no-red" /></td>
+</tr>
+</tbody>
+</table>
+<h2 id="h2o-automl">H2O AutoML<a class="headerlink" href="#h2o-automl" title="Permanent link">&para;</a></h2>
+<p><a href="https://github.com/autogoal/survey/edit/main/data/systems/h2o_automl.yml"><img alt="Edit YAML definition" src="https://img.shields.io/badge/Edit-Info-orange?logo=github" /></a>
+<a href="https://github.com/h2oai/h2o-3"><img alt="Repository" src="https://img.shields.io/badge/h2oai-h2o--3-blue?logo=github" /></a>
+<img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/h2oai/h2o-3?label=Github%20Stars&amp;logo=github&amp;style=social" /></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Basic&nbsp;info</strong></td>
+<td><a href="https://docs.h2o.ai/h2o/latest-stable/h2o-docs/automl.html"><img alt="System website" src="https://img.shields.io/badge/website-docs.h2o.ai-informational" /></a> <br><img alt="Open source" src="https://img.shields.io/badge/open--source-yes-success" />  <img alt="License" src="https://img.shields.io/badge/License-Apache 2.0-informational" /></td>
+</tr>
+<tr>
+<td><strong>Interfaces</strong></td>
+<td><img alt="CLI" src="https://img.shields.io/badge/CLI-yes-success" /> <img alt="GUI" src="https://img.shields.io/badge/GUI-yes-success" /> <img alt="HTTP" src="https://img.shields.io/badge/HTTP-yes-success" /> <img alt="Library" src="https://img.shields.io/badge/Library-yes-success" /> <br>  <img alt="Python" src="https://img.shields.io/badge/language-Python-blueviolet" /> <img alt="R" src="https://img.shields.io/badge/language-R-blueviolet" /> <img alt="Java" src="https://img.shields.io/badge/language-Java-blueviolet" /> <img alt="Scala" src="https://img.shields.io/badge/language-Scala-blueviolet" /></td>
+</tr>
+<tr>
+<td><strong> Domains</strong></td>
+<td><img alt="Multi-domain" src="https://img.shields.io/badge/multi--domain-no-critical" /> <br><img alt="tabular" src="https://img.shields.io/badge/domain-tabular-white" /> &nbsp;</td>
+</tr>
+<tr>
+<td><strong>Techniques</strong></td>
+<td><img alt="Distillation" src="https://img.shields.io/badge/distillation-no-critical" /> <br> <img alt="linear_models" src="https://img.shields.io/badge/technique-linear_models-white" /> &nbsp;  <img alt="trees" src="https://img.shields.io/badge/technique-trees-white" /> &nbsp;  <img alt="mlp" src="https://img.shields.io/badge/technique-mlp-white" /> &nbsp;  <img alt="ensembles" src="https://img.shields.io/badge/technique-ensembles-white" /> &nbsp;  <img alt="ad_hoc" src="https://img.shields.io/badge/technique-ad_hoc-white" /> &nbsp;</td>
+</tr>
+<tr>
+<td><strong>Tasks</strong></td>
+<td><img alt="Multi-task" src="https://img.shields.io/badge/multi--task-no-critical" /> <br> <img alt="classification" src="https://img.shields.io/badge/task-classification-white" />  <img alt="regression" src="https://img.shields.io/badge/task-regression-white" />  <img alt="imputation" src="https://img.shields.io/badge/task-imputation-white" />  <img alt="feature_preprocessing" src="https://img.shields.io/badge/task-feature_preprocessing-white" />  <img alt="data_preprocessing" src="https://img.shields.io/badge/task-data_preprocessing-white" /></td>
+</tr>
+<tr>
+<td><strong>Search&nbsp;strategies</strong></td>
+<td><img alt="Meta-learning" src="https://img.shields.io/badge/meta--learning-no-critical" /> <br> <img alt="random" src="https://img.shields.io/badge/strategy-random-white" /> &nbsp;  <img alt="grid" src="https://img.shields.io/badge/strategy-grid-white" /> &nbsp;  <img alt="constructive" src="https://img.shields.io/badge/strategy-constructive-white" /> &nbsp;</td>
+</tr>
+<tr>
+<td><strong>Search&nbsp;space</strong></td>
+<td><img alt="Hierarchical" src="https://img.shields.io/badge/hierarchical-no-critical" /> <img alt="Probabilistic" src="https://img.shields.io/badge/probabilistic-no-critical" /> <img alt="Differentiable" src="https://img.shields.io/badge/differentiable-no-critical" /> <img alt="Automatic" src="https://img.shields.io/badge/automatic-no-critical" /> <img alt="Robust" src="https://img.shields.io/badge/robust-yes-success" /> <br>  <br>  <img alt="single" src="https://img.shields.io/badge/pipeline-single-white" />  <img alt="fixed" src="https://img.shields.io/badge/pipeline-fixed-white" /></td>
+</tr>
+<tr>
+<td><strong>Architecture</strong></td>
+<td><img alt="extensible" src="https://img.shields.io/badge/extensible-no-red" />  <img alt="accesible" src="https://img.shields.io/badge/accesible-no-red" />  <img alt="portable" src="https://img.shields.io/badge/portable-yes-success" />  <br>  <img alt="gpu" src="https://img.shields.io/badge/gpu-yes-success" />  <img alt="tpu" src="https://img.shields.io/badge/tpu-no-red" />  <img alt="cluster" src="https://img.shields.io/badge/cluster-yes-success" /></td>
+</tr>
+</tbody>
+</table>
+<h2 id="hyperopt-sklearn">Hyperopt-sklearn<a class="headerlink" href="#hyperopt-sklearn" title="Permanent link">&para;</a></h2>
+<p><a href="https://github.com/autogoal/survey/edit/main/data/systems/hyperopt_sklearn.yml"><img alt="Edit YAML definition" src="https://img.shields.io/badge/Edit-Info-orange?logo=github" /></a>
+<a href="https://github.com/hyperopt/hyperopt-sklearn"><img alt="Repository" src="https://img.shields.io/badge/hyperopt-hyperopt--sklearn-blue?logo=github" /></a>
+<img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/hyperopt/hyperopt-sklearn?label=Github%20Stars&amp;logo=github&amp;style=social" /></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Basic&nbsp;info</strong></td>
+<td><a href="https://hyperopt.github.io/hyperopt-sklearn/"><img alt="System website" src="https://img.shields.io/badge/website-hyperopt.github.io-informational" /></a> <br><img alt="Open source" src="https://img.shields.io/badge/open--source-yes-success" />  <img alt="License" src="https://img.shields.io/badge/License-MIT-informational" /></td>
+</tr>
+<tr>
+<td><strong>Interfaces</strong></td>
+<td><img alt="CLI" src="https://img.shields.io/badge/CLI-no-critical" /> <img alt="GUI" src="https://img.shields.io/badge/GUI-no-critical" /> <img alt="HTTP" src="https://img.shields.io/badge/HTTP-no-critical" /> <img alt="Library" src="https://img.shields.io/badge/Library-yes-success" /> <br>  <img alt="Python" src="https://img.shields.io/badge/language-Python-blueviolet" /></td>
+</tr>
+<tr>
+<td><strong> Domains</strong></td>
+<td><img alt="Multi-domain" src="https://img.shields.io/badge/multi--domain-no-critical" /> <br><img alt="nlp" src="https://img.shields.io/badge/domain-nlp-white" /> &nbsp;<img alt="tabular" src="https://img.shields.io/badge/domain-tabular-white" /> &nbsp;</td>
+</tr>
+<tr>
+<td><strong>Techniques</strong></td>
+<td><img alt="Distillation" src="https://img.shields.io/badge/distillation-no-critical" /> <br> <img alt="linear_models" src="https://img.shields.io/badge/technique-linear_models-white" /> &nbsp;  <img alt="trees" src="https://img.shields.io/badge/technique-trees-white" /> &nbsp;  <img alt="bayesian" src="https://img.shields.io/badge/technique-bayesian-white" /> &nbsp;  <img alt="kernel_machines" src="https://img.shields.io/badge/technique-kernel_machines-white" /> &nbsp;</td>
+</tr>
+<tr>
+<td><strong>Tasks</strong></td>
+<td><img alt="Multi-task" src="https://img.shields.io/badge/multi--task-no-critical" /> <br> <img alt="classification" src="https://img.shields.io/badge/task-classification-white" />  <img alt="regression" src="https://img.shields.io/badge/task-regression-white" />  <img alt="feature_selection" src="https://img.shields.io/badge/task-feature_selection-white" />  <img alt="feature_preprocessing" src="https://img.shields.io/badge/task-feature_preprocessing-white" />  <img alt="dimensionality_reduction" src="https://img.shields.io/badge/task-dimensionality_reduction-white" /></td>
+</tr>
+<tr>
+<td><strong>Search&nbsp;strategies</strong></td>
+<td><img alt="Meta-learning" src="https://img.shields.io/badge/meta--learning-no-critical" /> <br> <img alt="bayesian" src="https://img.shields.io/badge/strategy-bayesian-white" /> &nbsp;  <img alt="random" src="https://img.shields.io/badge/strategy-random-white" /> &nbsp;  <img alt="hill_climbing" src="https://img.shields.io/badge/strategy-hill_climbing-white" /> &nbsp;</td>
+</tr>
+<tr>
+<td><strong>Search&nbsp;space</strong></td>
+<td><img alt="Hierarchical" src="https://img.shields.io/badge/hierarchical-yes-success" /> <img alt="Probabilistic" src="https://img.shields.io/badge/probabilistic-yes-success" /> <img alt="Differentiable" src="https://img.shields.io/badge/differentiable-no-critical" /> <img alt="Automatic" src="https://img.shields.io/badge/automatic-no-critical" /> <img alt="Robust" src="https://img.shields.io/badge/robust-yes-success" /> <br>  <img alt="continuous" src="https://img.shields.io/badge/params-continuous-white" />  <img alt="discrete" src="https://img.shields.io/badge/params-discrete-white" />  <br>  <img alt="fixed" src="https://img.shields.io/badge/pipeline-fixed-white" /></td>
+</tr>
+<tr>
+<td><strong>Architecture</strong></td>
+<td><img alt="extensible" src="https://img.shields.io/badge/extensible-yes-success" />  <img alt="accesible" src="https://img.shields.io/badge/accesible-no-red" />  <img alt="portable" src="https://img.shields.io/badge/portable-no-red" />  <br>  <img alt="gpu" src="https://img.shields.io/badge/gpu-no-red" />  <img alt="tpu" src="https://img.shields.io/badge/tpu-no-red" />  <img alt="cluster" src="https://img.shields.io/badge/cluster-no-red" /></td>
+</tr>
+</tbody>
+</table>
+<h2 id="knime-automl">KNIME AutoML<a class="headerlink" href="#knime-automl" title="Permanent link">&para;</a></h2>
+<p><a href="https://github.com/autogoal/survey/edit/main/data/systems/knime_automl.yml"><img alt="Edit YAML definition" src="https://img.shields.io/badge/Edit-Info-orange?logo=github" /></a></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Basic&nbsp;info</strong></td>
+<td><a href="https://hub.knime.com/knime/spaces/Examples/latest/00_Components%2FAutomation%2FAutoML~33fQGaQzuZByy6hE"><img alt="System website" src="https://img.shields.io/badge/website-hub.knime.com-informational" /></a> <br><img alt="Open source" src="https://img.shields.io/badge/open--source-no-critical" /></td>
+</tr>
+<tr>
+<td><strong>Interfaces</strong></td>
+<td><img alt="CLI" src="https://img.shields.io/badge/CLI-no-critical" /> <img alt="GUI" src="https://img.shields.io/badge/GUI-yes-success" /> <img alt="HTTP" src="https://img.shields.io/badge/HTTP-no-critical" /> <img alt="Library" src="https://img.shields.io/badge/Library-no-critical" /> <br></td>
+</tr>
+<tr>
+<td><strong> Domains</strong></td>
+<td><img alt="Multi-domain" src="https://img.shields.io/badge/multi--domain-no-critical" /> <br><img alt="tabular" src="https://img.shields.io/badge/domain-tabular-white" /> &nbsp;</td>
+</tr>
+<tr>
+<td><strong>Techniques</strong></td>
+<td><img alt="Distillation" src="https://img.shields.io/badge/distillation-no-critical" /> <br> <img alt="linear_models" src="https://img.shields.io/badge/technique-linear_models-white" /> &nbsp;  <img alt="trees" src="https://img.shields.io/badge/technique-trees-white" /> &nbsp;  <img alt="bayesian" src="https://img.shields.io/badge/technique-bayesian-white" /> &nbsp;</td>
+</tr>
+<tr>
+<td><strong>Tasks</strong></td>
+<td><img alt="Multi-task" src="https://img.shields.io/badge/multi--task-no-critical" /> <br> <img alt="classification" src="https://img.shields.io/badge/task-classification-white" />  <img alt="imputation" src="https://img.shields.io/badge/task-imputation-white" />  <img alt="feature_preprocessing" src="https://img.shields.io/badge/task-feature_preprocessing-white" />  <img alt="dimensionality_reduction" src="https://img.shields.io/badge/task-dimensionality_reduction-white" /></td>
+</tr>
+<tr>
+<td><strong>Search&nbsp;strategies</strong></td>
+<td><img alt="Meta-learning" src="https://img.shields.io/badge/meta--learning-no-critical" /> <br> <img alt="bayesian" src="https://img.shields.io/badge/strategy-bayesian-white" /> &nbsp;  <img alt="random" src="https://img.shields.io/badge/strategy-random-white" /> &nbsp;  <img alt="hill_climbing" src="https://img.shields.io/badge/strategy-hill_climbing-white" /> &nbsp;</td>
+</tr>
+<tr>
+<td><strong>Search&nbsp;space</strong></td>
+<td><img alt="Hierarchical" src="https://img.shields.io/badge/hierarchical-yes-success" /> <img alt="Probabilistic" src="https://img.shields.io/badge/probabilistic-no-critical" /> <img alt="Differentiable" src="https://img.shields.io/badge/differentiable-no-critical" /> <img alt="Automatic" src="https://img.shields.io/badge/automatic-no-critical" /> <img alt="Robust" src="https://img.shields.io/badge/robust-yes-success" /> <br>  <img alt="continuous" src="https://img.shields.io/badge/params-continuous-white" />  <img alt="discrete" src="https://img.shields.io/badge/params-discrete-white" />  <br>  <img alt="fixed" src="https://img.shields.io/badge/pipeline-fixed-white" /></td>
+</tr>
+<tr>
+<td><strong>Architecture</strong></td>
+<td><img alt="extensible" src="https://img.shields.io/badge/extensible-no-red" />  <img alt="accesible" src="https://img.shields.io/badge/accesible-no-red" />  <img alt="portable" src="https://img.shields.io/badge/portable-yes-success" />  <br>  <img alt="gpu" src="https://img.shields.io/badge/gpu-yes-success" />  <img alt="tpu" src="https://img.shields.io/badge/tpu-no-red" />  <img alt="cluster" src="https://img.shields.io/badge/cluster-no-red" /></td>
+</tr>
+</tbody>
+</table>
+<h2 id="ml-plan">ML-Plan<a class="headerlink" href="#ml-plan" title="Permanent link">&para;</a></h2>
+<p><a href="https://github.com/autogoal/survey/edit/main/data/systems/ml_plan.yml"><img alt="Edit YAML definition" src="https://img.shields.io/badge/Edit-Info-orange?logo=github" /></a>
+<a href="https://github.com/starlibs/AILibs"><img alt="Repository" src="https://img.shields.io/badge/starlibs-AILibs-blue?logo=github" /></a>
+<img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/starlibs/AILibs?label=Github%20Stars&amp;logo=github&amp;style=social" /></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Basic&nbsp;info</strong></td>
+<td><a href="https://starlibs.github.io/AILibs/projects/mlplan/"><img alt="System website" src="https://img.shields.io/badge/website-starlibs.github.io-informational" /></a> <br><img alt="Open source" src="https://img.shields.io/badge/open--source-yes-success" />  <img alt="License" src="https://img.shields.io/badge/License-AGPLv3-informational" /></td>
+</tr>
+<tr>
+<td><strong>Interfaces</strong></td>
+<td><img alt="CLI" src="https://img.shields.io/badge/CLI-no-critical" /> <img alt="GUI" src="https://img.shields.io/badge/GUI-no-critical" /> <img alt="HTTP" src="https://img.shields.io/badge/HTTP-no-critical" /> <img alt="Library" src="https://img.shields.io/badge/Library-yes-success" /> <br>  <img alt="Java" src="https://img.shields.io/badge/language-Java-blueviolet" /></td>
+</tr>
+<tr>
+<td><strong> Domains</strong></td>
+<td><img alt="Multi-domain" src="https://img.shields.io/badge/multi--domain-no-critical" /> <br><img alt="tabular" src="https://img.shields.io/badge/domain-tabular-white" /> &nbsp;</td>
+</tr>
+<tr>
+<td><strong>Techniques</strong></td>
+<td><img alt="Distillation" src="https://img.shields.io/badge/distillation-no-critical" /> <br> <img alt="linear_models" src="https://img.shields.io/badge/technique-linear_models-white" /> &nbsp;  <img alt="trees" src="https://img.shields.io/badge/technique-trees-white" /> &nbsp;  <img alt="kernel_machines" src="https://img.shields.io/badge/technique-kernel_machines-white" /> &nbsp;  <img alt="ensembles" src="https://img.shields.io/badge/technique-ensembles-white" /> &nbsp;</td>
+</tr>
+<tr>
+<td><strong>Tasks</strong></td>
+<td><img alt="Multi-task" src="https://img.shields.io/badge/multi--task-no-critical" /> <br> <img alt="classification" src="https://img.shields.io/badge/task-classification-white" />  <img alt="regression" src="https://img.shields.io/badge/task-regression-white" />  <img alt="imputation" src="https://img.shields.io/badge/task-imputation-white" />  <img alt="feature_selection" src="https://img.shields.io/badge/task-feature_selection-white" />  <img alt="feature_preprocessing" src="https://img.shields.io/badge/task-feature_preprocessing-white" />  <img alt="dimensionality_reduction" src="https://img.shields.io/badge/task-dimensionality_reduction-white" /></td>
+</tr>
+<tr>
+<td><strong>Search&nbsp;strategies</strong></td>
+<td><img alt="Meta-learning" src="https://img.shields.io/badge/meta--learning-no-critical" /> <br> <img alt="monte_carlo" src="https://img.shields.io/badge/strategy-monte_carlo-white" /> &nbsp;</td>
+</tr>
+<tr>
+<td><strong>Search&nbsp;space</strong></td>
+<td><img alt="Hierarchical" src="https://img.shields.io/badge/hierarchical-yes-success" /> <img alt="Probabilistic" src="https://img.shields.io/badge/probabilistic-no-critical" /> <img alt="Differentiable" src="https://img.shields.io/badge/differentiable-no-critical" /> <img alt="Automatic" src="https://img.shields.io/badge/automatic-no-critical" /> <img alt="Robust" src="https://img.shields.io/badge/robust-yes-success" /> <br>  <img alt="continuous" src="https://img.shields.io/badge/params-continuous-white" />  <img alt="discrete" src="https://img.shields.io/badge/params-discrete-white" />  <br>  <img alt="fixed" src="https://img.shields.io/badge/pipeline-fixed-white" /></td>
+</tr>
+<tr>
+<td><strong>Architecture</strong></td>
+<td><img alt="extensible" src="https://img.shields.io/badge/extensible-no-red" />  <img alt="accesible" src="https://img.shields.io/badge/accesible-no-red" />  <img alt="portable" src="https://img.shields.io/badge/portable-no-red" />  <br>  <img alt="gpu" src="https://img.shields.io/badge/gpu-no-red" />  <img alt="tpu" src="https://img.shields.io/badge/tpu-no-red" />  <img alt="cluster" src="https://img.shields.io/badge/cluster-no-red" /></td>
+</tr>
+</tbody>
+</table>
+<h2 id="recipe">RECIPE<a class="headerlink" href="#recipe" title="Permanent link">&para;</a></h2>
+<p><a href="https://github.com/autogoal/survey/edit/main/data/systems/recipe.yml"><img alt="Edit YAML definition" src="https://img.shields.io/badge/Edit-Info-orange?logo=github" /></a>
+<a href="https://github.com/laic-ufmg/Recipe"><img alt="Repository" src="https://img.shields.io/badge/laic--ufmg-Recipe-blue?logo=github" /></a>
+<img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/laic-ufmg/Recipe?label=Github%20Stars&amp;logo=github&amp;style=social" /></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Basic&nbsp;info</strong></td>
+<td><a href="https://laic-ufmg.github.io/Recipe/docs/"><img alt="System website" src="https://img.shields.io/badge/website-laic-ufmg.github.io-informational" /></a> <br><img alt="Open source" src="https://img.shields.io/badge/open--source-yes-success" />  <img alt="License" src="https://img.shields.io/badge/License-GPLv3-informational" /></td>
+</tr>
+<tr>
+<td><strong>Interfaces</strong></td>
+<td><img alt="CLI" src="https://img.shields.io/badge/CLI-no-critical" /> <img alt="GUI" src="https://img.shields.io/badge/GUI-no-critical" /> <img alt="HTTP" src="https://img.shields.io/badge/HTTP-no-critical" /> <img alt="Library" src="https://img.shields.io/badge/Library-yes-success" /> <br>  <img alt="Python" src="https://img.shields.io/badge/language-Python-blueviolet" /></td>
+</tr>
+<tr>
+<td><strong> Domains</strong></td>
+<td><img alt="Multi-domain" src="https://img.shields.io/badge/multi--domain-no-critical" /> <br><img alt="tabular" src="https://img.shields.io/badge/domain-tabular-white" /> &nbsp;</td>
+</tr>
+<tr>
+<td><strong>Techniques</strong></td>
+<td><img alt="Distillation" src="https://img.shields.io/badge/distillation-no-critical" /> <br> <img alt="linear_models" src="https://img.shields.io/badge/technique-linear_models-white" /> &nbsp;  <img alt="trees" src="https://img.shields.io/badge/technique-trees-white" /> &nbsp;  <img alt="bayesian" src="https://img.shields.io/badge/technique-bayesian-white" /> &nbsp;  <img alt="kernel_machines" src="https://img.shields.io/badge/technique-kernel_machines-white" /> &nbsp;</td>
+</tr>
+<tr>
+<td><strong>Tasks</strong></td>
+<td><img alt="Multi-task" src="https://img.shields.io/badge/multi--task-no-critical" /> <br> <img alt="classification" src="https://img.shields.io/badge/task-classification-white" />  <img alt="imputation" src="https://img.shields.io/badge/task-imputation-white" />  <img alt="feature_selection" src="https://img.shields.io/badge/task-feature_selection-white" />  <img alt="feature_preprocessing" src="https://img.shields.io/badge/task-feature_preprocessing-white" />  <img alt="dimensionality_reduction" src="https://img.shields.io/badge/task-dimensionality_reduction-white" /></td>
+</tr>
+<tr>
+<td><strong>Search&nbsp;strategies</strong></td>
+<td><img alt="Meta-learning" src="https://img.shields.io/badge/meta--learning-no-critical" /> <br> <img alt="evolutionary" src="https://img.shields.io/badge/strategy-evolutionary-white" /> &nbsp;</td>
+</tr>
+<tr>
+<td><strong>Search&nbsp;space</strong></td>
+<td><img alt="Hierarchical" src="https://img.shields.io/badge/hierarchical-yes-success" /> <img alt="Probabilistic" src="https://img.shields.io/badge/probabilistic-no-critical" /> <img alt="Differentiable" src="https://img.shields.io/badge/differentiable-no-critical" /> <img alt="Automatic" src="https://img.shields.io/badge/automatic-no-critical" /> <img alt="Robust" src="https://img.shields.io/badge/robust-yes-success" /> <br>  <img alt="continuous" src="https://img.shields.io/badge/params-continuous-white" />  <img alt="discrete" src="https://img.shields.io/badge/params-discrete-white" />  <br>  <img alt="linear" src="https://img.shields.io/badge/pipeline-linear-white" /></td>
+</tr>
+<tr>
+<td><strong>Architecture</strong></td>
+<td><img alt="extensible" src="https://img.shields.io/badge/extensible-no-red" />  <img alt="accesible" src="https://img.shields.io/badge/accesible-no-red" />  <img alt="portable" src="https://img.shields.io/badge/portable-no-red" />  <br>  <img alt="gpu" src="https://img.shields.io/badge/gpu-no-red" />  <img alt="tpu" src="https://img.shields.io/badge/tpu-no-red" />  <img alt="cluster" src="https://img.shields.io/badge/cluster-no-red" /></td>
+</tr>
+</tbody>
+</table>
+<h2 id="tpot">TPOT<a class="headerlink" href="#tpot" title="Permanent link">&para;</a></h2>
+<p><a href="https://github.com/autogoal/survey/edit/main/data/systems/tpot.yml"><img alt="Edit YAML definition" src="https://img.shields.io/badge/Edit-Info-orange?logo=github" /></a>
+<a href="https://github.com/epistasislab/tpot"><img alt="Repository" src="https://img.shields.io/badge/epistasislab-tpot-blue?logo=github" /></a>
+<img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/epistasislab/tpot?label=Github%20Stars&amp;logo=github&amp;style=social" /></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Basic&nbsp;info</strong></td>
+<td><a href="https://epistasislab.github.io/tpot/"><img alt="System website" src="https://img.shields.io/badge/website-epistasislab.github.io-informational" /></a> <br><img alt="Open source" src="https://img.shields.io/badge/open--source-yes-success" />  <img alt="License" src="https://img.shields.io/badge/License-LGPLv3-informational" /></td>
+</tr>
+<tr>
+<td><strong>Interfaces</strong></td>
+<td><img alt="CLI" src="https://img.shields.io/badge/CLI-yes-success" /> <img alt="GUI" src="https://img.shields.io/badge/GUI-no-critical" /> <img alt="HTTP" src="https://img.shields.io/badge/HTTP-no-critical" /> <img alt="Library" src="https://img.shields.io/badge/Library-yes-success" /> <br>  <img alt="Python" src="https://img.shields.io/badge/language-Python-blueviolet" /></td>
+</tr>
+<tr>
+<td><strong> Domains</strong></td>
+<td><img alt="Multi-domain" src="https://img.shields.io/badge/multi--domain-no-critical" /> <br><img alt="tabular" src="https://img.shields.io/badge/domain-tabular-white" /> &nbsp;</td>
+</tr>
+<tr>
+<td><strong>Techniques</strong></td>
+<td><img alt="Distillation" src="https://img.shields.io/badge/distillation-no-critical" /> <br> <img alt="linear_models" src="https://img.shields.io/badge/technique-linear_models-white" /> &nbsp;  <img alt="trees" src="https://img.shields.io/badge/technique-trees-white" /> &nbsp;</td>
+</tr>
+<tr>
+<td><strong>Tasks</strong></td>
+<td><img alt="Multi-task" src="https://img.shields.io/badge/multi--task-no-critical" /> <br> <img alt="classification" src="https://img.shields.io/badge/task-classification-white" />  <img alt="regression" src="https://img.shields.io/badge/task-regression-white" />  <img alt="feature_selection" src="https://img.shields.io/badge/task-feature_selection-white" />  <img alt="feature_preprocessing" src="https://img.shields.io/badge/task-feature_preprocessing-white" />  <img alt="dimensionality_reduction" src="https://img.shields.io/badge/task-dimensionality_reduction-white" /></td>
+</tr>
+<tr>
+<td><strong>Search&nbsp;strategies</strong></td>
+<td><img alt="Meta-learning" src="https://img.shields.io/badge/meta--learning-no-critical" /> <br> <img alt="evolutionary" src="https://img.shields.io/badge/strategy-evolutionary-white" /> &nbsp;</td>
+</tr>
+<tr>
+<td><strong>Search&nbsp;space</strong></td>
+<td><img alt="Hierarchical" src="https://img.shields.io/badge/hierarchical-no-critical" /> <img alt="Probabilistic" src="https://img.shields.io/badge/probabilistic-no-critical" /> <img alt="Differentiable" src="https://img.shields.io/badge/differentiable-no-critical" /> <img alt="Automatic" src="https://img.shields.io/badge/automatic-no-critical" /> <img alt="Robust" src="https://img.shields.io/badge/robust-no-critical" /> <br>  <img alt="continuous" src="https://img.shields.io/badge/params-continuous-white" />  <img alt="discrete" src="https://img.shields.io/badge/params-discrete-white" />  <br>  <img alt="graph" src="https://img.shields.io/badge/pipeline-graph-white" /></td>
+</tr>
+<tr>
+<td><strong>Architecture</strong></td>
+<td><img alt="extensible" src="https://img.shields.io/badge/extensible-yes-success" />  <img alt="accesible" src="https://img.shields.io/badge/accesible-no-red" />  <img alt="portable" src="https://img.shields.io/badge/portable-yes-success" />  <br>  <img alt="gpu" src="https://img.shields.io/badge/gpu-no-red" />  <img alt="tpu" src="https://img.shields.io/badge/tpu-no-red" />  <img alt="cluster" src="https://img.shields.io/badge/cluster-no-red" /></td>
+</tr>
+</tbody>
+</table>
+<h2 id="transmogrifai">TransmogrifAI<a class="headerlink" href="#transmogrifai" title="Permanent link">&para;</a></h2>
+<p><a href="https://github.com/autogoal/survey/edit/main/data/systems/transmogrif_ai.yml"><img alt="Edit YAML definition" src="https://img.shields.io/badge/Edit-Info-orange?logo=github" /></a>
+<a href="https://github.com/salesforce/TransmogrifAI"><img alt="Repository" src="https://img.shields.io/badge/salesforce-TransmogrifAI-blue?logo=github" /></a>
+<img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/salesforce/TransmogrifAI?label=Github%20Stars&amp;logo=github&amp;style=social" /></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Basic&nbsp;info</strong></td>
+<td><a href="https://transmogrif.ai/"><img alt="System website" src="https://img.shields.io/badge/website-transmogrif.ai-informational" /></a> <br><img alt="Open source" src="https://img.shields.io/badge/open--source-yes-success" />  <img alt="License" src="https://img.shields.io/badge/License-BSD-informational" /></td>
+</tr>
+<tr>
+<td><strong>Interfaces</strong></td>
+<td><img alt="CLI" src="https://img.shields.io/badge/CLI-no-critical" /> <img alt="GUI" src="https://img.shields.io/badge/GUI-no-critical" /> <img alt="HTTP" src="https://img.shields.io/badge/HTTP-no-critical" /> <img alt="Library" src="https://img.shields.io/badge/Library-yes-success" /> <br>  <img alt="Scala" src="https://img.shields.io/badge/language-Scala-blueviolet" /></td>
+</tr>
+<tr>
+<td><strong> Domains</strong></td>
+<td><img alt="Multi-domain" src="https://img.shields.io/badge/multi--domain-yes-success" /> <br><img alt="nlp" src="https://img.shields.io/badge/domain-nlp-white" /> &nbsp;<img alt="tabular" src="https://img.shields.io/badge/domain-tabular-white" /> &nbsp;<img alt="time_series" src="https://img.shields.io/badge/domain-time_series-white" /> &nbsp;</td>
+</tr>
+<tr>
+<td><strong>Techniques</strong></td>
+<td><img alt="Distillation" src="https://img.shields.io/badge/distillation-no-critical" /> <br> <img alt="linear_models" src="https://img.shields.io/badge/technique-linear_models-white" /> &nbsp;  <img alt="trees" src="https://img.shields.io/badge/technique-trees-white" /> &nbsp;  <img alt="bayesian" src="https://img.shields.io/badge/technique-bayesian-white" /> &nbsp;  <img alt="kernel_machines" src="https://img.shields.io/badge/technique-kernel_machines-white" /> &nbsp;  <img alt="ad_hoc" src="https://img.shields.io/badge/technique-ad_hoc-white" /> &nbsp;</td>
+</tr>
+<tr>
+<td><strong>Tasks</strong></td>
+<td><img alt="Multi-task" src="https://img.shields.io/badge/multi--task-no-critical" /> <br> <img alt="classification" src="https://img.shields.io/badge/task-classification-white" />  <img alt="regression" src="https://img.shields.io/badge/task-regression-white" />  <img alt="imputation" src="https://img.shields.io/badge/task-imputation-white" />  <img alt="feature_selection" src="https://img.shields.io/badge/task-feature_selection-white" />  <img alt="feature_preprocessing" src="https://img.shields.io/badge/task-feature_preprocessing-white" />  <img alt="domain_preprocessing" src="https://img.shields.io/badge/task-domain_preprocessing-white" />  <img alt="structured_prediction" src="https://img.shields.io/badge/task-structured_prediction-white" /></td>
+</tr>
+<tr>
+<td><strong>Search&nbsp;strategies</strong></td>
+<td><img alt="Meta-learning" src="https://img.shields.io/badge/meta--learning-no-critical" /> <br> <img alt="random" src="https://img.shields.io/badge/strategy-random-white" /> &nbsp;</td>
+</tr>
+<tr>
+<td><strong>Search&nbsp;space</strong></td>
+<td><img alt="Hierarchical" src="https://img.shields.io/badge/hierarchical-yes-success" /> <img alt="Probabilistic" src="https://img.shields.io/badge/probabilistic-no-critical" /> <img alt="Differentiable" src="https://img.shields.io/badge/differentiable-no-critical" /> <img alt="Automatic" src="https://img.shields.io/badge/automatic-yes-success" /> <img alt="Robust" src="https://img.shields.io/badge/robust-yes-success" /> <br>  <img alt="continuous" src="https://img.shields.io/badge/params-continuous-white" />  <img alt="discrete" src="https://img.shields.io/badge/params-discrete-white" />  <br>  <img alt="graph" src="https://img.shields.io/badge/pipeline-graph-white" /></td>
+</tr>
+<tr>
+<td><strong>Architecture</strong></td>
+<td><img alt="extensible" src="https://img.shields.io/badge/extensible-yes-success" />  <img alt="accesible" src="https://img.shields.io/badge/accesible-no-red" />  <img alt="portable" src="https://img.shields.io/badge/portable-no-red" />  <br>  <img alt="gpu" src="https://img.shields.io/badge/gpu-yes-success" />  <img alt="tpu" src="https://img.shields.io/badge/tpu-no-red" />  <img alt="cluster" src="https://img.shields.io/badge/cluster-no-red" /></td>
+</tr>
+</tbody>
+</table>
+<h2 id="vertex-ai">Vertex AI<a class="headerlink" href="#vertex-ai" title="Permanent link">&para;</a></h2>
+<p><a href="https://github.com/autogoal/survey/edit/main/data/systems/vertex_ai.yml"><img alt="Edit YAML definition" src="https://img.shields.io/badge/Edit-Info-orange?logo=github" /></a></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Basic&nbsp;info</strong></td>
+<td><a href="https://cloud.google.com/vertex-ai"><img alt="System website" src="https://img.shields.io/badge/website-cloud.google.com-informational" /></a> <br><img alt="Open source" src="https://img.shields.io/badge/open--source-no-critical" /></td>
+</tr>
+<tr>
+<td><strong>Interfaces</strong></td>
+<td><img alt="CLI" src="https://img.shields.io/badge/CLI-yes-success" /> <img alt="GUI" src="https://img.shields.io/badge/GUI-yes-success" /> <img alt="HTTP" src="https://img.shields.io/badge/HTTP-no-critical" /> <img alt="Library" src="https://img.shields.io/badge/Library-yes-success" /> <br></td>
+</tr>
+<tr>
+<td><strong> Domains</strong></td>
+<td><img alt="Multi-domain" src="https://img.shields.io/badge/multi--domain-no-critical" /> <br><img alt="images" src="https://img.shields.io/badge/domain-images-white" /> &nbsp;<img alt="nlp" src="https://img.shields.io/badge/domain-nlp-white" /> &nbsp;<img alt="tabular" src="https://img.shields.io/badge/domain-tabular-white" /> &nbsp;<img alt="time_series" src="https://img.shields.io/badge/domain-time_series-white" /> &nbsp;</td>
+</tr>
+<tr>
+<td><strong>Techniques</strong></td>
+<td><img alt="Distillation" src="https://img.shields.io/badge/distillation-no-critical" /> <br> <img alt="mlp" src="https://img.shields.io/badge/technique-mlp-white" /> &nbsp;  <img alt="pretrained" src="https://img.shields.io/badge/technique-pretrained-white" /> &nbsp;</td>
+</tr>
+<tr>
+<td><strong>Tasks</strong></td>
+<td><img alt="Multi-task" src="https://img.shields.io/badge/multi--task-no-critical" /> <br> <img alt="classification" src="https://img.shields.io/badge/task-classification-white" />  <img alt="regression" src="https://img.shields.io/badge/task-regression-white" />  <img alt="feature_selection" src="https://img.shields.io/badge/task-feature_selection-white" />  <img alt="feature_preprocessing" src="https://img.shields.io/badge/task-feature_preprocessing-white" />  <img alt="domain_preprocessing" src="https://img.shields.io/badge/task-domain_preprocessing-white" />  <img alt="structured_prediction" src="https://img.shields.io/badge/task-structured_prediction-white" />  <img alt="segmentation" src="https://img.shields.io/badge/task-segmentation-white" /></td>
+</tr>
+<tr>
+<td><strong>Search&nbsp;strategies</strong></td>
+<td><img alt="Meta-learning" src="https://img.shields.io/badge/meta--learning-no-critical" /> <br> <img alt="bayesian" src="https://img.shields.io/badge/strategy-bayesian-white" /> &nbsp;  <img alt="random" src="https://img.shields.io/badge/strategy-random-white" /> &nbsp;</td>
+</tr>
+<tr>
+<td><strong>Search&nbsp;space</strong></td>
+<td><img alt="Hierarchical" src="https://img.shields.io/badge/hierarchical-yes-success" /> <img alt="Probabilistic" src="https://img.shields.io/badge/probabilistic-yes-success" /> <img alt="Differentiable" src="https://img.shields.io/badge/differentiable-no-critical" /> <img alt="Automatic" src="https://img.shields.io/badge/automatic-no-critical" /> <img alt="Robust" src="https://img.shields.io/badge/robust-yes-success" /> <br>  <img alt="continuous" src="https://img.shields.io/badge/params-continuous-white" />  <img alt="discrete" src="https://img.shields.io/badge/params-discrete-white" />  <br>  <img alt="fixed" src="https://img.shields.io/badge/pipeline-fixed-white" /></td>
+</tr>
+<tr>
+<td><strong>Architecture</strong></td>
+<td><img alt="extensible" src="https://img.shields.io/badge/extensible-no-red" />  <img alt="accesible" src="https://img.shields.io/badge/accesible-no-red" />  <img alt="portable" src="https://img.shields.io/badge/portable-yes-success" />  <br>  <img alt="gpu" src="https://img.shields.io/badge/gpu-yes-success" />  <img alt="tpu" src="https://img.shields.io/badge/tpu-no-red" />  <img alt="cluster" src="https://img.shields.io/badge/cluster-no-red" /></td>
+</tr>
+</tbody>
+</table>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../comparison/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Comparison" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Comparison
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.709b4209.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.2b46852b.min.js"></script>
+      
+        <script src="../js/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

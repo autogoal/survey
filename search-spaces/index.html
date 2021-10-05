@@ -1,0 +1,828 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="canonical" href="https://autogoal.github.io/survey/search-spaces/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.2">
+    
+    
+      
+        <title>Search Space - AutoML Survey</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.1118c9be.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ba0d045b.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#000000">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="black" data-md-color-accent="black">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#search-spaces" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="AutoML Survey" class="md-header__button md-logo" aria-label="AutoML Survey" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AutoML Survey
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Search Space
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/autogoal/survey/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="AutoML Survey" class="md-nav__button md-logo" aria-label="AutoML Survey" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    AutoML Survey
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/autogoal/survey/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Search Space
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Search Space
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#operators" class="md-nav__link">
+    Operators
+  </a>
+  
+    <nav class="md-nav" aria-label="Operators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#models" class="md-nav__link">
+    Models
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hyperparameters" class="md-nav__link">
+    Hyperparameters
+  </a>
+  
+    <nav class="md-nav" aria-label="Hyperparameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#continuous-and-discrete-hyperparameters" class="md-nav__link">
+    Continuous and discrete hyperparameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#categorical-hyperparameters" class="md-nav__link">
+    Categorical hyperparameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conditional-hyperparameters" class="md-nav__link">
+    Conditional hyperparameters
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pipelines" class="md-nav__link">
+    Pipelines
+  </a>
+  
+    <nav class="md-nav" aria-label="Pipelines">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#single-model-pipelines" class="md-nav__link">
+    Single model pipelines
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fixed-size-pipelines" class="md-nav__link">
+    Fixed-size pipelines
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linear-pipelines" class="md-nav__link">
+    Linear pipelines
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graph-based-pipelines" class="md-nav__link">
+    Graph-based pipelines
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-features-of-search-spaces" class="md-nav__link">
+    Other features of search spaces
+  </a>
+  
+    <nav class="md-nav" aria-label="Other features of search spaces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hierarchical-spaces" class="md-nav__link">
+    Hierarchical spaces
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#probabilistic-spaces" class="md-nav__link">
+    Probabilistic spaces
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#differentiable-spaces" class="md-nav__link">
+    Differentiable spaces
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implicit-versus-explicit-spaces" class="md-nav__link">
+    Implicit versus explicit spaces
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../search-strategies/" class="md-nav__link">
+        Search Strategies
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../evaluation-methods/" class="md-nav__link">
+        Evaluation Methods
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../comparison/" class="md-nav__link">
+        Comparison
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../systems/" class="md-nav__link">
+        Systems
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#operators" class="md-nav__link">
+    Operators
+  </a>
+  
+    <nav class="md-nav" aria-label="Operators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#models" class="md-nav__link">
+    Models
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hyperparameters" class="md-nav__link">
+    Hyperparameters
+  </a>
+  
+    <nav class="md-nav" aria-label="Hyperparameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#continuous-and-discrete-hyperparameters" class="md-nav__link">
+    Continuous and discrete hyperparameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#categorical-hyperparameters" class="md-nav__link">
+    Categorical hyperparameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conditional-hyperparameters" class="md-nav__link">
+    Conditional hyperparameters
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pipelines" class="md-nav__link">
+    Pipelines
+  </a>
+  
+    <nav class="md-nav" aria-label="Pipelines">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#single-model-pipelines" class="md-nav__link">
+    Single model pipelines
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fixed-size-pipelines" class="md-nav__link">
+    Fixed-size pipelines
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linear-pipelines" class="md-nav__link">
+    Linear pipelines
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graph-based-pipelines" class="md-nav__link">
+    Graph-based pipelines
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-features-of-search-spaces" class="md-nav__link">
+    Other features of search spaces
+  </a>
+  
+    <nav class="md-nav" aria-label="Other features of search spaces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hierarchical-spaces" class="md-nav__link">
+    Hierarchical spaces
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#probabilistic-spaces" class="md-nav__link">
+    Probabilistic spaces
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#differentiable-spaces" class="md-nav__link">
+    Differentiable spaces
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implicit-versus-explicit-spaces" class="md-nav__link">
+    Implicit versus explicit spaces
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/autogoal/survey/edit/main/docs/search-spaces.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="search-spaces">Search spaces<a class="headerlink" href="#search-spaces" title="Permanent link">&para;</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><em>This section is under construction</em></p>
+</div>
+<p>In the context of AutoML, a search space is an implicitly- or explicitly-defined collection of machine learning pipelines, among which to search for a suitable solution to a given machine learning problem.
+The search space in any given AutoML system ultimately defines which solutions are possible at all.
+To characterize common search spaces, we'll focus first on the building blocks of any search space: <a href="#operators">operators</a>, <a href="#hyperparameters">hyperparameters</a>, and <a href="#pipelines">pipelines</a>.
+Then we'll look at <a href="#other-features-of-search-spaces">common characteristics</a> that can help us analize and compare the search spaces in current AutoML systems.</p>
+<h2 id="operators">Operators<a class="headerlink" href="#operators" title="Permanent link">&para;</a></h2>
+<p>An operator is any atomic component that performs a given function in a machine learning pipeline: e.g., a tokenization algorithm, a feature selector, or a classification model.
+For the purpose of AutoML, operators are often black-box; that is, we don't care about their internal structure, we just care about whether they can fit in any given pipeline.
+Operators are thus often characterized by input, output, and a set of <a href="#hyperparameters">hyperparameters</a>.</p>
+<p>The input and output define how that operator interacts with other operators in any given pipeline.
+This is not as simple as defining an input and output <em>type</em>, since often types, at least in their conventional definition in programming languages (i.e., independent types), are insufficient to completely characterize whether an operator can act on a given input.
+For example, most algorithms in <a href="https://scikit-learn.org"><code>scikit-learn</code></a> take matrices as input, but some can only act on <em>dense</em> matrices, while others work for both dense and sparse matrices.
+Similarly, in NAS, most operators are neural layers, which all receive tensors as inputs.
+However, they work on specific tensor <em>shapes</em>, and we cannot connect a layer <span class="arithmatex">\(l_1\)</span> to another layer <span class="arithmatex">\(l_2\)</span> unless their output and input shapes match, respectively.</p>
+<p>Therefore, to completely characterize an operator, an AutoML systems needs and implict or explicit typing system that is able to capture these restrictions.
+The more flexible the pipeline representation and the more varied the types of operators involved, the more sophisticated the typing system should be.
+In <a href="#fixed-size-pipelines">fixed-size pipelines</a>, for example, it often suffices to consider that every operator in each step has a definite input and output type.
+However, <a href="#linear-pipelines">linear</a> or <a href="#graph-based-pipelines">graph-based</a> pipelines need explicit or implicit restrictions about which operators can connect to each other.</p>
+<h3 id="models">Models<a class="headerlink" href="#models" title="Permanent link">&para;</a></h3>
+<p>One special type of operators are models, which have that have internal parameters which are adjusted from training data.
+For example, in a decision tree classifier, the structure of the tree is adjusted such that it maximizes the probability of classifying correctly all the elements in the training set.
+The difference between models and the other operators is important because every machine learning pipeline ultimately fits one or more models.
+All the remaining operators are there for secundary, even if often crucial, tasks, such as feature preprocessing or dimensionality reduction.</p>
+<p>Models break the <em>operator as a black-box illusion</em> in one important sense: they have two modes of operation that must be dealt with explicitely in the AutoML engine: training and prediction.
+Contrary to the other, model-free operators, models must be run once on training data to adjust their parameters, and only then can they be actually used on new data.
+Thus, all AutoML systems must somehow deal with this two-mode operation issue.
+The most common strategy is to consider <em>all</em> operators to work in these two modes, with model-free operators just ignoring whatever mode they're in.</p>
+<h2 id="hyperparameters">Hyperparameters<a class="headerlink" href="#hyperparameters" title="Permanent link">&para;</a></h2>
+<p>Hyperparameters are the tunable values of any operator that are not adjusted from data, but must be decided with a data-independent strategy.
+Examples include the number of layers or the activation functions in a neural network, the regularization strength in a linear classifier, or the maximum depth in a tree-based model.</p>
+<p>In a sense, the whole purpose of AutoML can be defined as finding the optimal configuration for all the hyperparameters involved in a set of selected operators.
+In fact, some AutoML paradigms are built entirely on top of the hyperparameter optimzation conceptualization.
+Paradigms like <a href="../#combined-algorithm-selection-and-hyperparameter-optimization">CASH</a> consider the selection of operators as <a href="#categorical-hyperparameters">categorical hyperparameters</a>, defining an implicit <a href="#hierarchical-spaces">two-level hierarchical space</a>.</p>
+<h3 id="continuous-and-discrete-hyperparameters">Continuous and discrete hyperparameters<a class="headerlink" href="#continuous-and-discrete-hyperparameters" title="Permanent link">&para;</a></h3>
+<p>The simplest types of hyperparameters are numerical values, either continuous or discrete.
+Examples include the regularization strength in logistic regression, or the maximum depth in a decision tree.
+In the simplest case, a numerical hyperparameter has a defined range of valid values for the optimizer can choose from.
+From a probabilistic point of view, this represents an implicit uniform distribution on the hyperparameter domain.</p>
+<p>However, in some cases it makes more sense to explore the domain a specific hyperparameter with a different distribution.
+As an example, take the regularization strength <span class="arithmatex">\(R\)</span> of a simple logistic regression model.
+The sensible values for <span class="arithmatex">\(R\)</span> may lie anywhere between <span class="arithmatex">\(10^{-6}\)</span> to <span class="arithmatex">\(1\)</span>.
+Asuming a uniform distribution in this case means that values between <span class="arithmatex">\(0.1\)</span> and <span class="arithmatex">\(1\)</span> will have roughly 90% of the attention of the optimizer, and values between <span class="arithmatex">\(10^{-6}\)</span> and <span class="arithmatex">\(10^{-5}\)</span> will be selected one in a million times.
+That's probably not what we want, but, on the contrary, we expect values between, say <span class="arithmatex">\(10^{-3}\)</span> and <span class="arithmatex">\(10^{-2}\)</span> to be as likely as those between <span class="arithmatex">\(10{^-2}\)</span> and <span class="arithmatex">\(10^{-1}\)</span>.
+In this case, we can define a logarithmic distribution instead of a uniform distribution, effectively stretching out the smallest scales of the hyperparameter range.</p>
+<h3 id="categorical-hyperparameters">Categorical hyperparameters<a class="headerlink" href="#categorical-hyperparameters" title="Permanent link">&para;</a></h3>
+<p>Categorical hyperparameters are used to model qualitatively different choices, such as the kernel function in a support vector machine, the activation function in a neural network's layer, or the regularization penalty function in a logistic regression.
+Since categorical values have no inherent order, they <em>should not</em> be treated as discrete values.
+The most common strategy is to define a categorical distribution, which assigns a probability <span class="arithmatex">\(p_i\)</span> to every value <span class="arithmatex">\(h_i\)</span> of a given hyperparameter <span class="arithmatex">\(h\)</span>, such that <span class="arithmatex">\(\sum  p_i = 1\)</span>.</p>
+<h3 id="conditional-hyperparameters">Conditional hyperparameters<a class="headerlink" href="#conditional-hyperparameters" title="Permanent link">&para;</a></h3>
+<p>Conditional hyperparameters appear when one or more hyperparameters only make sense sometimes, that is, <em>conditioned</em> to some other.
+The simplest case is in a <a href="#hierarchical-spaces">two-level hierarchical space</a>, where the first level defines the type of model, and the second level defines the hyperparameters of each model.
+For example, suppose we have three different operators to choose from: SVM, logistic regression, and decision trees, each with their own hyperparameters.
+Lets assume the selection of which operator to use is indicated by a categorical hyperparameter called <code>model</code>.
+The value of the hyperparameter <code>kernel_function</code> is only relevant when <code>model=svm</code>.
+The hyperparameter <code>kernel_function</code> is thus said to be conditioned to the value of the hyperparameter <code>model</code>.</p>
+<p>Conditional hyperparameters can also appear in non-hierarchical spaces.
+For example, suppose we have again an SVM operator with different kernel functions available: <code>linear</code>, <code>rbf</code> and <code>poly</code>.
+When <code>kernel_function=poly</code>, a new hyperparameter <code>degree</code> becomes relevant, which is not used in the other kernel functions.</p>
+<p>As long as dependencies among hyperparameters are acyclical, we can transform the search space into a hierarchical one, such that conditional hyperparameters are selected in a level below the hyperparameters they depend on.
+In some cases we have constraints that restrict two hyperparameters from simultaneously taking some pairs of values.
+These cases cannot be easily transformed into hierarchical spaces without introducing an arbitrary order between the hyperparameters.
+The most flexible AutoML systems have mostly conditioned hyperparameters, which in turn result in highly hierarchical search spaces.</p>
+<h2 id="pipelines">Pipelines<a class="headerlink" href="#pipelines" title="Permanent link">&para;</a></h2>
+<p>According to how flexible these pipelines are, we can identify four basic types:</p>
+<h3 id="single-model-pipelines">Single model pipelines<a class="headerlink" href="#single-model-pipelines" title="Permanent link">&para;</a></h3>
+<p>When a single model is trained end-to-end, which is often an estimator (e.g., a classifier or regressor).
+An example is training a linear regression model for price estimation on tabular data, or fine-tunning a concrete neural network architecture end-to-end for image classification.</p>
+<p><strong>Examples:</strong> <a href="../systems/#autogoal"><code>AutoGOAL</code></a>
+, <a href="../systems/#h2o-automl"><code>H2O AutoML</code></a>
+.</p>
+<h3 id="fixed-size-pipelines">Fixed-size pipelines<a class="headerlink" href="#fixed-size-pipelines" title="Permanent link">&para;</a></h3>
+<p>When a few fixed atomic steps are considered, e.g., data preprocessing, feature selection, dimensionality reduction, and classification.
+In each step, several different algorithms with they respective hyperparameters can be considered.</p>
+<p><strong>Examples:</strong> <a href="../systems/#auto-pytorch"><code>Auto-Pytorch</code></a>
+, <a href="../systems/#auto-sklearn"><code>Auto-Sklearn</code></a>
+, <a href="../systems/#auto-weka"><code>Auto-WEKA</code></a>
+, <a href="../systems/#autogoal"><code>AutoGOAL</code></a>
+, <a href="../systems/#autogluon"><code>AutoGluon</code></a>
+, <a href="../systems/#autonlp"><code>AutoNLP</code></a>
+, <a href="../systems/#azure-ml"><code>Azure ML</code></a>
+, <a href="../systems/#h2o-automl"><code>H2O AutoML</code></a>
+, <a href="../systems/#hyperopt-sklearn"><code>Hyperopt-sklearn</code></a>
+, <a href="../systems/#knime-automl"><code>KNIME AutoML</code></a>
+, <a href="../systems/#ml-plan"><code>ML-Plan</code></a>
+, <a href="../systems/#vertex-ai"><code>Vertex AI</code></a>
+.</p>
+<h3 id="linear-pipelines">Linear pipelines<a class="headerlink" href="#linear-pipelines" title="Permanent link">&para;</a></h3>
+<p><strong>Examples:</strong> <a href="../systems/#autogoal"><code>AutoGOAL</code></a>
+, <a href="../systems/#recipe"><code>RECIPE</code></a>
+.</p>
+<h3 id="graph-based-pipelines">Graph-based pipelines<a class="headerlink" href="#graph-based-pipelines" title="Permanent link">&para;</a></h3>
+<p><strong>Examples:</strong> <a href="../systems/#auto-pytorch"><code>Auto-Pytorch</code></a>
+, <a href="../systems/#autogoal"><code>AutoGOAL</code></a>
+, <a href="../systems/#autokeras"><code>AutoKeras</code></a>
+, <a href="../systems/#tpot"><code>TPOT</code></a>
+, <a href="../systems/#transmogrifai"><code>TransmogrifAI</code></a>
+.</p>
+<h2 id="other-features-of-search-spaces">Other features of search spaces<a class="headerlink" href="#other-features-of-search-spaces" title="Permanent link">&para;</a></h2>
+<h3 id="hierarchical-spaces">Hierarchical spaces<a class="headerlink" href="#hierarchical-spaces" title="Permanent link">&para;</a></h3>
+<h3 id="probabilistic-spaces">Probabilistic spaces<a class="headerlink" href="#probabilistic-spaces" title="Permanent link">&para;</a></h3>
+<h3 id="differentiable-spaces">Differentiable spaces<a class="headerlink" href="#differentiable-spaces" title="Permanent link">&para;</a></h3>
+<h3 id="implicit-versus-explicit-spaces">Implicit versus explicit spaces<a class="headerlink" href="#implicit-versus-explicit-spaces" title="Permanent link">&para;</a></h3>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: Introduction" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Introduction
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../search-strategies/" class="md-footer__link md-footer__link--next" aria-label="Next: Search Strategies" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Search Strategies
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.709b4209.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.2b46852b.min.js"></script>
+      
+        <script src="../js/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

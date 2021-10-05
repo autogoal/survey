@@ -1,0 +1,672 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="canonical" href="https://autogoal.github.io/survey/">
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.2">
+    
+    
+      
+        <title>AutoML Survey</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.1118c9be.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ba0d045b.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#000000">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="black" data-md-color-accent="black">
+  
+    
+    <script>function __prefix(e){return new URL(".",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduction-to-automl" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="AutoML Survey" class="md-header__button md-logo" aria-label="AutoML Survey" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AutoML Survey
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Introduction
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/autogoal/survey/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="AutoML Survey" class="md-nav__button md-logo" aria-label="AutoML Survey" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    AutoML Survey
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/autogoal/survey/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Introduction
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        Introduction
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#automl-in-a-nutshell" class="md-nav__link">
+    AutoML in a nutshell
+  </a>
+  
+    <nav class="md-nav" aria-label="AutoML in a nutshell">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#search-space" class="md-nav__link">
+    Search space
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search-strategy" class="md-nav__link">
+    Search strategy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evaluation-method" class="md-nav__link">
+    Evaluation method
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flavours-of-automl" class="md-nav__link">
+    Flavours of AutoML
+  </a>
+  
+    <nav class="md-nav" aria-label="Flavours of AutoML">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hyperparameter-optimization" class="md-nav__link">
+    Hyperparameter optimization
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#full-model-selection" class="md-nav__link">
+    Full model selection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#combined-algorithm-selection-and-hyperparameter-optimization" class="md-nav__link">
+    Combined algorithm selection and hyperparameter optimization
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#neural-architecture-search" class="md-nav__link">
+    Neural architecture search
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#heterogenous-automated-machine-learning" class="md-nav__link">
+    Heterogenous automated machine learning
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    What's next
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="search-spaces/" class="md-nav__link">
+        Search Space
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="search-strategies/" class="md-nav__link">
+        Search Strategies
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="evaluation-methods/" class="md-nav__link">
+        Evaluation Methods
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="comparison/" class="md-nav__link">
+        Comparison
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="systems/" class="md-nav__link">
+        Systems
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#automl-in-a-nutshell" class="md-nav__link">
+    AutoML in a nutshell
+  </a>
+  
+    <nav class="md-nav" aria-label="AutoML in a nutshell">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#search-space" class="md-nav__link">
+    Search space
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search-strategy" class="md-nav__link">
+    Search strategy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evaluation-method" class="md-nav__link">
+    Evaluation method
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flavours-of-automl" class="md-nav__link">
+    Flavours of AutoML
+  </a>
+  
+    <nav class="md-nav" aria-label="Flavours of AutoML">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hyperparameter-optimization" class="md-nav__link">
+    Hyperparameter optimization
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#full-model-selection" class="md-nav__link">
+    Full model selection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#combined-algorithm-selection-and-hyperparameter-optimization" class="md-nav__link">
+    Combined algorithm selection and hyperparameter optimization
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#neural-architecture-search" class="md-nav__link">
+    Neural architecture search
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#heterogenous-automated-machine-learning" class="md-nav__link">
+    Heterogenous automated machine learning
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    What's next
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/autogoal/survey/edit/main/docs/index.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="introduction-to-automl">Introduction to AutoML<a class="headerlink" href="#introduction-to-automl" title="Permanent link">&para;</a></h1>
+<p><em>Automated Machine Learning</em>, or AutoML for short, is a novel and expanding field in the intersection of machine learning, optimization, and software engineering.
+It's purpose is to progresively automate the most common (and often boring) tasks of conventional machine learning workflows.
+Tasks such as data preprocessing, feature extraction and selection, model selection, hyperparameter tunning, model validation, deployment, and monitoring.
+Despite its novelty, AutoML has become prominent in the last few years, as more profesionals from every field get into machine learning, often without a solid background in machine learning and no time to learn all the necessary theory.</p>
+<p>The following is a beginner-friendly introduction to the AutoML field.
+Our purpose is not to survey all the deep theory behind AutoML, but rather to provide an entry-point for newcommers, interested both in the research aspects and the practical aspects of AutoML.
+To narrow our focus, we decided to analize a set of practical AutoML systems, and extend outwards into the underlying theory guided by the paradigms and concepts that are most commonly used in these practical scenarios.
+To consider an AutoML system for inclusion, we defined a set of loose criteria, mostly regarding its status as a software product intended for broad use rather than, say, a reference implementation of a novel technique for research purposes.
+Thus, we consider a broad range of systems, both open-source and commercial, in different levels of maturity and with widely different features, as long as they fit the above criteria.
+The <a href="./systems">list of AutoML systems</a> considered in this survey, and the <a href="./comparison">features</a> that are evaluated, are the result of <a href="https://github.com/autogoal/survey">a colaborative effort</a>.</p>
+<p>Based on the analized systems we defined a set of conceptual features that help mapping the AutoML field, at least from a practical point-of-view.
+These features involve both internal and external characteristics of the systems.
+The internal characteristics refer to how the system works, e.g., the techniques it uses for optimizing and searching machine learning pipelines, and the types of hyperparameters it can represent.
+The external characteristics refer to the types of tasks that can be solved with the system and the way the user interacts with it.
+Based on these characteristics, we created a taxonomy of commonly used theoretical concepts, principle, and paradigims in the AutoML field, which guide this survey.
+We provide follow-up references on many of the topics we cover.</p>
+<h2 id="automl-in-a-nutshell">AutoML in a nutshell<a class="headerlink" href="#automl-in-a-nutshell" title="Permanent link">&para;</a></h2>
+<p>At its core, AutoML is about providing tools to automate the process of designing, training, validating, and deploying a machine learning pipeline for a given problem.
+Machine learning pipelines come in a variety of flavours, but they are often composed of a set of atomic <em>operators</em> (e.g., a feature selection algorithm, or a specific machine learning model), each of which can be configured by one or more <em>hyperparameters</em> (e.g., the number and type of layers and neurons per layer in a neural network, or the regularization factor in logistic regression).
+Each operator performs some task, often associated with an input data source, and producing an output that is fed to subsequent operators.
+The objective is to find a pipeline that is optimal, or close to optimal, in solving a given machine learning problem, among a set of posible pipelines.</p>
+<p>Thus, we can see an AutoML system, on a broad perspective, as a computational solution that receives a machine learning problem definition of some kind~(e.g., classification, regression, clustering) and associated training data, and it outputs a suitable machine learning pipeline, composed of one or more atomic operators, that is close to optimal in solving that problem according to some predefined performance metric(s).</p>
+<p>The core of any AutoML system is a <em>machine learning pipeline optimization engine</em>.
+Three key components can be identified in any such engine: a search space, a search strategy, and a performance estimation function.</p>
+<h3 id="search-space">Search space<a class="headerlink" href="#search-space" title="Permanent link">&para;</a></h3>
+<p>The <a href="./search-spaces">search space</a> defines which types of pipelines and operators are available. It is often restricted by an underlying machine learning library (or libraries) that support the actual implementation of said operators.
+For example, AutoML systems based on <a href="https://scikit-learn.org"><code>scikit-learn</code></a> can only output pipelines composed of <code>scikit-learn</code> estimators and transformers, while AutoML systems based on <a href=""><code>keras</code></a> or <a href=""><code>pytorch</code></a> can output pipelines that correspond to neural network architectures implemented in terms of these frameworks' APIs.
+The search space also defines which <a href="./search-space/#hyperparameters">hyperparameters</a> are optimized, and to what extent.</p>
+<h3 id="search-strategy">Search strategy<a class="headerlink" href="#search-strategy" title="Permanent link">&para;</a></h3>
+<p>A <a href="./search-strategies">search strategy</a> is an algorithm to efficiently explore a given search space and find the optimal pipelines.
+The search space can be arbitrarily big, exponential in size with respect to the number of available operators, and potentially unbounded in some of the hyperparameters (e.g., you can add as many layers as you want to a neural network).
+In machine learning, the difference between a useless solution and a highly effective one often boils down to the use of one type of algorithm over another, or even to their specific configurations.
+An effective search strategy must be able to quickly focus on promising regions of the search space, while still ensuring a thorough enough exploration to avoid missing potentially good solutions.
+This balance between exploration and exploitation is the crux of the problem that all search strategies are designed to deal with.</p>
+<h3 id="evaluation-method">Evaluation method<a class="headerlink" href="#evaluation-method" title="Permanent link">&para;</a></h3>
+<p>Finally, the <a href="./evaluation-methods">evaluation method</a> measures the expected performance of any given pipeline in the task at hand.
+The simplest evaluation method consists in evaluating the pipeline in a validation dataset, but evaluating machine learning algorithms is a costly task, especially when using models with millions or billions of parameters, like the largest neural networks.
+Thus, we often want to estimate this performance either by evaluating in smaller sets or by creating surrogate functions that approximate it.
+Furthermore, we often want to optimize more than one performance indicator, which may be in contradiction, such as accuracy versus model complexity (e.g., to reduce inference time in a production scenario).</p>
+<h2 id="flavours-of-automl">Flavours of AutoML<a class="headerlink" href="#flavours-of-automl" title="Permanent link">&para;</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><em>This section is under construction</em></p>
+</div>
+<p>Over the years several different conceptualizations of AutoML have been proposed, some more flexible than others.
+We'll review next some of the most common flavours of AutoML from a high-level point of view, without dwelving too deep into their specifities.
+Afterwards, when we have introduced all the building blocks of the AutoML process, we'll be able to look back at these definitions in more details.</p>
+<h3 id="hyperparameter-optimization">Hyperparameter optimization<a class="headerlink" href="#hyperparameter-optimization" title="Permanent link">&para;</a></h3>
+<h3 id="full-model-selection">Full model selection<a class="headerlink" href="#full-model-selection" title="Permanent link">&para;</a></h3>
+<h3 id="combined-algorithm-selection-and-hyperparameter-optimization">Combined algorithm selection and hyperparameter optimization<a class="headerlink" href="#combined-algorithm-selection-and-hyperparameter-optimization" title="Permanent link">&para;</a></h3>
+<h3 id="neural-architecture-search">Neural architecture search<a class="headerlink" href="#neural-architecture-search" title="Permanent link">&para;</a></h3>
+<h3 id="heterogenous-automated-machine-learning">Heterogenous automated machine learning<a class="headerlink" href="#heterogenous-automated-machine-learning" title="Permanent link">&para;</a></h3>
+<h2 id="whats-next">What's next<a class="headerlink" href="#whats-next" title="Permanent link">&para;</a></h2>
+<p>The three components mentioned above (search space, search strategy, and performance estimation function) make up the core of the "internal characteristics" of an AutoML system.
+In this survey, we are also interested in "external" characteristics, such as the types of machine learning tasks that can be solved, the interfaces by which users interact with the system, the steps of the machine learning workflow that are covered, and other software engineering concerns.</p>
+<p>In the next few sections we'll review the basic theory behind the core AutoML process.
+We'll introduce the most common types of search spaces and strategies, and some interesting performance estimation functions.
+Finally, we'll present a comparison of many practical AutoML systems in terms of all of these characteristics, and provide some rules guidelines for choosing an appropiate tool for a given task.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+      
+        
+        <a href="search-spaces/" class="md-footer__link md-footer__link--next" aria-label="Next: Search Space" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Search Space
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": ".", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "assets/javascripts/workers/search.709b4209.min.js", "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.2b46852b.min.js"></script>
+      
+        <script src="js/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
